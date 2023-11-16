@@ -3,18 +3,21 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div>
-            <NavLink to='/accueil' className='navbar__link'>
-                Accueil
+        <nav>
+            <NavLink to='/' className='navbar__link'>
+                Prestations
             </NavLink>
-            <NavLink to='/particuliers' className='navbar__link'>
-                Particuliers
+            <NavLink to='/particuliers/portraits' className='navbar__link'>
+                Portraits
+            </NavLink>
+            <NavLink to='/particuliers/mariage' className='navbar__link'>
+                Mariage
             </NavLink>
             <NavLink to='/entreprises' className='navbar__link'>
                 Entreprises
             </NavLink>
-            <NavLink to='/travaildauteur' className='navbar__link'>
-                Travail d'auteur
+            <NavLink to='/gallerie' className='navbar__link'>
+                Gallerie
             </NavLink>
             <NavLink to='/espaceclient' className='navbar__link'>
                 Espace clients
@@ -22,7 +25,7 @@ const Navbar = () => {
             <NavLink to='/contact' className='navbar__link'>
                 Contact
             </NavLink>
-        </div>
+        </nav>
     );
 };
 

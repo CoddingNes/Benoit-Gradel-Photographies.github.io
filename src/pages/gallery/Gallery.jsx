@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 
-const Corporate = () => {
+const Gallery = () => {
     return (
         <main>
             <Navbar />
-            Entreprises
+            Gallery
         </main>
     );
 };
 
-export default Corporate;
+export default Gallery;

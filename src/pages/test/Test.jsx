@@ -1,10 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './home.scss';
+// import Gallery from "../../components/gallery/Gallery";
 
-const Home = () => {
+
+const Test = () => {
     return (
         <main>
+            <h1>Test</h1>
+            <p>Petit test pour voir si ça fonctionne</p>
+            {/* <Gallery /> */}
+
             <div className='summary'>
                 <h2>Benoit Gradel photographe professionnel</h2>
                 <ul>
@@ -50,7 +55,8 @@ const Home = () => {
                 </NavLink>
             </div>
         </main>
+
     );
 };
 
-export default Home;
+export default Test;

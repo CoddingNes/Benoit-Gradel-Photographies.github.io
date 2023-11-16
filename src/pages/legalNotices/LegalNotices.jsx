@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 
-const Corporate = () => {
+const Notices = () => {
     return (
         <main>
             <Navbar />
-            Entreprises
+            Mentions Légales
         </main>
     );
 };
 
-export default Corporate;
+export default Notices;
