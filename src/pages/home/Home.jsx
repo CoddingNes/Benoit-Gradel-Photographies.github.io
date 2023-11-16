@@ -1,17 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.scss';
+import Gallery from '../../components/gallery/Gallery';
 
 const Home = () => {
     return (
-        <div>
-            <p>try</p>
-            <NavLink to='client' className='nav__link'>
-                <p className='nav__link-customer'>Client</p>
-            </NavLink>
-            <i className="fa-brands fa-facebook"></i>
-        </div>
+        <main>
+            <Gallery />
+            <div className='summary'>
+                <h2>
+                    Bienvenue
+                </h2>
+                <p>
+                    Description
+                </p>
+                <NavLink to='contact' className='navbar__link'>
+                    Contactez-moi maintenant
+                </NavLink>
+                <p className='signature'>
+                    Benoit Gradel
+                </p>
+            </div>
+        </main>
     );
 };
 
 export default Home;
+

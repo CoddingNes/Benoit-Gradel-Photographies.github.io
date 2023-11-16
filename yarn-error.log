@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\CoddingNes\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @fortawesome/fontawesome-svg-core# Free icons styles
+  C:\Program Files\nodejs\node.exe C:\Users\CoddingNes\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
 
 PATH: 
   C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\CoddingNes\AppData\Local\Microsoft\WindowsApps;C:\Users\CoddingNes\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\CoddingNes\AppData\Roaming\npm;C:\Users\CoddingNes\AppData\Local\GitHubDesktop\bin;C:\Users\CoddingNes\AppData\Local\gitkraken\bin
@@ -14,25 +14,28 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/Free: Not found
-      at Request.params.callback [as _callback] (C:\Users\CoddingNes\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
-      at Request.self.callback (C:\Users\CoddingNes\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
-      at Request.emit (node:events:527:28)
-      at Request.<anonymous> (C:\Users\CoddingNes\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141862:10)
-      at Request.emit (node:events:527:28)
-      at IncomingMessage.<anonymous> (C:\Users\CoddingNes\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141784:12)
-      at Object.onceWrapper (node:events:641:28)
-      at IncomingMessage.emit (node:events:539:35)
-      at endReadableNT (node:internal/streams/readable:1345:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  SyntaxError: C:\Users\CoddingNes\Documents\Dev\benoit-gradel\package.json: Unexpected token / in JSON at position 4
+      at JSON.parse (<anonymous>)
+      at C:\Users\CoddingNes\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\CoddingNes\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\CoddingNes\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
+    //"homepage": "/benoit-gradel-photographies.fr/",
     "name": "benoit-gradel",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+      "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
       "@csstools/normalize.css": "^12.0.0",
+      "@emailjs/browser": "^3.11.0",
+      "@fortawesome/fontawesome-svg-core": "^6.4.2",
+      "@fortawesome/free-brands-svg-icons": "^6.4.2",
+      "@fortawesome/free-regular-svg-icons": "^6.4.2",
+      "@fortawesome/free-solid-svg-icons": "^6.4.2",
+      "@fortawesome/react-fontawesome": "^0.2.0",
       "@testing-library/jest-dom": "^5.17.0",
       "@testing-library/react": "^13.4.0",
       "@testing-library/user-event": "^13.5.0",
@@ -1348,6 +1351,11 @@ Lockfile:
     "resolved" "https://registry.npmjs.org/@csstools/selector-specificity/-/selector-specificity-2.2.0.tgz"
     "version" "2.2.0"
   
+  "@emailjs/browser@^3.11.0":
+    "integrity" "sha512-RkY3FKZ3fPdK++OeF46mRTFpmmQWCHUVHZH209P3NE4D5sg2Atg7S2wa3gw5062Gl4clt4Wn5SyC4WhlVZC5pA=="
+    "resolved" "https://registry.npmjs.org/@emailjs/browser/-/browser-3.11.0.tgz"
+    "version" "3.11.0"
+  
   "@eslint-community/eslint-utils@^4.2.0":
     "integrity" "sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA=="
     "resolved" "https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz"
@@ -1379,6 +1387,46 @@ Lockfile:
     "integrity" "sha512-Kn7K8dx/5U6+cT1yEhpX1w4PCSg0M+XyRILPgvwcEBjerFWCwQj5sbr3/VmxqV0JGHCBCzyd6LxypEuehypY1w=="
     "resolved" "https://registry.npmjs.org/@eslint/js/-/js-8.53.0.tgz"
     "version" "8.53.0"
+  
+  "@fortawesome/fontawesome-common-types@6.4.2":
+    "integrity" "sha512-1DgP7f+XQIJbLFCTX1V2QnxVmpLdKdzzo2k8EmvDOePfchaIGQ9eCHj2up3/jNEbZuBqel5OxiaOJf37TWauRA=="
+    "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.4.2.tgz"
+    "version" "6.4.2"
+  
+  "@fortawesome/fontawesome-svg-core@^6.4.2", "@fortawesome/fontawesome-svg-core@~1 || ~6":
+    "integrity" "sha512-gjYDSKv3TrM2sLTOKBc5rH9ckje8Wrwgx1CxAPbN5N3Fm4prfi7NsJVWd1jklp7i5uSCVwhZS5qlhMXqLrpAIg=="
+    "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.4.2.tgz"
+    "version" "6.4.2"
+    dependencies:
+      "@fortawesome/fontawesome-common-types" "6.4.2"
+  
+  "@fortawesome/free-brands-svg-icons@^6.4.2":
+    "integrity" "sha512-LKOwJX0I7+mR/cvvf6qIiqcERbdnY+24zgpUSouySml+5w8B4BJOx8EhDR/FTKAu06W12fmUIcv6lzPSwYKGGg=="
+    "resolved" "https://registry.npmjs.org/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.4.2.tgz"
+    "version" "6.4.2"
+    dependencies:
+      "@fortawesome/fontawesome-common-types" "6.4.2"
+  
+  "@fortawesome/free-regular-svg-icons@^6.4.2":
+    "integrity" "sha512-0+sIUWnkgTVVXVAPQmW4vxb9ZTHv0WstOa3rBx9iPxrrrDH6bNLsDYuwXF9b6fGm+iR7DKQvQshUH/FJm3ed9Q=="
+    "resolved" "https://registry.npmjs.org/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-6.4.2.tgz"
+    "version" "6.4.2"
+    dependencies:
+      "@fortawesome/fontawesome-common-types" "6.4.2"
+  
+  "@fortawesome/free-solid-svg-icons@^6.4.2":
+    "integrity" "sha512-sYwXurXUEQS32fZz9hVCUUv/xu49PEJEyUOsA51l6PU/qVgfbTb2glsTEaJngVVT8VqBATRIdh7XVgV1JF1LkA=="
+    "resolved" "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.4.2.tgz"
+    "version" "6.4.2"
+    dependencies:
+      "@fortawesome/fontawesome-common-types" "6.4.2"
+  
+  "@fortawesome/react-fontawesome@^0.2.0":
+    "integrity" "sha512-uHg75Rb/XORTtVt7OS9WoK8uM276Ufi7gCzshVWkUJbHhh3svsUUeqXerrM96Wm7fRiDzfKRwSoahhMIkGAYHw=="
+    "resolved" "https://registry.npmjs.org/@fortawesome/react-fontawesome/-/react-fontawesome-0.2.0.tgz"
+    "version" "0.2.0"
+    dependencies:
+      "prop-types" "^15.8.1"
   
   "@gar/promisify@^1.0.1", "@gar/promisify@^1.1.3":
     "integrity" "sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw=="
@@ -8886,7 +8934,7 @@ Lockfile:
     optionalDependencies:
       "fsevents" "^2.3.2"
   
-  "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>=16.8":
+  "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>=16.3", "react@>=16.8":
     "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
     "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
     "version" "18.2.0"
@@ -10331,9 +10379,9 @@ Lockfile:
       "is-typedarray" "^1.0.0"
   
   "typescript@^3.2.1 || ^4", "typescript@>= 2.7", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
-    "integrity" "sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w=="
-    "resolved" "https://registry.npmjs.org/typescript/-/typescript-5.2.2.tgz"
-    "version" "5.2.2"
+    "integrity" "sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g=="
+    "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz"
+    "version" "4.9.5"
   
   "unbox-primitive@^1.0.2":
     "integrity" "sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw=="
