@@ -11,7 +11,7 @@ import Portraits from './pages/private/portraits/Portraits';
 import Marriage from './pages/private/marriage/Marriage';
 import Corporate from './pages/corporate/Corporate';
 // import Author from './pages/author/Author';
-import Gallery from './pages/gallery/Gallery';
+import Showroom from './pages/showroom/Showroom';
 import Customer from './pages/customer/Customer';
 import Contact from './pages/contact/Contact';
 import LegalNotices from './pages/legalNotices/LegalNotices';
@@ -31,7 +31,7 @@ root.render(
         <Route path="/particuliers/mariage" element={<Marriage />} />
         <Route path="/entreprises" element={<Corporate />} />
         {/* <Route path="/travaildauteur" element={<Author />} /> */}
-        <Route path="/gallerie" element={<Gallery />} />
+        <Route path="/gallerie" element={<Showroom />} />
         <Route path="/espaceclient" element={<Customer />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<LegalNotices />} />

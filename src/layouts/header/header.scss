@@ -1,3 +1,12 @@
-.header {
-    background-color: skyblue;
+@import '../../Style/variables.scss';
+
+header {
+
+    border-bottom: 2px solid rgb(255, 128, 82);
+
+    h1 {
+        color: $primary-color;
+        padding: 0.5em;
+        padding-top: 0.1em;
+    }
 }

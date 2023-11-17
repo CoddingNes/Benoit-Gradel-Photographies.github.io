@@ -1,0 +1,11 @@
+@import "../../Style/variables.scss";
+
+footer {
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid $secondary-color;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    background-color: white;
+}
