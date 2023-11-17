@@ -5,7 +5,27 @@ footer {
     bottom: 0;
     border-top: 2px solid $secondary-color;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     margin: auto;
     width: 100%;
     background-color: white;
+
+    & ul {
+        padding: 0;
+    }
+
+    & .social__links {
+        display: flex;
+        justify-content: space-around;
+
+        & a {
+            padding: 0.3em;
+            font-size: 2em;
+        }
+    }
+
+    & p {
+        margin: 0;
+    }
 }

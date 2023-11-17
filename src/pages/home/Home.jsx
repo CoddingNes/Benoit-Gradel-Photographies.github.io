@@ -40,7 +40,7 @@ const Home = () => {
                 </li>
                 <li>
                     <h3>
-                        <NavLink to='/espaceclient' className='home__link'>
+                        <NavLink to='/espaceclient' className='home__link__customer'>
                             Espace clients
                         </NavLink>
                     </h3>
