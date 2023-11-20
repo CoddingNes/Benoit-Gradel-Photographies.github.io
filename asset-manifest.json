@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Benoit-Gradel-Photographies/static/css/main.8160fc55.css",
+    "main.js": "/Benoit-Gradel-Photographies/static/js/main.de0d9fda.js",
+    "static/media/sunset_sea.jpg": "/Benoit-Gradel-Photographies/static/media/sunset_sea.21dd632f433d715b4192.jpg",
+    "index.html": "/Benoit-Gradel-Photographies/index.html",
+    "main.8160fc55.css.map": "/Benoit-Gradel-Photographies/static/css/main.8160fc55.css.map",
+    "main.de0d9fda.js.map": "/Benoit-Gradel-Photographies/static/js/main.de0d9fda.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8160fc55.css",
+    "static/js/main.de0d9fda.js"
+  ]
+}
