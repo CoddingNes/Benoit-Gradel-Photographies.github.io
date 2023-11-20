@@ -1,10 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navbar = () => {
     return (
         <nav>
+            <FontAwesomeIcon icon={faBars} className='bars-icon' />
             <ul className='navbar__list'>
                 <li>
                     <NavLink to='/' className='navbar__link'>

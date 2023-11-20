@@ -2,11 +2,15 @@
 
 nav {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     position: absolute;
     right: 10px;
-    top: 100px;
-    translate: 0 -28px;
+    top: 72px;
+    // translate: 0 -28px;
+
+    .bars-icon {
+        display: none;
+    }
 
     .navbar__list {
         display: flex;
@@ -55,6 +59,47 @@ nav {
                     margin: 0;
                     animation: show 400ms ease-out 200ms both;
                 }
+            }
+        }
+    }
+
+    @media screen and (max-width: 426px) {
+        top: 20px;
+        right: 10px;
+
+        .bars-icon {
+            display: block;
+            position: absolute;
+            right: 10px;
+        }
+
+        .navbar__link {
+            padding: 0;
+        }
+
+        .navbar__list {
+            display: none;
+            background-color: white;
+            border: 2px solid $secondary-color;
+            padding: 5px;
+        }
+
+        &:hover {
+            display: flex;
+            flex-direction: column;
+
+            .bars-icon {
+                display: none;
+            }
+
+            & .navbar__list {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &.private-list {
+                margin: 0;
+                padding: 0;
             }
         }
     }
