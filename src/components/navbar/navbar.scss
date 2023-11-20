@@ -1,0 +1,61 @@
+@import '../../Style/variables.scss';
+
+nav {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    translate: 0 -28px;
+
+    .navbar__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar__link {
+        padding: 0 1em;
+        margin: 0 0 1px 1px;
+
+        &:hover {
+            border-left: 1px solid $primary-color;
+            border-bottom: 1px solid $primary-color;
+            margin: 0;
+        }
+
+        &.dropdown-elements {
+            display: none;
+            border: none;
+        }
+
+        &.private-title {
+            border: none;
+        }
+
+        &.private-list:hover {
+            border: none;
+            margin: 0 0 1px 1px;
+
+            & .dropdown-element {
+                &s {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0;
+                    background-color: white;
+                }
+
+                &1 {
+                    margin: 0;
+                    animation: show 400ms ease-out 50ms both;
+                }
+
+                &2 {
+                    margin: 0;
+                    animation: show 400ms ease-out 200ms both;
+                }
+            }
+        }
+    }
+}
