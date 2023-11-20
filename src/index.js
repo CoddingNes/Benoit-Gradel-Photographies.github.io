@@ -25,7 +25,7 @@ root.render(
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="coddingnes.github.io/Benoit-Gradel-Photographies.github.io/" element={<Home />} />
         {/* <Route path="/particuliers" element={<Private />} /> */}
         <Route path="/particuliers/portraits" element={<Portraits />} />
         <Route path="/particuliers/mariage" element={<Marriage />} />
