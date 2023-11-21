@@ -9,13 +9,6 @@ const Home = () => {
             <Gallery />
             <h2>Benoit Gradel photographe professionnel</h2>
             <ul className='home__link'>
-                <li>
-                    <h3>
-                        <NavLink to='/gallerie' className='home__link'>
-                            Gallerie
-                        </NavLink>
-                    </h3>
-                </li>
                 <li className='home__link__benefits__list'>
                     <h3 className='home__link__benefits__title'>
                         Prestations
@@ -37,6 +30,13 @@ const Home = () => {
                             </NavLink>
                         </li>
                     </ul>
+                </li>
+                <li>
+                    <h3>
+                        <NavLink to='/gallerie' className='home__link'>
+                            Gallerie
+                        </NavLink>
+                    </h3>
                 </li>
                 <li>
                     <h3>

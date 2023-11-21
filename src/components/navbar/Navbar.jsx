@@ -10,11 +10,11 @@ const Navbar = () => {
         <nav>
             <FontAwesomeIcon icon={faBars} className='bars-icon' />
             <ul className='navbar__list'>
-                <li>
+                {/* <li>
                     <NavLink to='/' className='navbar__link'>
                         Prestations
                     </NavLink>
-                </li>
+                </li> */}
                 <li className='navbar__link private-list'>
                     <p className='navbar__link private-title'>
                         Particuliers
