@@ -13,28 +13,30 @@ const Footer = () => {
                 <li>07130 Toulaud</li>
                 <li>tel : 06 78 08 71 68</li>
             </ul>
-            <div className="social__links">
-                <a href="https://www.facebook.com/benoit.gradel.photographies/?ref=hl"
-                    target="_blank"
-                    rel="noopener noreferrer" >
-                    <FontAwesomeIcon icon={faFacebook} />
-                </a>
-                <a href="https://twitter.com/BenoitGradelPho"
-                    target="_blank"
-                    rel="noopener noreferrer" >
-                    <FontAwesomeIcon icon={faSquareXTwitter} />
-                </a>
-            </div>
-            <div className='legal__data'>
+            <div>
+                <div className="social__links">
+                    <a href="https://www.facebook.com/benoit.gradel.photographies/?ref=hl"
+                        target="_blank"
+                        rel="noopener noreferrer" >
+                        <FontAwesomeIcon icon={faFacebook} />
+                    </a>
+                    <a href="https://twitter.com/BenoitGradelPho"
+                        target="_blank"
+                        rel="noopener noreferrer" >
+                        <FontAwesomeIcon icon={faSquareXTwitter} />
+                    </a>
+                </div>
                 <NavLink to='mentions-legales' className='mentions__link'>
                     Mentions légales
                 </NavLink>
+            </div>
+            <div>
+                <a href='https://coddingnes-dev.fr/'
+                    target='_blank'
+                    rel="noopener noreferrer" classNames="coddingnes__link">©2023 CoddingNes
+                </a>
                 <p>
-                    <a href='https://coddingnes-dev.fr/'
-                        target='_blank'
-                        rel="noopener noreferrer" >©2023 Alexandra NICOLAS aka CoddingNes
-                    </a>
-                    <br />Tous droits réservés
+                    Tous droits réservés
                 </p>
             </div>
         </footer >
