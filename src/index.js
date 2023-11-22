@@ -17,6 +17,7 @@ import Contact from './pages/contact/Contact';
 import LegalNotices from './pages/legalNotices/LegalNotices';
 import Footer from './layouts/footer/Footer';
 import Error from './pages/error/Error';
+import Prices from './pages/prices/Prices';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -35,6 +36,7 @@ root.render(
         <Route path="/espaceclient" element={<Customer />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<LegalNotices />} />
+        <Route path="/grille-de-tarifs" element={<Prices />} />
         <Route path="/error" element={<Error />} />
       </Routes>
       <Footer />

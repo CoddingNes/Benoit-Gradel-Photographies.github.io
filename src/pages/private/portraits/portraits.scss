@@ -1,0 +1,45 @@
+@import "../../../Style/variables.scss";
+
+#portraits {
+    p {
+        line-height: 1.5em;
+    }
+
+    // .package__box__title:hover {
+    //     border-left: 1px solid $primary-color;
+    //     border-bottom: 1px solid $primary-color;
+    // }
+
+    .package__box__description {
+        display: none;
+        border: none;
+    }
+
+    .package__box:hover {
+        & .package__box__description {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            background-color: white;
+
+            &1 {
+                margin: 0;
+                animation: show 400ms ease-out 50ms both;
+            }
+
+            &2 {
+                margin: 0;
+                animation: show 400ms ease-out 200ms both;
+            }
+        }
+    }
+
+    .portraits__link__prices {
+        font-weight: bold;
+
+        &:hover {
+            border-left: 1px solid $primary-color;
+            border-bottom: 1px solid $primary-color;
+        }
+    }
+}

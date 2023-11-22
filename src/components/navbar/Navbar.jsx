@@ -19,7 +19,6 @@ const Navbar = () => {
                     <p className='navbar__link private-title'>
                         Particuliers
                     </p>
-
                     <ul className='navbar__link dropdown-elements'>
                         <li>
                             <NavLink to='/particuliers/portraits' className='navbar__link dropdown-element1'>
