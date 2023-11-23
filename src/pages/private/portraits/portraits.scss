@@ -15,31 +15,45 @@
         border: none;
     }
 
-    .package__box:hover {
-        & .package__box__description {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            background-color: white;
+    .package__box {
+        // position: absolute;
 
-            &1 {
-                margin: 0;
-                animation: show 400ms ease-out 50ms both;
-            }
-
-            &2 {
-                margin: 0;
-                animation: show 400ms ease-out 200ms both;
-            }
+        h3 {
+            margin: 2em;
         }
-    }
-
-    .portraits__link__prices {
-        font-weight: bold;
 
         &:hover {
-            border-left: 1px solid $primary-color;
-            border-bottom: 1px solid $primary-color;
+            display: flex;
+
+            & .package__box__description {
+                display: flex;
+                position: relative;
+                // top: 0;
+                // left: 500px;
+                flex: 1 1 33vw;
+                flex-direction: column;
+                padding: 0;
+                background-color: white;
+
+                &1 {
+                    margin: 0;
+                    animation: show 400ms ease-out 50ms both;
+                }
+
+                &2 {
+                    margin: 0;
+                    animation: show 400ms ease-out 200ms both;
+                }
+            }
+        }
+
+        .portraits__link__prices {
+            font-weight: bold;
+
+            &:hover {
+                border-left: 1px solid $primary-color;
+                border-bottom: 1px solid $primary-color;
+            }
         }
     }
 }
