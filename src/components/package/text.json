@@ -1,0 +1,43 @@
+[
+    {
+        "packageType": "solo",
+        "title": "Forfait SOLO : 90€",
+        "description": [
+            "20 à 30 minutes² de prise de vues en intérieur ou en extérieur (si le temps le permet)",
+            "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+            "La création d’une galerie privée disponible 3 mois",
+            "3 tirages papier au format 15x20cm"
+        ]
+    },
+    {
+        "packageType": "duo",
+        "title": "Forfait DUO : 105€¹",
+        "description": [
+            "30 à 45 minutes² de prise de vues en intérieur ou en extérieur (si le temps le permet)",
+            "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+            "La création d’une galerie privée disponible 3 mois",
+            "3 tirages papier au format 15x20cm"
+        ]
+    },
+    {
+        "packageType": "family",
+        "title": "Forfait FAMILLE : 135€¹",
+        "description": [
+            "Jusqu’à 5 personnes – 10€ par personne supplémentaires.",
+            "1 heure² de prise de vues en intérieur ou en extérieur (si le temps le permet)",
+            "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+            "La création d’une galerie privée disponible 3 mois",
+            "5 tirages papier au format 15x20cm"
+        ]
+    },
+    {
+        "packageType": "pregnancy",
+        "title": "Forfait GROSSESSE : 180€¹",
+        "description": [
+            "2 séances de prise de vue : 1 pendant la grossesse puis 1 dans le mois qui suit la naissance.",
+            "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+            "La création d’une galerie privée disponible 3 mois",
+            "8 tirages papier au format 15x20cm"
+        ]
+    }
+]

@@ -1,0 +1,70 @@
+import React, { useEffect, useState } from 'react';
+import Data from './text.json';
+import './package.scss';
+
+
+const Package = () => {
+
+    const [packageChoice, setPackageChoice] = useState();
+    const [descriptions, setDescriptions] = useState([]);
+
+    useEffect(() => {
+        const getData = () => {
+
+            // fetch('text.json', {
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //         'Accept': 'application/json'
+            //     }
+            // })
+            //     .then(response => {
+            //         return response.json();
+            //     })
+            //     .then(data => {
+            let description = [];
+            // const packageType = [];
+            if (packageChoice !== undefined) {
+                for (let i = 0; i < Data.length; i++) {
+                    // packageType.push(Data[i].packageType);
+                    // packageList.push(Data[i]);
+                    if (Data[i].packageType === packageChoice) {
+                        description = Data[i].description;
+                        setDescriptions(description);
+                    };
+                    console.log("for");
+                }
+            }
+            // })
+        };
+
+        getData()
+    }, [packageChoice]);
+
+    return (
+        <div className={"package__box"}>
+            <ul className={"package__box__titles"}>
+                {Data.map((packagedetails) => (
+                    <li>
+                        <h3 className={"package__box__title " + packagedetails.packageType} onClick={() => { setPackageChoice(packagedetails.packageType) }} key={packagedetails.packageType}>{packagedetails.title}</h3>
+                    </li>
+
+                    // < PackageBox
+                    //     setPackageChoice={setPackageChoice}
+                    //     packageType={packagedetails.packageType}
+                    //     title={packagedetails.title}
+                    //     key={packagedetails.packageType}
+                    // />
+                ))}
+            </ul>
+            <ul className={'package__box__description'} >
+                {descriptions.map((description) => (
+                    <li className={'package__box__descriptions'}>
+                        {description}
+                    </li>
+                ))}
+            </ul >
+        </div>
+    );
+};
+
+export default Package;

@@ -2,8 +2,10 @@ import React from 'react';
 import Navbar from '../../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
 import './portraits.scss';
+import Package from '../../../components/package/Package';
 
 const Portraits = () => {
+
     return (
         <main id='portraits'>
             <Navbar />
@@ -25,12 +27,15 @@ const Portraits = () => {
             <NavLink to='contact' className='home__link__contact'>
                 Prenez rendez-vous maintenant !
             </NavLink>
-            <div className='packages'>
-                <div className='package__box solo'>
+            {/* <div className='packages'> */}
+
+            <Package />
+
+            {/* <div className='package__box solo'>
                     <h3 className='package__box__title solo'>{"Forfait SOLO : 90€"}</h3>
                     <ul className='package__box__description solo'>
                         <li>
-                            {"30 à 45 minutes² de prise de vues en intérieur ou en extérieur (si le temps le permet)"}
+                            {"20 à 30 minutes² de prise de vues en intérieur ou en extérieur (si le temps le permet)"}
                         </li>
                         <li>
                             {"L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)"}
@@ -41,7 +46,6 @@ const Portraits = () => {
                         <li>
                             {"3 tirages papier au format 15x20cm"}
                         </li>
-                        <li></li>
                     </ul>
                 </div>
                 <div className='package__box duo'>
@@ -59,7 +63,6 @@ const Portraits = () => {
                         <li>
                             {"3 tirages papier au format 15x20cm"}
                         </li>
-                        <li></li>
                     </ul>
                 </div>
                 <div className='package__box family'>
@@ -96,10 +99,9 @@ const Portraits = () => {
                         <li>
                             {"8 tirages papier au format 15x20cm"}
                         </li>
-                        <li></li>
                     </ul>
-                </div>
-            </div>
+                </div> */}
+            {/* </div> */}
             <div className='notes__box'>
                 <p className='note1'>{"¹ : Des frais de déplacements peuvent être ajoutés selon la distance à parcourir."}</p>
                 <p className='note2'>{"² : les durées de session sont données à titre indicatif et peuvent être plus ou moins importantes."}</p>

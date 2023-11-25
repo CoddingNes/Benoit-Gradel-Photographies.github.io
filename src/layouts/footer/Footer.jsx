@@ -33,7 +33,7 @@ const Footer = () => {
             <div>
                 <a href='https://coddingnes-dev.fr/'
                     target='_blank'
-                    rel="noopener noreferrer" classNames="coddingnes__link">©2023 CoddingNes
+                    rel="noopener noreferrer" className="coddingnes__link">©2023 CoddingNes
                 </a>
                 <p>
                     Tous droits réservés
