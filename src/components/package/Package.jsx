@@ -7,6 +7,7 @@ const Package = () => {
 
     const [packageChoice, setPackageChoice] = useState();
     const [descriptions, setDescriptions] = useState([]);
+    const [border, setBorder] = useState("");
 
     useEffect(() => {
         const getData = () => {
@@ -30,6 +31,11 @@ const Package = () => {
                     if (Data[i].packageType === packageChoice) {
                         description = Data[i].description;
                         setDescriptions(description);
+                        setBorder("border");
+                        setTimeout(() => {
+                            setBorder("");
+                        }, 450
+                        )
                     };
                     console.log("for");
                 }
@@ -45,7 +51,11 @@ const Package = () => {
             <ul className={"package__box__titles"}>
                 {Data.map((packagedetails) => (
                     <li>
-                        <h3 className={"package__box__title " + packagedetails.packageType} onClick={() => { setPackageChoice(packagedetails.packageType) }} key={packagedetails.packageType}>{packagedetails.title}</h3>
+                        <h3 className={"package__box__title " + packagedetails.packageType}
+                            onClick={() => { setPackageChoice(packagedetails.packageType) }}
+                            key={packagedetails.packageType}>
+                            {packagedetails.title}
+                        </h3>
                     </li>
 
                     // < PackageBox
@@ -56,7 +66,10 @@ const Package = () => {
                     // />
                 ))}
             </ul>
-            <ul className={'package__box__description'} >
+            <ul className={'package__box__description ' + border} >
+                <li className={'package__box__descriptions-title'}>
+                    Détails du forfait {packageChoice}
+                </li>
                 {descriptions.map((description) => (
                     <li className={'package__box__descriptions'}>
                         {description}

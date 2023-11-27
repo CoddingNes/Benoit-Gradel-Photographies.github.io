@@ -1,3 +1,5 @@
+@import '../../Style/variables.scss';
+
 #portraits {
     .package__box {
         display: flex;
@@ -6,22 +8,80 @@
         &__titles {
             padding: 0;
             margin: 0;
+            cursor: pointer;
         }
 
         &__description {
             // display: none;
+            position: relative;
             display: flex;
             justify-content: center;
             // position: relative;
             // top: 0;
             // left: 500px;
+            max-width: 500px;
             flex: 1 2 50vw;
             flex-direction: column;
-            padding: 10px;
+            padding: 20px;
             margin: 0;
+            border: 4px ridge $primary-color;
+            // background-color: white;
+            overflow: hidden;
+
+            &.border {
+                &::before {
+                    // border: 4px ridge $primary-color;
+                    content: '';
+                    position: absolute;
+                    top: 15%;
+                    left: 15%;
+                    height: 70%;
+                    width: 70%;
+                    rotate: 20deg;
+                    z-index: -2;
+                    background-color: black !important;
+                    animation: borderAnim 500ms linear forwards;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 1px;
+                    bottom: 1px;
+                    left: 1px;
+                    right: 1px;
+                    z-index: -1;
+                    background-color: white;
+                }
+
+                @keyframes borderAnim {
+                    0% {
+                        // transform: rotate(-35deg);
+                        scale: 1;
+                        // translate: -50% -50%;
+                    }
+
+                    100% {
+                        // transform: rotate(45deg);
+                        scale: 3;
+                        // translate: 0;
+                    }
+                }
+
+            }
+
 
             &s {
                 padding: 8px 0;
+
+                &-title {
+                    font-weight: bold;
+                    margin: auto;
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                    font-size: 1.2em;
+                }
+
             }
         }
 

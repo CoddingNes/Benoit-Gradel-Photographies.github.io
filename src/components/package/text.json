@@ -20,7 +20,7 @@
         ]
     },
     {
-        "packageType": "family",
+        "packageType": "famille",
         "title": "Forfait FAMILLE : 135€¹",
         "description": [
             "Jusqu’à 5 personnes – 10€ par personne supplémentaires.",
@@ -31,7 +31,7 @@
         ]
     },
     {
-        "packageType": "pregnancy",
+        "packageType": "grossesse",
         "title": "Forfait GROSSESSE : 180€¹",
         "description": [
             "2 séances de prise de vue : 1 pendant la grossesse puis 1 dans le mois qui suit la naissance.",
