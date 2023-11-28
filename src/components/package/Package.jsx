@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Data from './text.json';
+import GlobalData from '../../text.json';
 import './package.scss';
 
 
@@ -8,10 +8,11 @@ const Package = () => {
     const [packageChoice, setPackageChoice] = useState();
     const [descriptions, setDescriptions] = useState([]);
     const [border, setBorder] = useState("");
+    const [Data, setData] = useState([]);
 
     useEffect(() => {
         const getData = () => {
-
+            setData(GlobalData['portraits']['forfaits']);
             // fetch('text.json', {
             //     headers: {
             //         'Content-Type': 'application/json',
@@ -37,23 +38,22 @@ const Package = () => {
                         }, 450
                         )
                     };
-                    console.log("for");
                 }
             }
             // })
         };
 
         getData()
-    }, [packageChoice]);
+    }, [packageChoice, Data]);
 
     return (
         <div className={"package__box"}>
             <ul className={"package__box__titles"}>
-                {Data.map((packagedetails) => (
+                {Data.map((packagedetails, index) => (
                     <li>
                         <h3 className={"package__box__title " + packagedetails.packageType}
                             onClick={() => { setPackageChoice(packagedetails.packageType) }}
-                            key={packagedetails.packageType}>
+                            key={index}>
                             {packagedetails.title}
                         </h3>
                     </li>
@@ -70,8 +70,9 @@ const Package = () => {
                 <li className={'package__box__descriptions-title'}>
                     Détails du forfait {packageChoice}
                 </li>
-                {descriptions.map((description) => (
-                    <li className={'package__box__descriptions'}>
+                {descriptions.map((description, index) => (
+                    <li className={'package__box__descriptions'}
+                        key={index}>
                         {description}
                     </li>
                 ))}
