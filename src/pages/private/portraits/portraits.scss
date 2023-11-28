@@ -1,9 +1,27 @@
 @import "../../../Style/variables.scss";
 
 #portraits {
-    p {
-        line-height: 1.5em;
+
+    .text__box {
+        margin: 20px 0;
+
+        p {
+            line-height: 1.3em;
+            margin: 0;
+            padding: 6px 0;
+        }
     }
+
+    .notes__box {
+        margin: 20px 0;
+
+        p {
+            line-height: 1em;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
 
     // .package__box__title:hover {
     //     border-left: 1px solid $primary-color;
