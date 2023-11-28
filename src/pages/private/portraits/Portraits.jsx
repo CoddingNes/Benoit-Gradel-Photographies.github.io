@@ -64,13 +64,13 @@ const Portraits = () => {
                 <p className='note2'>{"² : les durées de session sont données à titre indicatif et peuvent être plus ou moins importantes."}</p> */}
             </div>
             <p>
-                {data['price-grid']['text']}
                 {/* Pour tous tirages supplémentaires, merci de vous reporter à la */}
+                {data["price-grid"]["text"]}
                 <NavLink
                     to='../../Prices'
                     className='portraits__link__prices'>
-                    {data['price-grid']['link']}
                     {/* grille de tarifs */}
+                    {data["price-grid"]["link"]}
                 </NavLink>
             </p>
         </main >
