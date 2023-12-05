@@ -1,0 +1,80 @@
+{
+    "portraits": {
+        "title": "Portait studio & Lifestyle",
+        "text": [
+            "Parce que vos enfants grandissent trop vite, vous souhaitez garder une trace de tous ces moments…",
+            "Parce que vous avez toujours rêvé de jouer les stars de cinéma avec les flashs qui crépitent autour de vous…",
+            "Ou tout simplement, parce que vous avez envie de réaliser un beau portrait, pour vous ou pour offrir…",
+            "",
+            "",
+            "Tout cela est désormais possible demain, chez vous. Plus besoin de vous déplacer, grâce à mon studio mobile, c’est un véritable studio photo pro qui vient chez vous !",
+            "Je me déplace dans toute la région Rhône-Alpes et installe en quelques minutes le matériel nécessaire pour réaliser des portraits studio chez vous (ou dans tout autre lieu de votre choix) ou des portraits lifestyle.",
+            "Couleur ou Noir&Blanc… à vous de choisir !"
+        ],
+        "link": "Prenez rendez-vous maintenant !",
+        "forfaits": [
+            {
+                "packageType": "solo",
+                "title": "Forfait SOLO : 90€",
+                "description": [
+                    "20 à 30 minutes² de prise de vues en intérieur ou en extérieur (si le temps le permet)",
+                    "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+                    "La création d’une galerie privée disponible 3 mois",
+                    "3 tirages papier au format 15x20cm"
+                ]
+            },
+            {
+                "packageType": "duo",
+                "title": "Forfait DUO : 105€¹",
+                "description": [
+                    "30 à 45 minutes² de prise de vues en intérieur ou en extérieur (si le temps le permet)",
+                    "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+                    "La création d’une galerie privée disponible 3 mois",
+                    "3 tirages papier au format 15x20cm"
+                ]
+            },
+            {
+                "packageType": "famille",
+                "title": "Forfait FAMILLE : 135€¹",
+                "description": [
+                    "Jusqu’à 5 personnes – 10€ par personne supplémentaires.",
+                    "1 heure² de prise de vues en intérieur ou en extérieur (si le temps le permet)",
+                    "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+                    "La création d’une galerie privée disponible 3 mois",
+                    "5 tirages papier au format 15x20cm"
+                ]
+            },
+            {
+                "packageType": "grossesse",
+                "title": "Forfait GROSSESSE : 180€¹",
+                "description": [
+                    "2 séances de prise de vue : 1 pendant la grossesse puis 1 dans le mois qui suit la naissance.",
+                    "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+                    "La création d’une galerie privée disponible 3 mois",
+                    "8 tirages papier au format 15x20cm"
+                ]
+            }
+        ],
+        "notes": [
+            "¹ : Des frais de déplacements peuvent être ajoutés selon la distance à parcourir.",
+            "² : les durées de session sont données à titre indicatif et peuvent être plus ou moins importantes."
+        ],
+        "price-grid": {
+            "text": "Pour tous tirages supplémentaires, merci de vous reporter à la ",
+            "link": "grille de tarifs"
+        }
+    },
+    "mariages": {
+        "title": "Reportage de mariage",
+        "text": [
+            "Nous avons tous aujourd’hui un appareil photo dans la poche que nous utilisons lors de toutes les occasions du quotidien. Pourtant, malgré une qualité toujours croissante, nous avons tous été un jour déçu par le rendu de ces instantanés.",
+            "",
+            "",
+            "C’est pourquoi, lors des grandes occasions, faites appel à un professionnel de l’image. Je réaliserai pour vous des souvenirs à la hauteur de cet événement.",
+            "",
+            "",
+            "Et parce que chaque mariage est unique, je vous propose de vous rencontrer pour trouver ensemble la formule la plus adaptée à vos envies, à vos besoins et à votre budget."
+        ],
+        "link": "Alors n’hésitez plus et contactez-moi maintenant !"
+    }
+}

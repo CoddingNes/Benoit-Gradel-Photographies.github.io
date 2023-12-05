@@ -1,18 +1,20 @@
-// import React from 'react';
-// import './packageBox.scss'
-// // import Text from "../../../public/text";
+import React from 'react';
+import './packageBox.scss'
 
 
-// const PackageBox = (props) => {
+const PackageBox = (props) => {
 
-//     // const PackageData = [Text]
-//     // console.log(PackageData);
+    const titre = props.title;
+    const data = props.data;
+    const dataTitle = data["title"];
+    console.log(data);
 
-//     return (
-//         <li>
-//             <h3 className={".package__box__title " + props.packageType} onClick={() => { props.setPackageChoice(props.packageType) }} key={props.key}>{props.title}</h3>
-//         </li>
-//     );
-// };
+    return (
+        <div>
+            <p>{titre}</p>
+            <p>{dataTitle}</p>
+        </div>
+    );
+};
 
-// export default PackageBox;
+export default PackageBox;
