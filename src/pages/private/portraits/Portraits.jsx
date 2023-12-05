@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
 import './portraits.scss';
@@ -24,7 +23,6 @@ const Portraits = () => {
     return (
         <main id='portraits'>
             <Navbar />
-            {/* <h2>Portait studio & Lifestyle</h2> */}
             <h2>{portraitsData["title"]}</h2>
             {portraitsData["text"].map((ligne, index) => (
                 <p
@@ -32,8 +30,8 @@ const Portraits = () => {
                     {ligne}
                 </p>))}
 
-            <NavLink to='contact' className='home__link__contact'>
-                Prenez rendez-vous maintenant !
+            <NavLink to='../../contact' className='home__link__contact'>
+                {portraitsData["link"]}
             </NavLink>
 
             <Package data={portraitsData} />
@@ -46,8 +44,14 @@ const Portraits = () => {
                 ))
                 }
             </div>
-            <p>Pour tous tirages supplémentaires, merci de vous reporter à la <NavLink to='Prices' className='portraits__link__prices'>
-                grille de tarifs</NavLink> </p>
+            <p>
+                {portraitsData["price-grid"]["text"] + " "}
+                <NavLink
+                    to='../../grille-de-tarifs'
+                    className='portraits__link__prices'>
+                    {portraitsData["price-grid"]["link"]}
+                </NavLink>
+            </p>
         </main >
     );
 };

@@ -76,5 +76,36 @@
             "Et parce que chaque mariage est unique, je vous propose de vous rencontrer pour trouver ensemble la formule la plus adaptée à vos envies, à vos besoins et à votre budget."
         ],
         "link": "Alors n’hésitez plus et contactez-moi maintenant !"
+    },
+    "entreprises": {
+        "title": "Entreprises et marketing photo",
+        "text": [
+            "Vous souhaitez réaliser des photos de vos produits pour vos plaquettes ou catalogues ? Je dispose de tous le matériel (éclairage, studio, tente de diffusion, etc.) nécessaire à a réalisation de packshots de qualité.",
+            "",
+            "",
+            "Vous désirez renouveler la charte photo de votre entreprise ? Nous définirons ensemble comment réaliser les images qui correspondent le plus à votre entreprise.",
+            "",
+            "",
+            "Vous organisez un évènement et vous souhaitez une couverture médiatique ?"
+        ],
+        "link": "Pour tous ces projets, et pour tous les autres,  n’hésitez pas à me contacter, nous mettrons alors en place la meilleure stratégie pour répondre à vos attentes."
+    },
+    "tarifs": {
+        "title": "Tarifs des tirages 2020",
+        "text": [],
+        "tableau": [
+            {
+                "Titres": [],
+                "Lignes": []
+            },
+            {
+                "Titres": [],
+                "Lignes": []
+            }
+        ],
+        "link": {
+            "text": "Si vous souhaitez d’autres dimensions ou d’autres supports (plexy, caisse américaine, encadrement, etc.), merci de ",
+            "link": "me contacter"
+        }
     }
 }
