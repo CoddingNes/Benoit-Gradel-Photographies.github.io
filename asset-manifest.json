@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bfdd8a1.css",
-    "main.js": "/static/js/main.201fa330.js",
+    "main.css": "/static/css/main.7c69424d.css",
+    "main.js": "/static/js/main.288e7c1e.js",
     "static/media/sunset_sea.jpg": "/static/media/sunset_sea.21dd632f433d715b4192.jpg",
     "index.html": "/index.html",
-    "main.6bfdd8a1.css.map": "/static/css/main.6bfdd8a1.css.map",
-    "main.201fa330.js.map": "/static/js/main.201fa330.js.map"
+    "main.7c69424d.css.map": "/static/css/main.7c69424d.css.map",
+    "main.288e7c1e.js.map": "/static/js/main.288e7c1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.6bfdd8a1.css",
-    "static/js/main.201fa330.js"
+    "static/css/main.7c69424d.css",
+    "static/js/main.288e7c1e.js"
   ]
 }
