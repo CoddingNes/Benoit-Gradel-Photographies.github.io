@@ -95,12 +95,45 @@
         "text": [],
         "tableau": [
             {
-                "Titres": [],
-                "Lignes": []
-            },
-            {
-                "Titres": [],
-                "Lignes": []
+                "titres": [
+                    [
+                        "Format du tirage"
+                    ],
+                    [
+                        "Prix Unitaire",
+                        3
+                    ]
+                ],
+                "lignes": [
+                    [
+                        [
+                            ""
+                        ],
+                        [
+                            "de 1 à 4"
+                        ],
+                        [
+                            "de 5 à 9"
+                        ],
+                        [
+                            "plus de 10"
+                        ]
+                    ],
+                    [
+                        [
+                            ""
+                        ],
+                        [
+                            "de 1 à 4"
+                        ],
+                        [
+                            "de 5 à 9"
+                        ],
+                        [
+                            "plus de 10"
+                        ]
+                    ]
+                ]
             }
         ],
         "link": {

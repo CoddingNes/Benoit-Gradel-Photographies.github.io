@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
 import GlobalData from '../../assets/testtext.json';
+import PriceTable from '../../components/priceTable/PriceTable';
+import './prices.scss';
 
 const Prices = () => {
     const [priceData, setPriceData] = useState([]);
@@ -26,6 +28,14 @@ const Prices = () => {
                     key={index}>
                     {ligne}
                 </p>))}
+            {priceData["tableau"].map((table, index) => (
+                <PriceTable
+                    titles={table["titres"]}
+                    colspan={table["largeurTitre"]}
+                    lines={table["lignes"]}
+                    key={index}
+                />
+            ))}
             <p>
                 {priceData["link"]["text"] + " "}
                 <NavLink
