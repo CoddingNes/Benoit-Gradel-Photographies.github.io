@@ -15,17 +15,17 @@ const Home = () => {
                     </h3>
                     <ul className='home__link__benefits__elements'>
                         <li>
-                            <NavLink to='/particuliers/portraits' className='home__link__benefits__element1'>
+                            <NavLink to='/prestations/portraits' className='home__link__benefits__element1'>
                                 Portraits
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/particuliers/mariage' className='home__link__benefits__element2'>
+                            <NavLink to='/prestations/mariage' className='home__link__benefits__element2'>
                                 Mariage
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/entreprises' className='home__link__benefits__element3'>
+                            <NavLink to='/prestations/entreprises' className='home__link__benefits__element3'>
                                 Entreprises
                             </NavLink>
                         </li>

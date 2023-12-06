@@ -3,6 +3,7 @@ import React from 'react';
 const PriceTable = (props) => {
     return (
         <table
+            id='priceTable__table'
             key={props.key}>
             <tr>
                 {props.titles.map((title, index) =>

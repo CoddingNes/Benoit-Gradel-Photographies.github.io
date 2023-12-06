@@ -15,26 +15,26 @@ const Navbar = () => {
                         Prestations
                     </NavLink>
                 </li> */}
-                <li className='navbar__link private-list'>
-                    <p className='navbar__link private-title'>
-                        Particuliers
+                <li className='navbar__link services-list'>
+                    <p className='navbar__link services-title'>
+                        Prestations
                     </p>
                     <ul className='navbar__link dropdown-elements'>
                         <li>
-                            <NavLink to='/particuliers/portraits' className='navbar__link dropdown-element1'>
+                            <NavLink to='/prestations/portraits' className='navbar__link dropdown-element1'>
                                 Portraits
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/particuliers/mariage' className='navbar__link dropdown-element2'>
+                            <NavLink to='/prestations/mariage' className='navbar__link dropdown-element2'>
                                 Mariage
                             </NavLink>
                         </li>
+                        <li><NavLink to='/prestations/entreprises' className='navbar__link dropdown-element3'>
+                            Entreprises
+                        </NavLink>
+                        </li>
                     </ul>
-                </li>
-                <li><NavLink to='/entreprises' className='navbar__link'>
-                    Entreprises
-                </NavLink>
                 </li>
                 <li><NavLink to='/gallerie' className='navbar__link'>
                     Gallerie

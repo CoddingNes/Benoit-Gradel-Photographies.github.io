@@ -28,9 +28,9 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/particuliers" element={<Private />} /> */}
-        <Route path="/particuliers/portraits" element={<Portraits />} />
-        <Route path="/particuliers/mariage" element={<Marriage />} />
-        <Route path="/entreprises" element={<Corporate />} />
+        <Route path="/prestations/portraits" element={<Portraits />} />
+        <Route path="/prestations/mariage" element={<Marriage />} />
+        <Route path="/prestations/entreprises" element={<Corporate />} />
         {/* <Route path="/travaildauteur" element={<Author />} /> */}
         <Route path="/gallerie" element={<Showroom />} />
         <Route path="/espaceclient" element={<Customer />} />

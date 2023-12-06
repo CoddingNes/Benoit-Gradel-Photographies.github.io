@@ -4,6 +4,18 @@
     .package__box {
         display: flex;
         flex-direction: row;
+        border: none !important;
+
+        &__closingCross {
+            font-size: 1.5em;
+            color: $primary-color;
+            position: relative;
+            right: 32px;
+            top: 7px;
+            background-color: black;
+            padding: 0 2px;
+            border-radius: 20%;
+        }
 
         &__titles {
             padding: 0;

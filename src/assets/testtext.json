@@ -121,16 +121,116 @@
                     ],
                     [
                         [
-                            ""
+                            "10x15 cm"
                         ],
                         [
-                            "de 1 à 4"
+                            "2,50 €"
                         ],
                         [
-                            "de 5 à 9"
+                            "2,20 €"
                         ],
                         [
-                            "plus de 10"
+                            "2,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "15x20 cm"
+                        ],
+                        [
+                            "7,50 €"
+                        ],
+                        [
+                            "7,00 €"
+                        ],
+                        [
+                            "6,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "20x30 cm"
+                        ],
+                        [
+                            "15,00 €"
+                        ],
+                        [
+                            "14,00 €"
+                        ],
+                        [
+                            "12,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "30x40 cm"
+                        ],
+                        [
+                            "22,00 €"
+                        ],
+                        [
+                            "20,00 €"
+                        ],
+                        [
+                            "18,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "40x60 cm"
+                        ],
+                        [
+                            "45,00 €"
+                        ],
+                        [
+                            "43,00 €"
+                        ],
+                        [
+                            "40,00 €"
+                        ]
+                    ]
+                ]
+            },
+            {
+                "titres": [
+                    [
+                        "Format du tirage"
+                    ],
+                    [
+                        "Prix Unitaire"
+                    ]
+                ],
+                "lignes": [
+                    [
+                        [
+                            "30x30 cm"
+                        ],
+                        [
+                            "55,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "30x40 cm"
+                        ],
+                        [
+                            "60,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "40x40 cm"
+                        ],
+                        [
+                            "75,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "40x60 cm"
+                        ],
+                        [
+                            "90,00 €"
                         ]
                     ]
                 ]
@@ -139,6 +239,11 @@
         "link": {
             "text": "Si vous souhaitez d’autres dimensions ou d’autres supports (plexy, caisse américaine, encadrement, etc.), merci de ",
             "link": "me contacter"
+        },
+        "notes": {
+            "text": [
+                "Possibilité de réaliser un livre photo sur demande."
+            ]
         }
     }
 }

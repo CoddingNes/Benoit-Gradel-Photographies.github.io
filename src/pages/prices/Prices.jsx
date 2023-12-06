@@ -44,6 +44,14 @@ const Prices = () => {
                     {priceData["link"]["link"]}
                 </NavLink>
             </p>
+            <div className='notes__box'>
+                {priceData["notes"]["text"].map((note, index) => (
+                    <p key={index} >
+                        {note}
+                    </p>
+                ))
+                }
+            </div>
         </div>
     );
 };

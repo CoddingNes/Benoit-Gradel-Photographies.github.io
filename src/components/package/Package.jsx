@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Data from './text.json';
 import './package.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 const Package = () => {
@@ -12,7 +14,7 @@ const Package = () => {
     useEffect(() => {
         const getData = () => {
             let description = [];
-            if (packageChoice !== undefined) {
+            if (packageChoice !== undefined && packageChoice !== null) {
                 for (let i = 0; i < Data.length; i++) {
                     if (Data[i].packageType === packageChoice) {
                         description = Data[i].description;
@@ -24,6 +26,8 @@ const Package = () => {
                         )
                     };
                 }
+            } else {
+                setDescriptions([]);
             }
         };
 
@@ -54,6 +58,10 @@ const Package = () => {
                     </li>
                 ))}
             </ul >
+            <FontAwesomeIcon
+                className={'package__box__closingCross'}
+                onClick={() => { setPackageChoice() }}
+                icon={faSquareXmark} />
         </div>
     );
 };
