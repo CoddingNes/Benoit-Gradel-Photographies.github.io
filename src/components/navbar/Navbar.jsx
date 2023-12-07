@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import CustomerSpace from '../customerSpace/CustomerSpace';
 
 
 const Navbar = () => {
+
+    const [customerSpace, setCustomerSpace] = useState(false);
+
     return (
         <nav>
             <FontAwesomeIcon icon={faBars} className='bars-icon' />
@@ -40,9 +44,22 @@ const Navbar = () => {
                     Gallerie
                 </NavLink>
                 </li>
-                <li><NavLink to='/espaceclient' className='navbar__link'>
-                    Espace clients
-                </NavLink>
+                <li>
+                    <p
+                        className='navbar__link'
+                        onClick={() => { setCustomerSpace(true) }}>
+                        Espace clients
+                    </p>
+                    {/* <NavLink  
+                to='/espaceclient' 
+                className='navbar__link'
+                onClick={setCustomerSpace(true)} >
+                Espace clients
+                </NavLink> */}
+                    <CustomerSpace
+                        className={customerSpace ? 'customerSpace__box' : 'customerSpace__box-Off'}
+                        setCustomerSpace={setCustomerSpace}
+                    />
                 </li>
                 <li><NavLink to='/contact' className='navbar__link'>
                     Contact
