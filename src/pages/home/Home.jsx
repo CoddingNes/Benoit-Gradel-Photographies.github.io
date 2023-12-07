@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.scss';
 import Gallery from '../../components/gallery/Gallery';
+import CustomerSpace from '../../components/customerSpace/CustomerSpace';
 
 const Home = () => {
+
+    const [customerSpace, setCustomerSpace] = useState(false);
+
     return (
         <main id='home'>
             <Gallery />
@@ -40,7 +44,15 @@ const Home = () => {
                 </li>
                 <li>
                     <h3>
-                        <NavLink to='/espaceclient' className='home__link__customer'>
+                        <CustomerSpace
+                            className={customerSpace ? 'customerSpace__box  home' : 'customerSpace__box-Off'}
+                            setCustomerSpace={setCustomerSpace}
+                        />
+
+                        <NavLink
+                            // to='/espaceclient'
+                            className='home__link__customer'
+                            onClick={() => { setCustomerSpace(true) }}>
                             Espace clients
                         </NavLink>
                     </h3>

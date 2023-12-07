@@ -57,7 +57,7 @@ const Navbar = () => {
                 Espace clients
                 </NavLink> */}
                     <CustomerSpace
-                        className={customerSpace ? 'customerSpace__box' : 'customerSpace__box-Off'}
+                        className={customerSpace ? 'customerSpace__box navbar' : 'customerSpace__box-Off'}
                         setCustomerSpace={setCustomerSpace}
                     />
                 </li>
