@@ -4,41 +4,78 @@
     .package__box {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        gap: 5vw;
+        // justify-content: space-between;
         border: none !important;
+
+        @media screen and (max-width: 426px) {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        div {
+            display: flex;
+            flex: 1 1 50vw;
+
+            @media screen and (max-width: 426px) {
+                flex: none;
+                margin-bottom: 20px;
+            }
+        }
+
 
         &__closingCross {
             font-size: 1.5em;
             color: $primary-color;
-            position: relative;
-            right: 32px;
+            position: absolute;
+            right: 7px;
             top: 7px;
             background-color: black;
             padding: 0 2px;
             border-radius: 20%;
+
+            &Off {
+                display: none;
+            }
         }
 
         &__titles {
             padding: 0;
             margin: 0;
             cursor: pointer;
+
+            h3 {
+                @media screen and (max-width: 426px) {
+                    margin: 10px !important;
+                    margin: 20px 0 !important;
+                }
+            }
         }
 
+
         &__description {
-            // display: none;
             position: relative;
             display: flex;
             justify-content: center;
-            // position: relative;
-            // top: 0;
-            // left: 500px;
+            align-self: center;
+            justify-self: center;
             max-width: 500px;
-            flex: 1 2 50vw;
             flex-direction: column;
             padding: 20px;
             margin: 0;
             border: 4px ridge $primary-color;
-            // background-color: white;
             overflow: hidden;
+
+            @media screen and (min-width: 426px) {
+                flex: 1 1 50vw;
+            }
+
+            &s-title {
+                @media screen and (max-width: 425px) {
+                    margin: 0 !important;
+                }
+            }
 
             &.border {
                 &::before {
