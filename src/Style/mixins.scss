@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+@mixin hoverAnimElement {
+    background-color: $backgroundColor-light;
+}
+
+@mixin hoverAnimBefore {
+    content: "";
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    z-index: -2;
+    background-color: $primary-color;
+}
+
+@mixin hoverAnimAfter {
+    content: "";
+    position: absolute;
+    top: -85%;
+    bottom: -85%;
+    left: -30%;
+    right: -30%;
+    z-index: -1;
+    background-color: white;
+    rotate: 45deg;
+    animation: hoverAnim 300ms linear 1 forwards;
+}

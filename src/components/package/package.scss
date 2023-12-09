@@ -1,4 +1,7 @@
 @import '../../Style/variables.scss';
+@import '../../Style/animations.scss';
+@import '../../Style/mixins.scss';
+
 
 #portraits {
     .package__box {
@@ -45,14 +48,35 @@
             margin: 0;
             cursor: pointer;
 
-            h3 {
-                @media screen and (max-width: 426px) {
-                    margin: 10px !important;
-                    margin: 20px 0 !important;
+            li {
+                position: relative;
+
+                h3 {
+                    margin: 25px;
+                    padding: 10px 4px;
+                    width: fit-content;
+
+                    &:hover {
+                        position: relative;
+                        @include hoverAnimElement;
+
+                        &::before {
+                            @include hoverAnimBefore;
+                        }
+
+                        &::after {
+                            @include hoverAnimAfter;
+                        }
+                    }
+
+                    @media screen and (max-width: 426px) {
+                        margin: 10px !important;
+                        margin: 20px 0 !important;
+                    }
                 }
             }
-        }
 
+        }
 
         &__description {
             position: relative;
@@ -102,23 +126,7 @@
                     z-index: -1;
                     background-color: white;
                 }
-
-                @keyframes borderAnim {
-                    0% {
-                        // transform: rotate(-35deg);
-                        scale: 1;
-                        // translate: -50% -50%;
-                    }
-
-                    100% {
-                        // transform: rotate(45deg);
-                        scale: 3;
-                        // translate: 0;
-                    }
-                }
-
             }
-
 
             &s {
                 padding: 8px 0;
@@ -133,10 +141,5 @@
 
             }
         }
-
-        h3 {
-            margin: 2em;
-        }
-
     }
 }

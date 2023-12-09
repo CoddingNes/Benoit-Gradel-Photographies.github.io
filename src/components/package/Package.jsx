@@ -69,11 +69,12 @@ const Package = () => {
             <ul className={"package__box__titles"}>
                 {Data.map((packagedetails, index) => (
                     <li>
-                        <h3 className={"package__box__title " + packagedetails.packageType}
+                        <h3 className={"package__box__title hover__anim" + packagedetails.packageType}
                             onClick={() => { setPackageChoice(packagedetails.packageType) }}
                             key={index}>
                             {packagedetails.title}
                         </h3>
+                        {/* <p className='package__box__title__alt'>plus de détails</p> */}
                     </li>
                 ))}
             </ul>

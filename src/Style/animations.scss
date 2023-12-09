@@ -46,3 +46,35 @@
         opacity: 1;
     }
 }
+
+
+@keyframes borderAnim {
+    0% {
+        // transform: rotate(-35deg);
+        scale: 1;
+        // translate: -50% -50%;
+    }
+
+    100% {
+        // transform: rotate(45deg);
+        scale: 3;
+        // translate: 0;
+    }
+}
+
+@keyframes hoverAnim {
+    0% {
+        rotate: -45deg;
+    }
+
+    99% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        rotate: 45deg;
+        opacity: 0;
+        scale: 0;
+    }
+}
