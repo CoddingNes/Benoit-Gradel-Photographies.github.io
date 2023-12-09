@@ -56,18 +56,18 @@
                     padding: 10px 4px;
                     width: fit-content;
 
-                    &:hover {
-                        position: relative;
-                        @include hoverAnimElement;
+                    // &:hover {
+                    //     position: relative;
+                    //     @include hoverAnimElement;
 
-                        &::before {
-                            @include hoverAnimBefore;
-                        }
+                    //     &::before {
+                    //         @include hoverAnimBefore;
+                    //     }
 
-                        &::after {
-                            @include hoverAnimAfter;
-                        }
-                    }
+                    //     &::after {
+                    //         @include hoverAnimAfter;
+                    //     }
+                    // }
 
                     @media screen and (max-width: 426px) {
                         margin: 10px !important;

@@ -1,10 +1,19 @@
 @import "../../../Style/variables.scss";
+@import "../../../Style/mixins.scss";
 
 #portraits {
     p {
         line-height: 1.3em;
         padding: 5px;
         margin: 0;
+    }
+
+    .link {
+
+        &__prices,
+        &__contact {
+            @include link;
+        }
     }
 
     // .package__box__title:hover {

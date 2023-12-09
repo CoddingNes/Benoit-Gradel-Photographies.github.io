@@ -1,0 +1,8 @@
+@import '../../Style/variables.scss';
+@import '../../Style/mixins.scss';
+
+#corporate {
+    .link__contact {
+        @include link;
+    }
+}

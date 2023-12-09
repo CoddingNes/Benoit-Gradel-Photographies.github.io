@@ -2,6 +2,7 @@
 
 @mixin hoverAnimElement {
     background-color: $backgroundColor-light;
+    position: relative;
 }
 
 @mixin hoverAnimBefore {
@@ -26,4 +27,10 @@
     background-color: white;
     rotate: 45deg;
     animation: hoverAnim 300ms linear 1 forwards;
+}
+
+@mixin link {
+    color: $primary-color;
+    font-weight: bold;
+    padding: 0 5px;
 }

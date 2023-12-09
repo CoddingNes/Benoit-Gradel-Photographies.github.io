@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Data from './text.json';
+import Data from '../../assets/texts.json';
 import './package.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
@@ -69,7 +69,7 @@ const Package = () => {
             <ul className={"package__box__titles"}>
                 {Data.map((packagedetails, index) => (
                     <li>
-                        <h3 className={"package__box__title hover__anim" + packagedetails.packageType}
+                        <h3 className={"package__box__title hover__anim " + packagedetails.packageType}
                             onClick={() => { setPackageChoice(packagedetails.packageType) }}
                             key={index}>
                             {packagedetails.title}

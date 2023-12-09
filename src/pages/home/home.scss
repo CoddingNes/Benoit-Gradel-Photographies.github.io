@@ -1,5 +1,6 @@
 @import '../../Style/variables.scss';
 @import '../../Style/animations.scss';
+@import "../../Style/mixins.scss";
 
 #home {
     display: flex;
@@ -18,48 +19,19 @@
         padding: 0;
     }
 
-    & a // ,.home__link__benefits__title 
-
-        {
-
-        // border: 2px solid black;
-
-        &:hover {
-            border-bottom: solid 2px $primary-color;
-            border-left: solid 2px $primary-color;
-        }
-    }
-
-
     & .home__link {
         &__contact {
-            margin-top: 2em;
-            border: 1px solid black;
+            @include link;
+            border: 1px solid $primary-color;
         }
 
         &__benefits {
 
-            // &__benefits__elements {
-            //     display: none;
-            // }
-
-            &__element {
-                &s {
-                    display: none;
-                    margin: 0;
-                    padding: 1em 0 0 0;
-                }
-
-                // &1,
-                // &2,
-                // &3 {
-                //     opacity: 0;
-                // }
+            &__elements {
+                display: none;
+                margin: 0;
+                padding: 1em 0 0 0;
             }
-
-            // &__benefits__element1 {
-            //     opacity: 0;
-            // }
 
             &__list {
                 margin: 1em 0 1em 0;
@@ -67,19 +39,23 @@
                 &:hover .home__link__benefits__element {
                     &s {
                         display: block;
+
+                        li {
+                            margin: 5px 0;
+                        }
                     }
 
-                    &1 {
-                        animation: show 300ms ease-out 0ms both;
-                    }
+                    // &1 {
+                    //     animation: show 300ms ease-out 0ms both;
+                    // }
 
-                    &2 {
-                        animation: show 300ms ease-out 100ms both;
-                    }
+                    // &2 {
+                    //     animation: show 300ms ease-out 100ms both;
+                    // }
 
-                    &3 {
-                        animation: show 300ms ease-out 200ms both;
-                    }
+                    // &3 {
+                    //     animation: show 300ms ease-out 200ms both;
+                    // }
                 }
             }
 

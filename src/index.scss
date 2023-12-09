@@ -1,5 +1,6 @@
 @import './Style/animations.scss';
 @import './Style/variables.scss';
+@import './Style/mixins.scss';
 
 
 * {
@@ -23,37 +24,14 @@ a {
   color: black;
 }
 
-// .hover__anim {
-//   z-index: 1;
-//   background-color: white !important;
-//   overflow: hidden !important;
+.hover__anim:hover {
+  @include hoverAnimElement;
 
-//   &:hover {
-//     position: relative;
-//     background-color: white !important;
+  &::before {
+    @include hoverAnimBefore;
+  }
 
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       top: -3px;
-//       bottom: -3px;
-//       left: -3px;
-//       right: -3px;
-//       z-index: -100;
-//       background-color: $primary-color;
-//     }
-
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       top: -85%;
-//       bottom: -85%;
-//       left: -50px;
-//       right: -50px;
-//       z-index: -99;
-//       background-color: white;
-//       rotate: 45deg;
-//       animation: hoverAnim 500ms linear 1 forwards;
-//     }
-//   }
-// }
+  &::after {
+    @include hoverAnimAfter;
+  }
+}

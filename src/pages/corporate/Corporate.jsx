@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
-import GlobalData from '../../assets/testtext.json';
+import GlobalData from '../../assets/texts.json';
+import './corporate.scss';
 
 const Corporate = () => {
     const [entreprisesData, setEntreprisesData] = useState([]);
@@ -18,7 +19,7 @@ const Corporate = () => {
     }
 
     return (
-        <main>
+        <main id='corporate'>
             <Navbar />
             <h2>{entreprisesData["title"]}</h2>
             {entreprisesData["text"].map((ligne, index) => (
@@ -27,9 +28,15 @@ const Corporate = () => {
                     {ligne}
                 </p>))}
 
-            <NavLink to='../contact' className='home__link__contact'>
-                {entreprisesData["link"]}
-            </NavLink>
+            <p>
+                {entreprisesData["contact"]["text"][0]}
+                <NavLink
+                    to='../../contact'
+                    className='link__contact hover__anim'>
+                    {entreprisesData["contact"]["link"]}
+                </NavLink>
+                {entreprisesData["contact"]["text"][1]}
+            </p>
         </main>
     );
 };

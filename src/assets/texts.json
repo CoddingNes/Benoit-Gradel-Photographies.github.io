@@ -1,5 +1,6 @@
 {
     "portraits": {
+        "link": "Portrait",
         "title": "Portait studio & Lifestyle",
         "text": [
             "Parce que vos enfants grandissent trop vite, vous souhaitez garder une trace de tous ces moments…",
@@ -11,7 +12,10 @@
             "Je me déplace dans toute la région Rhône-Alpes et installe en quelques minutes le matériel nécessaire pour réaliser des portraits studio chez vous (ou dans tout autre lieu de votre choix) ou des portraits lifestyle.",
             "Couleur ou Noir&Blanc… à vous de choisir !"
         ],
-        "link": "Prenez rendez-vous maintenant !",
+        "contact": {
+            "text": "Prenez rendez-vous ",
+            "link": "maintenant !"
+        },
         "forfaits": [
             {
                 "packageType": "solo",
@@ -65,6 +69,7 @@
         }
     },
     "mariages": {
+        "link": "Mariages",
         "title": "Reportage de mariage",
         "text": [
             "Nous avons tous aujourd’hui un appareil photo dans la poche que nous utilisons lors de toutes les occasions du quotidien. Pourtant, malgré une qualité toujours croissante, nous avons tous été un jour déçu par le rendu de ces instantanés.",
@@ -75,9 +80,13 @@
             "",
             "Et parce que chaque mariage est unique, je vous propose de vous rencontrer pour trouver ensemble la formule la plus adaptée à vos envies, à vos besoins et à votre budget."
         ],
-        "link": "Alors n’hésitez plus et contactez-moi maintenant !"
+        "contact": {
+            "text": "Alors n’hésitez plus et ",
+            "link": "contactez-moi maintenant !"
+        }
     },
     "entreprises": {
+        "link": "Entreprises",
         "title": "Entreprises et marketing photo",
         "text": [
             "Vous souhaitez réaliser des photos de vos produits pour vos plaquettes ou catalogues ? Je dispose de tous le matériel (éclairage, studio, tente de diffusion, etc.) nécessaire à a réalisation de packshots de qualité.",
@@ -88,7 +97,16 @@
             "",
             "Vous organisez un évènement et vous souhaitez une couverture médiatique ?"
         ],
-        "link": "Pour tous ces projets, et pour tous les autres,  n’hésitez pas à me contacter, nous mettrons alors en place la meilleure stratégie pour répondre à vos attentes."
+        "contact": {
+            "text": [
+                "Pour tous ces projets, et pour tous les autres,  n’hésitez pas à ",
+                ", nous mettrons alors en place la meilleure stratégie pour répondre à vos attentes."
+            ],
+            "link": "me contacter"
+        }
+    },
+    "espace clients": {
+        "link": "Espace clients"
     },
     "tarifs": {
         "title": "Tarifs des tirages 2020",

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
-import GlobalData from '../../assets/testtext.json';
+import GlobalData from '../../assets/texts.json';
 import PriceTable from '../../components/priceTable/PriceTable';
 import './prices.scss';
 

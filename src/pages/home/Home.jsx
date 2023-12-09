@@ -19,17 +19,17 @@ const Home = () => {
                     </h3>
                     <ul className='home__link__benefits__elements'>
                         <li>
-                            <NavLink to='/prestations/portraits' className='home__link__benefits__element1'>
+                            <NavLink to='/prestations/portraits' className='home__link__benefits__element1 hover__anim'>
                                 Portraits
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/prestations/mariage' className='home__link__benefits__element2'>
+                            <NavLink to='/prestations/mariage' className='home__link__benefits__element2 hover__anim'>
                                 Mariage
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/prestations/entreprises' className='home__link__benefits__element3'>
+                            <NavLink to='/prestations/entreprises' className='home__link__benefits__element3 hover__anim'>
                                 Entreprises
                             </NavLink>
                         </li>
@@ -37,7 +37,7 @@ const Home = () => {
                 </li>
                 <li>
                     <h3>
-                        <NavLink to='/gallerie' className='home__link'>
+                        <NavLink to='/gallerie' className='home__link hover__anim'>
                             Gallerie
                         </NavLink>
                     </h3>
@@ -51,14 +51,14 @@ const Home = () => {
 
                         <NavLink
                             // to='/espaceclient'
-                            className='home__link__customer'
+                            className='home__link__customer hover__anim'
                             onClick={() => { setCustomerSpace(true) }}>
                             Espace clients
                         </NavLink>
                     </h3>
                 </li>
             </ul>
-            <NavLink to='contact' className='home__link__contact'>
+            <NavLink to='contact' className='home__link__contact hover__anim'>
                 Contactez-moi maintenant
             </NavLink>
         </main>
