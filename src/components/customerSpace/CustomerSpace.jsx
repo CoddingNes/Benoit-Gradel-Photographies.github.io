@@ -17,7 +17,7 @@ const CustomerSpace = (props) => {
                         className="client__formInput"
                         name={"login"}
                         id={"identifiant2"}
-                        value={"BG60-"}
+                        defaultValue={"BG60-"}
                         placeholder={"Identifiant"}
                         onfocus={"if (this.value=='Identifiant') {this.value=''}"}
                         type={"text"} />
@@ -27,7 +27,7 @@ const CustomerSpace = (props) => {
                         className="client__formInput"
                         name={"password"}
                         id={"pass2"}
-                        value={"Mot de passe"}
+                        defaultValue={"Mot de passe"}
                         placeholder={"Mot de passe"}
                         onfocus={"if (this.value=='Mot de passe') {this.value=''}"}
                         type={"text"} />
