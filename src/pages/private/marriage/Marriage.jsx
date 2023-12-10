@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
 import './marriage.scss';

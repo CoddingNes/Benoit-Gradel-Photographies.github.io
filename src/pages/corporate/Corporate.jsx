@@ -21,10 +21,10 @@ const Corporate = (props) => {
         <main id='corporate'>
             <Navbar />
             <h2>{entreprisesData["title"]}</h2>
-            {entreprisesData["text"].map((ligne, index) => (
+            {entreprisesData["text"].map((line, index) => (
                 <p
                     key={index}>
-                    {ligne}
+                    {line}
                 </p>))}
 
             <p>

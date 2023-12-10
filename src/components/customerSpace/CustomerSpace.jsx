@@ -19,7 +19,7 @@ const CustomerSpace = (props) => {
                         id={"identifiant2"}
                         defaultValue={"BG60-"}
                         placeholder={"Identifiant"}
-                        onfocus={"if (this.value=='Identifiant') {this.value=''}"}
+                        // onfocus={"if (this.value=='Identifiant') {this.value=''}"}
                         type={"text"} />
                 </div>
                 <div>
@@ -29,7 +29,7 @@ const CustomerSpace = (props) => {
                         id={"pass2"}
                         defaultValue={"Mot de passe"}
                         placeholder={"Mot de passe"}
-                        onfocus={"if (this.value=='Mot de passe') {this.value=''}"}
+                        // onfocus={"if (this.value=='Mot de passe') {this.value=''}"}
                         type={"text"} />
                 </div>
                 <input

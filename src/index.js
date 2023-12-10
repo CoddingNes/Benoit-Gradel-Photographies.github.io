@@ -35,7 +35,7 @@ root.render(
         {/* <Route path="/travaildauteur" element={<Author />} /> */}
         <Route path="/gallerie" element={<Showroom />} />
         {/* <Route path="/espaceclient" element={<Customer />} /> */}
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact data={Data.contact} />} />
         <Route path="/mentions-legales" element={<LegalNotices />} />
         <Route path="/grille-de-tarifs" element={<Prices data={Data.tarifs} />} />
         <Route path="/error" element={<Error />} />

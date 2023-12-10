@@ -263,5 +263,51 @@
                 "Possibilité de réaliser un livre photo sur demande."
             ]
         }
+    },
+    "contact": {
+        "link": "Contact",
+        "titre": "Contactez-moi",
+        "texte": [
+            "Vous pouvez me contacter",
+            "soit par téléphone au 06 78 02 71 68",
+            "soit en remplissant ce formulaire."
+        ],
+        "cadres": [
+            {
+                "identifiant": "user-name",
+                "texte": "Votre nom",
+                "critères": "obligatoire",
+                "element": "input",
+                "type": "text"
+            },
+            {
+                "identifiant": "user-email",
+                "texte": "Votre email",
+                "critères": "obligatoire",
+                "element": "input",
+                "type": "email"
+            },
+            {
+                "identifiant": "user-phon",
+                "texte": "Votre numéro de téléphone",
+                "critères": "",
+                "element": "input",
+                "type": "tel"
+            },
+            {
+                "identifiant": "form-title",
+                "texte": "Sujet du message",
+                "critères": "obligatoire",
+                "element": "input",
+                "type": "text"
+            },
+            {
+                "identifiant": "form-message",
+                "texte": "Votre message",
+                "critères": "obligatoire",
+                "element": "textarea",
+                "type": "text"
+            }
+        ]
     }
 }

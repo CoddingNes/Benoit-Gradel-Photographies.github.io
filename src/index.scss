@@ -17,7 +17,12 @@ body {
 }
 
 main {
-  margin: 0 10px;
+  margin: 0 10px 100px 10px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
 }
 
 a {
