@@ -18,6 +18,7 @@ import LegalNotices from './pages/legalNotices/LegalNotices';
 import Footer from './layouts/footer/Footer';
 import Error from './pages/error/Error';
 import Prices from './pages/prices/Prices';
+import Data from './assets/texts.json';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,15 +29,15 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/particuliers" element={<Private />} /> */}
-        <Route path="/prestations/portraits" element={<Portraits />} />
-        <Route path="/prestations/mariage" element={<Marriage />} />
-        <Route path="/prestations/entreprises" element={<Corporate />} />
+        <Route path="/prestations/portraits" element={<Portraits data={Data.portraits} />} />
+        <Route path="/prestations/mariage" element={<Marriage data={Data.mariages} />} />
+        <Route path="/prestations/entreprises" element={<Corporate data={Data.entreprises} />} />
         {/* <Route path="/travaildauteur" element={<Author />} /> */}
         <Route path="/gallerie" element={<Showroom />} />
         {/* <Route path="/espaceclient" element={<Customer />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<LegalNotices />} />
-        <Route path="/grille-de-tarifs" element={<Prices />} />
+        <Route path="/grille-de-tarifs" element={<Prices data={Data.tarifs} />} />
         <Route path="/error" element={<Error />} />
       </Routes>
       <Footer />

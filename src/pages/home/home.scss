@@ -21,7 +21,6 @@
 
     & .home__link {
         &__contact {
-            @include link;
             border: 1px solid $primary-color;
         }
 

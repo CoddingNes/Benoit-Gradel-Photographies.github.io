@@ -3,13 +3,12 @@ import Navbar from '../../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
 import './portraits.scss';
 import Package from '../../../components/package/Package';
-import GlobalData from '../../../assets/texts.json';
 
 
-const Portraits = () => {
+const Portraits = (props) => {
     const [portraitsData, setPortraitsData] = useState([]);
     const setPackageBox = () => {
-        setPortraitsData(GlobalData.portraits);
+        setPortraitsData(props.data);
     }
 
     useEffect(() => {
@@ -34,12 +33,12 @@ const Portraits = () => {
                     {portraitsData["contact"]["text"]}
                     <NavLink
                         to='../../contact'
-                        className='link__contact hover__anim'>
+                        className='link__contact link-style hover__anim'>
                         {portraitsData["contact"]["link"]}
                     </NavLink>
                 </p>
 
-                <Package data={portraitsData} />
+                <Package data={portraitsData.forfaits} />
 
                 <div className='notes__box'>
                     {portraitsData["notes"].map((note, index) => (
@@ -53,7 +52,7 @@ const Portraits = () => {
                     {portraitsData["price-grid"]["text"] + " "}
                     <NavLink
                         to='../../grille-de-tarifs'
-                        className='link__prices hover__anim'>
+                        className='link__prices link-style hover__anim'>
                         {portraitsData["price-grid"]["link"]}
                     </NavLink>
                 </p>

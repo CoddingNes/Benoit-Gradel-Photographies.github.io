@@ -58,7 +58,7 @@ const Home = () => {
                     </h3>
                 </li>
             </ul>
-            <NavLink to='contact' className='home__link__contact hover__anim'>
+            <NavLink to='contact' className='home__link__contact link-style hover__anim'>
                 Contactez-moi maintenant
             </NavLink>
         </main>

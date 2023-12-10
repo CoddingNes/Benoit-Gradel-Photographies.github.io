@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import '../footer/footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -26,9 +26,9 @@ const Footer = () => {
                         <FontAwesomeIcon icon={faSquareXTwitter} />
                     </a>
                 </div>
-                <NavLink to='mentions-legales' className='mentions__link'>
+                {/* <NavLink to='mentions-legales' className='mentions__link'>
                     Mentions légales
-                </NavLink>
+                </NavLink> */}
             </div>
             <div>
                 <a href='https://coddingnes-dev.fr/'

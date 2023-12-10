@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
-import GlobalData from '../../assets/texts.json';
 import './corporate.scss';
 
-const Corporate = () => {
+const Corporate = (props) => {
     const [entreprisesData, setEntreprisesData] = useState([]);
     const setPackageBox = () => {
-        setEntreprisesData(GlobalData.entreprises);
+        setEntreprisesData(props.data);
     }
 
     useEffect(() => {
@@ -32,7 +31,7 @@ const Corporate = () => {
                 {entreprisesData["contact"]["text"][0]}
                 <NavLink
                     to='../../contact'
-                    className='link__contact hover__anim'>
+                    className='link__contact link-style hover__anim'>
                     {entreprisesData["contact"]["link"]}
                 </NavLink>
                 {entreprisesData["contact"]["text"][1]}

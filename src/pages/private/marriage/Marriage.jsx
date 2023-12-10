@@ -2,13 +2,12 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Navbar from '../../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
-import GlobalData from '../../../assets/texts.json';
 import './marriage.scss';
 
-const Marriage = () => {
+const Marriage = (props) => {
     const [marriageData, setMarriageData] = useState([]);
     const setPackageBox = () => {
-        setMarriageData(GlobalData.mariages);
+        setMarriageData(props.data);
     }
 
     useEffect(() => {
@@ -33,7 +32,7 @@ const Marriage = () => {
                 {marriageData["contact"]["text"]}
                 <NavLink
                     to='../../contact'
-                    className='link__contact hover__anim'>
+                    className='link__contact link-style hover__anim'>
                     {marriageData["contact"]["link"]}
                 </NavLink>
             </p>

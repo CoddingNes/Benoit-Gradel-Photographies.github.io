@@ -15,7 +15,7 @@ const Package = (props) => {
         const getData = () => {
             setPackageDetails(props.data);
             let description = [];
-            if (packageDetails !== null && packageChoice !== undefined && packageChoice !== null) {
+            if (packageChoice !== undefined && packageChoice !== null) {
                 for (let i = 0; i < packageDetails.length; i++) {
                     if (packageDetails[i].packageType === packageChoice) {
                         description = packageDetails[i].description;
@@ -43,7 +43,7 @@ const Package = (props) => {
     return (
         <div className={"package__box"}>
             <ul className={"package__box__titles"}>
-                {packageDetails["forfaits"].map((packagedetails, index) => (
+                {packageDetails.map((packagedetails, index) => (
                     <li>
                         <h3 className={"package__box__title hover__anim " + packagedetails.packageType}
                             onClick={() => { setPackageChoice(packagedetails.packageType) }}

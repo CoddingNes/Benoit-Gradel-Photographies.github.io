@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
-import GlobalData from '../../assets/texts.json';
 import PriceTable from '../../components/priceTable/PriceTable';
 import './prices.scss';
 
-const Prices = () => {
+const Prices = (props) => {
     const [priceData, setPriceData] = useState([]);
     const setPackageBox = () => {
-        setPriceData(GlobalData.tarifs);
+        setPriceData(props.data);
     }
 
     useEffect(() => {
@@ -40,7 +39,7 @@ const Prices = () => {
                 {priceData["link"]["text"] + " "}
                 <NavLink
                     to='../../contact'
-                    className='home__link__contact'>
+                    className='home__link__contact link-style hover__anim'>
                     {priceData["link"]["link"]}
                 </NavLink>
             </p>
