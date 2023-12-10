@@ -8,23 +8,22 @@ nav {
     position: absolute;
     right: 10px;
     top: 72px;
-    // translate: 0 -28px;
 
-    .hover__anim:hover {
-        overflow: hidden;
-        position: relative;
-        display: inline;
-        @include hoverAnimElement;
+    // .hover__anim:hover {
+    //     // overflow: hidden;
+    //     // position: relative;
+    //     // display: inline;
+    //     // @include hoverAnimElement;
 
-        &::before {
-            @include hoverAnimBefore;
-        }
+    //     // &::before {
+    //     //     @include hoverAnimBefore;
+    //     // }
 
-        &::after {
-            @include hoverAnimAfter;
-        }
+    //     // &::after {
+    //     //     @include hoverAnimAfter;
+    //     // }
 
-    }
+    // }
 
     .bars-icon {
         display: none;
@@ -42,7 +41,6 @@ nav {
 
     p {
         cursor: pointer;
-        // background-color: $backgroundColor-light;
         margin: 0;
         display: inline;
     }
@@ -50,11 +48,6 @@ nav {
     .navbar__link {
         padding: 0 0.5em;
         margin: 0 0.5em;
-        // margin: 0 0 1px 1px;
-
-        @media screen and (max-width: 426px) {
-            margin: 5px 0;
-        }
 
         &.dropdown-elements {
             display: none;
@@ -67,7 +60,8 @@ nav {
             line-height: 1.15 !important;
 
             @media screen and (max-width: 426px) {
-                margin-left: -2px;
+                margin: 0 !important;
+                // margin: 0 0.5em;
             }
         }
 
@@ -78,8 +72,12 @@ nav {
             gap: 5px;
             padding: 0;
 
+            @media screen and (max-width: 426px) {
+                align-items: start;
+            }
+
             &:hover {
-                margin: 0 0 1px 1px;
+                margin: 0 0 0 8px;
 
                 & .dropdown-element {
                     &s {
@@ -87,17 +85,19 @@ nav {
                         flex-direction: column;
                         align-items: center;
                         gap: 5px;
-                        // line-height: 1.5em;
-                        align-items: center;
                         padding: 0;
-                        // background-color: white;
+
+                        @media screen and (max-width: 426px) {
+                            margin: 0 0.5em;
+                            align-items: start;
+                        }
                     }
 
                     &1 {
                         // margin: 0;
                         // animation: show 300ms ease-out 50ms both;
                         margin-left: 10px;
-                        display: inline;
+                        // display: inline;
                         background-color: white;
                     }
 
@@ -151,11 +151,7 @@ nav {
             & .navbar__list {
                 display: flex;
                 flex-direction: column;
-            }
-
-            &.private-list {
-                margin: 0;
-                padding: 0;
+                gap: 10px;
             }
         }
     }
