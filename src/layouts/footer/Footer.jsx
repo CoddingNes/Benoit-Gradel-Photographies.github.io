@@ -8,12 +8,12 @@ import { faSquareXTwitter } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
     return (
         <footer>
-            <ul>
+            <ul className='contact__details__block'>
                 <li>Benoit Gradel Photographies</li>
                 <li>07130 Toulaud</li>
                 <li>tel : 06 78 08 71 68</li>
             </ul>
-            <div>
+            <div className='social__links__block'>
                 <div className="social__links">
                     <a href="https://www.facebook.com/benoit.gradel.photographies/?ref=hl"
                         target="_blank"
@@ -30,7 +30,7 @@ const Footer = () => {
                     Mentions légales
                 </NavLink> */}
             </div>
-            <div>
+            <div className='author__block'>
                 <a href='https://coddingnes-dev.fr/'
                     target='_blank'
                     rel="noopener noreferrer" className="coddingnes__link">©2023 CoddingNes

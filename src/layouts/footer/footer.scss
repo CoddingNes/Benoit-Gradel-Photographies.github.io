@@ -4,30 +4,38 @@ footer {
     position: fixed;
     bottom: 0;
     border-top: 2px solid $secondary-color;
-    display: flex;
+    display: grid;
+    grid-template-columns: 38% auto 38%;
+    gap: 10px;
     justify-content: space-around;
-    padding: 0.8em 0;
-    width: 100%;
+    // justify-content: center;
+    align-items: center;
+    padding: 2vw 1vw;
+    // margin: 0 10px;
+    width: 98vw;
     background-color: white;
+    // flex-wrap: nowrap;
+
+    .contact__details__block {
+        // :first-child {
+        //     white-space: wrap;
+        // }
+    }
+
+    .social__links__block {
+        align-items: center;
+        text-wrap: nowrap;
+    }
+
+    .author__block {
+        justify-self: end;
+    }
 
     &>* {
-        // flex: 1 1 33vw;
-        // border: 1px solid black;
         margin: 0;
         display: flex;
         flex-direction: column;
-        // align-items: center;
     }
-
-    &:nth-child(2) {
-        align-items: center;
-    }
-
-    // &>div {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    // }
 
     & .coddingnes__link {
         justify-content: center;
