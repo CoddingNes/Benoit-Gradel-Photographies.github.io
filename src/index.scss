@@ -12,8 +12,29 @@ body {
   margin: auto !important;
   max-width: 100vw;
   overflow: hidden visible;
-  // background-color: aqua;
   scroll-behavior: smooth;
+}
+
+[data-theme="light"] {
+  @include lightTheme;
+
+  a,
+  h1,
+  h2,
+  h3 {
+    color: $default-color-light;
+  }
+}
+
+[data-theme="dark"] {
+  @include darkTheme;
+
+  a,
+  h1,
+  h2,
+  h3 {
+    color: $default-color-dark;
+  }
 }
 
 main {
@@ -27,7 +48,6 @@ h2 {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 .hover__anim:hover {

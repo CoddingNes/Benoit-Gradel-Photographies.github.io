@@ -19,7 +19,7 @@ const Prices = (props) => {
     }
 
     return (
-        <div>
+        <main>
             <Navbar />
             <h2>{priceData["title"]}</h2>
             {priceData["text"].map((ligne, index) => (
@@ -51,7 +51,7 @@ const Prices = (props) => {
                 ))
                 }
             </div>
-        </div>
+        </main>
     );
 };
 

@@ -3,6 +3,8 @@
 header {
 
     border-bottom: 2px solid rgb(255, 128, 82);
+    display: flex;
+    justify-content: space-between;
 
     h1 {
         padding: 0.5em;
@@ -12,5 +14,10 @@ header {
             margin: 0.2em;
             padding: 0.3em;
         }
+    }
+
+    .darkBrightIcon {
+        margin: 10px;
+        font-size: 2em;
     }
 }

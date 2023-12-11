@@ -35,3 +35,13 @@
     padding: 0 5px;
     white-space: nowrap;
 }
+
+@mixin lightTheme {
+    background-color: $backgroundColor-light;
+    color: $default-color-light;
+}
+
+@mixin darkTheme {
+    background-color: $backgroundColor-dark;
+    color: $default-color-dark;
+}
