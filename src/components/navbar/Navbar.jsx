@@ -11,16 +11,11 @@ const Navbar = () => {
     const [customerSpace, setCustomerSpace] = useState(false);
 
     return (
-        <nav>
+        <nav id='nav'>
             <FontAwesomeIcon
                 icon={faBars}
                 className='bars-icon' />
             <ul className='navbar__list'>
-                {/* <li>
-                    <NavLink to='/' className='navbar__link'>
-                        Prestations
-                    </NavLink>
-                </li> */}
                 <li className='navbar__link services-list'>
                     <p className='navbar__link services-title'>
                         Prestations

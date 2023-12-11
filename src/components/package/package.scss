@@ -3,6 +3,29 @@
 @import '../../Style/mixins.scss';
 
 
+[data-theme="light"] {
+    .border::before {
+        background-color: $backgroundColor-dark;
+    }
+
+    .border::after {
+        background-color: $backgroundColor-light;
+    }
+}
+
+[data-theme="dark"] {
+    .border::before {
+        background-color: $backgroundColor-light;
+    }
+
+    .border::after {
+        background-color: $backgroundColor-dark;
+    }
+}
+
+
+
+
 #portraits {
     .package__box {
         display: flex;
@@ -112,7 +135,7 @@
                     width: 70%;
                     rotate: 20deg;
                     z-index: -2;
-                    background-color: black !important;
+                    // background-color: black !important;
                     animation: borderAnim 500ms linear forwards;
                 }
 
@@ -124,7 +147,7 @@
                     left: 1px;
                     right: 1px;
                     z-index: -1;
-                    background-color: white;
+                    // background-color: white;
                 }
             }
 

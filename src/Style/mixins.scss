@@ -1,7 +1,12 @@
 @import './variables.scss';
 
-@mixin hoverAnimElement {
+@mixin hoverAnimElement-light {
     background-color: $backgroundColor-light;
+    position: relative;
+}
+
+@mixin hoverAnimElement-dark {
+    background-color: $backgroundColor-dark;
     position: relative;
 }
 
@@ -16,7 +21,7 @@
     background-color: $primary-color;
 }
 
-@mixin hoverAnimAfter {
+@mixin hoverAnimAfter-light {
     content: "";
     position: absolute;
     top: -85%;
@@ -24,13 +29,26 @@
     left: -30%;
     right: -30%;
     z-index: -1;
-    background-color: white;
+    background-color: $backgroundColor-light;
+    rotate: 45deg;
+    animation: hoverAnim 300ms linear 1 forwards;
+}
+
+@mixin hoverAnimAfter-dark {
+    content: "";
+    position: absolute;
+    top: -85%;
+    bottom: -85%;
+    left: -30%;
+    right: -30%;
+    z-index: -1;
+    background-color: $backgroundColor-dark;
     rotate: 45deg;
     animation: hoverAnim 300ms linear 1 forwards;
 }
 
 @mixin link {
-    color: $primary-color;
+    color: $primary-color !important;
     font-weight: bold;
     padding: 0 5px;
     white-space: nowrap;

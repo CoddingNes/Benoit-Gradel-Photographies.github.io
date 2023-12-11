@@ -2,15 +2,22 @@
 @import '../../Style/animations.scss';
 
 
-$customerSpaceBoxSize: 260px;
-$customerSpaceBoxHalfSize: calc(260px/2);
-$customerSpaceBoxPosition: calc(50vw - $customerSpaceBoxHalfSize);
-
 
 [data-theme="dark"] {
+
+    .customerSpace__box,
     .customerSpace__box::after {
         background-color: $backgroundColor-dark;
     }
+}
+
+[data-theme="light"] {
+
+    .customerSpace__box,
+    .customerSpace__box::after {
+        background-color: $backgroundColor-light;
+    }
+
 }
 
 .customerSpace__box {
@@ -30,7 +37,6 @@ $customerSpaceBoxPosition: calc(50vw - $customerSpaceBoxHalfSize);
         left: -1000%;
         right: -1000%;
         bottom: -1000%;
-        // background-color: rgba($color: #000000, $alpha: 0.5);
         z-index: -10;
         -webkit-backdrop-filter: blur(15px);
         /* assure la compatibilité avec safari */
@@ -44,7 +50,7 @@ $customerSpaceBoxPosition: calc(50vw - $customerSpaceBoxHalfSize);
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: white;
+        border: 4px ridge $primary-color;
         z-index: -1;
     }
 
@@ -87,11 +93,6 @@ $customerSpaceBoxPosition: calc(50vw - $customerSpaceBoxHalfSize);
     }
 }
 
-.client__form {
-    // display: flex;
-    // justify-content: center;
-}
-
 .client__formInput {
     width: 100%;
     background: #D8D8D8;
@@ -102,13 +103,11 @@ $customerSpaceBoxPosition: calc(50vw - $customerSpaceBoxHalfSize);
 }
 
 .client__formButton {
-    // display: block;
-    // align-self: center;
     width: 100%;
     border: 0;
     padding: 5px;
-    color: #ffffff;
-    background-color: #26ae90;
+    color: $default-color-dark;
+    background-color: $primary-color;
     font-size: 13px;
     margin-top: 5px;
     text-decoration: none;

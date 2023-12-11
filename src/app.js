@@ -29,7 +29,6 @@ function App() {
 
     return (
         <BrowserRouter>
-            <p>{darkModePreference}</p>
             <Header />
             <DarkBright theme={theme} setTheme={setTheme} />
             <Routes>

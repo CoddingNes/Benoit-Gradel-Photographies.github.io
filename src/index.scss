@@ -50,17 +50,34 @@ a {
   text-decoration: none;
 }
 
-.hover__anim:hover {
-  @include hoverAnimElement;
+[data-theme="light"] {
+  .hover__anim:hover {
+    @include hoverAnimElement-light;
 
-  &::before {
-    @include hoverAnimBefore;
-  }
+    &::before {
+      @include hoverAnimBefore;
+    }
 
-  &::after {
-    @include hoverAnimAfter;
+    &::after {
+      @include hoverAnimAfter-light;
+    }
   }
 }
+
+[data-theme="dark"] {
+  .hover__anim:hover {
+    @include hoverAnimElement-dark;
+
+    &::before {
+      @include hoverAnimBefore;
+    }
+
+    &::after {
+      @include hoverAnimAfter-dark;
+    }
+  }
+}
+
 
 .link-style {
   @include link;

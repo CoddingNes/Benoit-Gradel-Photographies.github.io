@@ -1,5 +1,17 @@
 @import "../../Style/variables.scss";
 
+[data-theme="light"] {
+    footer {
+        background-color: $backgroundColor-light;
+    }
+}
+
+[data-theme="dark"] {
+    footer {
+        background-color: $backgroundColor-dark;
+    }
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -11,6 +23,8 @@ footer {
     align-items: center;
     padding: 1vh 1vw;
     width: 98vw;
+
+
 
     @media screen and (max-width: 426px) {
         padding: 2vw 1vw;

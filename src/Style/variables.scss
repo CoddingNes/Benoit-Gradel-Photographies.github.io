@@ -1,6 +1,12 @@
+//Themes
 $primary-color: #26AE90;
 $secondary-color: rgb(255, 128, 82);
 $default-color-light: black;
 $default-color-dark: white;
 $backgroundColor-light: white;
 $backgroundColor-dark: rgb(0, 0, 0);
+
+//CustomerSpaceBox
+$customerSpaceBoxSize: 260px;
+$customerSpaceBoxHalfSize: calc(260px/2);
+$customerSpaceBoxPosition: calc(50vw - $customerSpaceBoxHalfSize);

@@ -10,16 +10,20 @@ const DarkBright = (props) => {
     // const [dark, setDark] = useState(false);
 
     return (
-        <div className={props.theme === "dark" ? "darkBright-button dark" : "darkBright-button bright"
+        <div className={props.theme === "dark" ? "darkLight-button dark" : "darkLight-button light"
         }>
             {props.theme === "light" ?
-                <FontAwesomeIcon icon={faMoon}
+                <FontAwesomeIcon
+                    icon={faMoon}
                     onClick={() => { props.setTheme("dark") }}
-                    className="darkBrightIcon"
+                    className="darkLightIcon dark"
+                    aria-label="thème foncé"
                 /> :
-                <FontAwesomeIcon icon={faSun}
+                <FontAwesomeIcon
+                    icon={faSun}
                     onClick={() => { props.setTheme("light") }}
-                    className="darkBrightIcon"
+                    className="darkLightIcon light"
+                    aria-label="thème clair"
                 />
             }
         </div>
