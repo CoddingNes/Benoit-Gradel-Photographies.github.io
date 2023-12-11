@@ -12,65 +12,42 @@ const Form = (props) => {
     const form = useRef();
     const setPackageBox = () => {
         setFormData(props.data);
-        console.log(formData);
     }
 
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    //     emailjs.sendForm(/*'service_d5jz5bl'*/'', '' /*'template_uzjrtr8'*/, form.current, 'XiNbf4nHndikDxCBL')
-    //         .then((result) => {
-    //             console.log(result.text);
-    //             document.querySelector('.contact__form__send-button').value = "J'ai bien reçu votre message, merci !";
-    //             setTimeout(() => {
-    //                 // console.log("effacé");
-    //                 document.querySelector('.contact__form__user-name-input').value = '';
-    //                 document.querySelector('.contact__form__user-email-input').value = '';
-    //                 document.querySelector('.contact__form__message-input').value = '';
-    //                 document.querySelector('.contact__form__send-button').value = "Envoyer";
-    //             }, 3000
-    //             )
+        emailjs.sendForm('service_d5jz5bl', 'BG_contact_form', form.current, 'XiNbf4nHndikDxCBL')
+            .then((result) => {
+                document.querySelector('.contact__form__send-button').value = "Votre message a été envoyé !";
+                setTimeout(() => {
+                    document.querySelector('.contact__form__user-name-input').value = '';
+                    document.querySelector('.contact__form__user-email-input').value = '';
+                    document.querySelector('.contact__form__user-phon-input').value = '';
+                    document.querySelector('.contact__form__title-input').value = '';
+                    document.querySelector('.contact__form__message-input').value = '';
+                    document.querySelector('.contact__form__send-button').value = "Envoyer";
+                }, 3000
+                )
 
-    //         }, (error) => {
-    //             console.log(error.text);
-    //         });
-    // }
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
 
     useEffect(() => {
         setPackageBox();
-        // sendEmail();
     })
 
     if (formData.length === 0) {
         return <>Still loading...</>;
     }
 
-
-
-    // return (
-    //     <div className='contact'>
-    //         <form className='contact__form' ref={form}
-    //         // onSubmit={sendEmail}
-    //         >
-    //             <label for='user-name'>{"Votre nom (obligatoire)"}</label>
-    //             <Input type="text" name="user-name" id="name" />
-    //             <label for='user-email'>{"Votre email (obligatoire)"}</label>
-    //             <Input type="email" name="user-email" id="email" required />
-    //             <label for='user-phon'>{"Votre numéro de téléphone (si vous souhaitez que je vous rappelle)"}</label>
-    //             <Input type="tel" name="user-phon" id="tel" />
-    //             <label for='form-title'>{"Sujet du message"}</label>
-    //             <Input type="text" name="message-title" id="title" />
-    //             <label for='form-message'>{"Votre message"}</label>
-    //             <Textarea name='form-message' rows="5" cols="33" id='form-message' />
-    //         </form>
-    //     </div>
-    // );
-
     return (
         <div className='contact__form__container'>
             <form className='contact__form'
                 ref={form}
-            // onSubmit={sendEmail}
+                onSubmit={sendEmail}
             >
                 {formData.map((element, index) => (
                     element.element === 'input' ?

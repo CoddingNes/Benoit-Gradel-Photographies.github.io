@@ -295,14 +295,14 @@
                 "type": "tel"
             },
             {
-                "identifiant": "form-title",
+                "identifiant": "title",
                 "texte": "Sujet du message",
                 "critères": "obligatoire",
                 "element": "input",
                 "type": "text"
             },
             {
-                "identifiant": "form-message",
+                "identifiant": "message",
                 "texte": "Votre message",
                 "critères": "obligatoire",
                 "element": "textarea",
