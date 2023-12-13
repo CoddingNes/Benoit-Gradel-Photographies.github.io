@@ -19,6 +19,7 @@ const Form = (props) => {
 
         emailjs.sendForm('service_d5jz5bl', 'BG_contact_form', form.current, 'XiNbf4nHndikDxCBL')
             .then((result) => {
+                console.log(result.text);
                 document.querySelector('.contact__form__send-button').value = "Votre message a été envoyé !";
                 setTimeout(() => {
                     document.querySelector('.contact__form__user-name-input').value = '';

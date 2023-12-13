@@ -32,15 +32,15 @@ function App() {
             <Header />
             <DarkBright theme={theme} setTheme={setTheme} />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/prestations/portraits" element={<Portraits data={Data.portraits} />} />
-                <Route path="/prestations/mariage" element={<Marriage data={Data.mariages} />} />
-                <Route path="/prestations/entreprises" element={<Corporate data={Data.entreprises} />} />
-                <Route path="/gallerie" element={<Showroom />} />
-                <Route path="/contact" element={<Contact data={Data.contact} />} />
-                <Route path="/mentions-legales" element={<LegalNotices />} />
-                <Route path="/grille-de-tarifs" element={<Prices data={Data.tarifs} />} />
-                <Route path="/error" element={<Error />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/" element={<Home data={Data} />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/prestations/portraits" element={<Portraits data={Data.portraits} />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/prestations/mariage" element={<Marriage data={Data.mariages} />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/prestations/entreprises" element={<Corporate data={Data.entreprises} />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/gallerie" element={<Showroom />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/contact" element={<Contact data={Data.contact} />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/mentions-legales" element={<LegalNotices />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/grille-de-tarifs" element={<Prices data={Data.tarifs} />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/error" element={<Error />} />
             </Routes>
             <Footer />
         </BrowserRouter>

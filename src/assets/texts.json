@@ -1,6 +1,41 @@
 {
+    "accueil": {
+        "title": "Benoit Gradel photographe professionnel",
+        "images": [
+            {
+                "url": "https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/347401205_6060050327398002_5811506122245440157_n.jpg?stp=dst-jpg_p180x540&_nc_cat=101&ccb=1-7&_nc_sid=a73e89&_nc_ohc=_S2H-FCJmrEAX8edmI4&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBmwAV8XzJi70XrxKP5XKnGSpBjLfojnLV9uKpHsLkKWA&oe=657ECAB7",
+                "alt": "La mouche a soif"
+            },
+            {
+                "url": "https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/347594220_744810837651949_6906736564030904749_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=3635dc&_nc_ohc=WkcFtmXpCsIAX_YD05X&_nc_ht=scontent-cdg4-2.xx&oh=00_AfD7uijbGM_lf-6wYd5n2UgOZ5aUobbH1A-gwEgWlaM6Xg&oe=657F3A80",
+                "alt": "Tigre"
+            },
+            {
+                "url": "./sunset.jpg",
+                "alt": "Sea Sunset"
+            },
+            {
+                "url": "https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/347396230_745114494288250_5133008024219586150_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=3635dc&_nc_ohc=1QI6sV55nxQAX8jN05r&_nc_ht=scontent-cdg4-2.xx&oh=00_AfB5HAesrBoLJloPvxe8i6l98DWG3i4XYXg_eFwW6cmLcg&oe=657EA6A7",
+                "alt": "Lion"
+            },
+            {
+                "url": "https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/376746328_808126077987091_1490422452701528880_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a73e89&_nc_ohc=bN4uGdkhzrsAX9GNwv0&_nc_oc=AQm_w9nCsbb1vTIQ99jgwTnoSewtEfWEDhuHfcBbtMH3MLFcLvw9XY9fMFrnLQCWMso&_nc_ht=scontent-cdg4-3.xx&oh=00_AfB9TEZKt5mCqTIUVoLQhV9XdWCqbTTgRGGLzTovryhCXg&oe=657E66BE",
+                "alt": "Sagrada Familia"
+            }
+        ]
+    },
+    "navigation": {
+        "prestations": [
+            "Prestations",
+            "Portrait",
+            "Mariages",
+            "Entreprises"
+        ],
+        "galerie": "Galerie",
+        "espace_clients": "Espace clients",
+        "formulaire_de_contact": "Contactez-moi maintenant"
+    },
     "portraits": {
-        "link": "Portrait",
         "title": "Portait studio & Lifestyle",
         "text": [
             "Parce que vos enfants grandissent trop vite, vous souhaitez garder une trace de tous ces moments…",
@@ -69,7 +104,6 @@
         }
     },
     "mariages": {
-        "link": "Mariages",
         "title": "Reportage de mariage",
         "text": [
             "Nous avons tous aujourd’hui un appareil photo dans la poche que nous utilisons lors de toutes les occasions du quotidien. Pourtant, malgré une qualité toujours croissante, nous avons tous été un jour déçu par le rendu de ces instantanés.",
@@ -86,7 +120,6 @@
         }
     },
     "entreprises": {
-        "link": "Entreprises",
         "title": "Entreprises et marketing photo",
         "text": [
             "Vous souhaitez réaliser des photos de vos produits pour vos plaquettes ou catalogues ? Je dispose de tous le matériel (éclairage, studio, tente de diffusion, etc.) nécessaire à a réalisation de packshots de qualité.",
@@ -104,9 +137,6 @@
             ],
             "link": "me contacter"
         }
-    },
-    "espace clients": {
-        "link": "Espace clients"
     },
     "tarifs": {
         "title": "Tarifs des tirages 2020",

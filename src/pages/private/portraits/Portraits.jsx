@@ -51,7 +51,7 @@ const Portraits = (props) => {
                 <p>
                     {portraitsData["price-grid"]["text"] + " "}
                     <NavLink
-                        to='../../grille-de-tarifs'
+                        to='/Benoit-Gradel-Photographies.github.io/grille-de-tarifs'
                         className='link__prices link-style hover__anim'>
                         {portraitsData["price-grid"]["link"]}
                     </NavLink>

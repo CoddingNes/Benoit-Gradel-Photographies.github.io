@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
         <header>
-            <NavLink to='/' className='logo__link' title="Benoit Gradel Photographies, portraits, mariages et projets d'entreprise">
+            <NavLink to='/Benoit-Gradel-Photographies.github.io/' className='logo__link' title="Benoit Gradel Photographies, portraits, mariages et projets d'entreprise">
                 <h1 className='title'>Benoit Gradel Photographies</h1>
             </NavLink>
         </header>
