@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
 import './corporate.scss';
 
 const Corporate = (props) => {
     const [entreprisesData, setEntreprisesData] = useState([]);
-    const setPackageBox = () => {
+    const getData = () => {
         setEntreprisesData(props.data);
+        props.showNav(true);
     }
 
     useEffect(() => {
-        setPackageBox();
+        getData();
     })
 
     if (entreprisesData.length === 0) {
@@ -19,7 +19,6 @@ const Corporate = (props) => {
 
     return (
         <main id='corporate'>
-            <Navbar />
             <h2>{entreprisesData["title"]}</h2>
             {entreprisesData["text"].map((line, index) => (
                 <p

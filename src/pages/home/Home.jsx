@@ -12,6 +12,7 @@ const Home = (props) => {
     const setData = () => {
         setHomeData(props.data.accueil);
         setNavData(props.data.navigation);
+        props.showNav(false);
     }
 
     useEffect(() => {
@@ -81,7 +82,7 @@ const Home = (props) => {
             </ul>
             <NavLink
                 to='/Benoit-Gradel-Photographies.github.io/contact' className='home__link__contact link-style hover__anim'>
-                {navData.formulaire_de_contact}
+                {homeData.formulaire_de_contact}
             </NavLink>
         </main>
     );

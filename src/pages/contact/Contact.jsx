@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Form from '../../components/form/Form';
-import Navbar from '../../components/navbar/Navbar';
 import './contact.scss';
 
 const Contact = (props) => {
 
     const [contactData, setContactData] = useState([]);
-    const setPackageBox = () => {
+    const getData = () => {
         setContactData(props.data);
+        props.showNav(true);
     }
 
     useEffect(() => {
-        setPackageBox();
+        getData();
     })
 
     if (contactData.length === 0) {
@@ -20,7 +20,6 @@ const Contact = (props) => {
 
     return (
         <main id='contact'>
-            <Navbar />
             <h2 className='contact__title'>{contactData.titre}</h2>
             <div className='contact__container'>
                 <div className='contact__intro'>

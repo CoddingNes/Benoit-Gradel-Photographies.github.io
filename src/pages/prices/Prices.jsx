@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
 import PriceTable from '../../components/priceTable/PriceTable';
 import './prices.scss';
 
 const Prices = (props) => {
     const [priceData, setPriceData] = useState([]);
-    const setPackageBox = () => {
+    const getData = () => {
         setPriceData(props.data);
+        props.showNav(true);
     }
 
     useEffect(() => {
-        setPackageBox();
+        getData();
     })
 
     if (priceData.length === 0) {
@@ -20,7 +20,6 @@ const Prices = (props) => {
 
     return (
         <main>
-            <Navbar />
             <h2>{priceData["title"]}</h2>
             {priceData["text"].map((ligne, index) => (
                 <p

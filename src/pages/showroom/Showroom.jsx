@@ -1,13 +1,27 @@
-import React from 'react';
-import Navbar from '../../components/navbar/Navbar';
+import React, { useState, useEffect } from 'react';
 
-const Gallery = () => {
+const ShowRoom = (props) => {
+
+    const [showRoomData, setShowRoomDataData] = useState([]);
+    const getData = () => {
+        setShowRoomDataData(props.data);
+        props.showNav(true);
+    }
+
+    useEffect(() => {
+        getData();
+    })
+
+    if (showRoomData.length === 0) {
+        return <>Still loading...</>;
+    }
+
+
     return (
         <main>
-            <Navbar />
             Gallery
         </main>
     );
 };
 
-export default Gallery;
+export default ShowRoom;

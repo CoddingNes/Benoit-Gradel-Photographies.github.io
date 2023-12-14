@@ -1,11 +1,9 @@
 import React from 'react';
-import Navbar from '../../components/navbar/Navbar';
 import './legalNotices.scss';
 
 const Notices = () => {
     return (
         <main>
-            <Navbar />
             <h2>Mentions légales</h2>
             <p>Merci de lire attentivement les présentes modalités d’utilisation du présent site avant de le parcourir. En vous connectant sur ce site, vous acceptez sans réserve les présentes modalités.</p>
             <h3>Entreprise individuelle</h3>

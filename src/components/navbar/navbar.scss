@@ -37,6 +37,10 @@
     right: 10px;
     top: 72px;
 
+    &.hide {
+        display: none;
+    }
+
     .bars-icon {
         display: none;
     }

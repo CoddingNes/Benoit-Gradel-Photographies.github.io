@@ -1,11 +1,9 @@
 import React from "react";
 import './customer.scss';
-import Navbar from "../../components/navbar/Navbar";
 
 const Customer = () => {
     return (
         <main id="client__form">
-            <Navbar />
             <h2>Consulter votre album</h2>
             <div className="client__formContainer">
                 <form

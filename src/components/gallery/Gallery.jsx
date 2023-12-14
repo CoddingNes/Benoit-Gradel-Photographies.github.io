@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import Sunset_sea from '../../assets/sunset_sea.jpg';
 import './gallery.scss';
 
 const Gallery = (props) => {
@@ -13,8 +12,6 @@ const Gallery = (props) => {
         }
     }
 
-    // let img = require('../../assets/sunset_sea.jpg')
-
     useEffect(() => {
         setData();
     })
@@ -26,16 +23,12 @@ const Gallery = (props) => {
     return (
         <div id='gallery'>
             <div className='gallery'>
-                {/* <img src={galleryData[0].url} alt="Sunset" crossOrigin="anonymous" />
-                <img src={'./' + galleryData[1].url} alt="Sunset" crossOrigin="anonymous" />
-                <img src={img} alt="Sunset" />
- */}
-                {/* <img src={galleryData.image[2].url} alt="Sunset" crossOrigin="anonymous" /> */}
                 {galleryData.map((image, index) => (
                     <img
                         key={index}
                         src={image.url}
                         alt={image.alt}
+                        crossOrigin="anonymous"
                     />
                 ))}
 

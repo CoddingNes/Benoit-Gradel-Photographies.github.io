@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
 import './portraits.scss';
 import Package from '../../../components/package/Package';
@@ -9,6 +8,7 @@ const Portraits = (props) => {
     const [portraitsData, setPortraitsData] = useState([]);
     const setPackageBox = () => {
         setPortraitsData(props.data);
+        props.showNav(true);
     }
 
     useEffect(() => {
@@ -21,7 +21,6 @@ const Portraits = (props) => {
 
     return (
         <main>
-            <Navbar />
             <div id='portraits'>
                 <h2>{portraitsData["title"]}</h2>
                 {portraitsData["text"].map((ligne, index) => (

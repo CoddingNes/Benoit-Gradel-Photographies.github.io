@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../../../components/navbar/Navbar';
 import { NavLink } from 'react-router-dom';
 import './marriage.scss';
 
@@ -7,6 +6,7 @@ const Marriage = (props) => {
     const [marriageData, setMarriageData] = useState([]);
     const setPackageBox = () => {
         setMarriageData(props.data);
+        props.showNav(true);
     }
 
     useEffect(() => {
@@ -19,7 +19,6 @@ const Marriage = (props) => {
 
     return (
         <main id='marriage'>
-            <Navbar />
             <h2>{marriageData["title"]}</h2>
             {marriageData["text"].map((ligne, index) => (
                 <p

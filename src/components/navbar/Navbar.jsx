@@ -11,7 +11,7 @@ const Navbar = (props) => {
     const [customerSpace, setCustomerSpace] = useState(false);
     const [navData, setNavData] = useState([]);
     const setData = () => {
-        setNavData(props.data.navigation);
+        setNavData(props.data);
     }
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const Navbar = (props) => {
     }
 
     return (
-        <nav id='nav'>
+        <nav id='nav' className={props.showNav ? 'show' : 'hide'}>
             <FontAwesomeIcon
                 icon={faBars}
                 className='bars-icon' />

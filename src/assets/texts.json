@@ -22,7 +22,8 @@
                 "url": "https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/376746328_808126077987091_1490422452701528880_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a73e89&_nc_ohc=bN4uGdkhzrsAX9GNwv0&_nc_oc=AQm_w9nCsbb1vTIQ99jgwTnoSewtEfWEDhuHfcBbtMH3MLFcLvw9XY9fMFrnLQCWMso&_nc_ht=scontent-cdg4-3.xx&oh=00_AfB9TEZKt5mCqTIUVoLQhV9XdWCqbTTgRGGLzTovryhCXg&oe=657E66BE",
                 "alt": "Sagrada Familia"
             }
-        ]
+        ],
+        "formulaire_de_contact": "Contactez-moi maintenant"
     },
     "navigation": {
         "prestations": [
@@ -33,7 +34,7 @@
         ],
         "galerie": "Galerie",
         "espace_clients": "Espace clients",
-        "formulaire_de_contact": "Contactez-moi maintenant"
+        "formulaire_de_contact": "Contact"
     },
     "portraits": {
         "title": "Portait studio & Lifestyle",
