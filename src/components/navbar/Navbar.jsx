@@ -26,31 +26,40 @@ const Navbar = (props) => {
         <nav id='nav' className={props.showNav ? 'show' : 'hide'}>
             <FontAwesomeIcon
                 icon={faBars}
-                className='bars-icon' />
-            <ul className='navbar__list'>
+                className={props.showNavDetails ? 'bars-icon showdetails' : 'bars-icon hideDetails'}
+                onClick={() => { props.setShowNavDetails(true) }}
+            />
+            <ul className={props.showNavDetails ? 'navbar__list showdetails' : 'navbar__list hideDetails'}>
                 <li className='navbar__link services-list'>
-                    <p className='navbar__link services-title'>
+                    <p className='navbar__link services-title'
+                    >
                         {navData.prestations[0]}
                     </p>
                     <ul className='navbar__link dropdown-elements'>
                         <li>
                             <NavLink
                                 to='/Benoit-Gradel-Photographies.github.io/prestations/portraits'
-                                className='navbar__link dropdown-element1 hover__anim'>
+                                className='navbar__link dropdown-element1 hover__anim'
+                                onClick={() => { props.setShowNavDetails(false) }}
+                            >
                                 {navData.prestations[1]}
                             </NavLink>
                         </li>
                         <li>
                             <NavLink
                                 to='/Benoit-Gradel-Photographies.github.io/prestations/mariage'
-                                className='navbar__link dropdown-element2 hover__anim'>
+                                className='navbar__link dropdown-element2 hover__anim'
+                                onClick={() => { props.setShowNavDetails(false) }}
+                            >
                                 {navData.prestations[2]}
                             </NavLink>
                         </li>
                         <li>
                             <NavLink
                                 to='/Benoit-Gradel-Photographies.github.io/prestations/entreprises'
-                                className='navbar__link dropdown-element3 hover__anim'>
+                                className='navbar__link dropdown-element3 hover__anim'
+                                onClick={() => { props.setShowNavDetails(false) }}
+                            >
                                 {navData.prestations[3]}
                             </NavLink>
                         </li>
@@ -59,14 +68,19 @@ const Navbar = (props) => {
                 <li>
                     <NavLink
                         to='/Benoit-Gradel-Photographies.github.io/gallerie'
-                        className='navbar__link hover__anim'>
+                        className='navbar__link hover__anim'
+                        onClick={() => { props.setShowNavDetails(false) }}
+                    >
                         {navData.galerie}
                     </NavLink>
                 </li>
                 <li>
                     <p
                         className='navbar__link customerSpace hover__anim'
-                        onClick={() => { setCustomerSpace(true) }}>
+                        onClick={() => {
+                            setCustomerSpace(true);
+                        }}
+                    >
                         {navData.espace_clients}
                     </p>
                     <CustomerSpace
@@ -77,7 +91,9 @@ const Navbar = (props) => {
                 <li>
                     <NavLink
                         to='/Benoit-Gradel-Photographies.github.io/contact'
-                        className='navbar__link hover__anim'>
+                        className='navbar__link hover__anim'
+                        onClick={() => { props.setShowNavDetails(false) }}
+                    >
                         {navData.formulaire_de_contact}
                     </NavLink>
                 </li>

@@ -20,7 +20,7 @@ const Portraits = (props) => {
     }
 
     return (
-        <main>
+        <main onClick={() => { props.setShowNavDetails(false) }}>
             <div id='portraits'>
                 <h2>{portraitsData["title"]}</h2>
                 {portraitsData["text"].map((ligne, index) => (

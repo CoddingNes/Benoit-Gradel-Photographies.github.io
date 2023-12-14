@@ -5,7 +5,7 @@ import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 const CustomerSpace = (props) => {
     return (
-        <div className={props.className}>
+        <div className={props.className} >
             <h3 className='customerSpace__title'>Entrez vos identifiants pour accéder à votre galerie privée</h3>
             <form
                 className="client__form"
@@ -51,7 +51,9 @@ const CustomerSpace = (props) => {
             </form>
             <FontAwesomeIcon
                 className={' customerSpace__box__closingCross'}
-                onClick={() => { props.setCustomerSpace(false) }}
+                onClick={() => {
+                    props.setCustomerSpace(false);
+                }}
                 icon={faSquareXmark} />
         </div>);
 };

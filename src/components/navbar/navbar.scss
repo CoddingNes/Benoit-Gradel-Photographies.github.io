@@ -133,11 +133,14 @@
     @media screen and (max-width: 426px) {
         top: 20px;
         right: 10px;
+        display: flex;
+        flex-direction: column;
 
-        .bars-icon {
-            display: block;
-            position: absolute;
-            right: 10px;
+        .navbar__list {
+            border: 2px solid $secondary-color;
+            padding: 5px;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .navbar__link {
@@ -145,26 +148,31 @@
             // background-color: white !important;
         }
 
-        .navbar__list {
-            display: none;
-            // background-color: white;
-            border: 2px solid $secondary-color;
-            padding: 5px;
+        .bars-icon {
+            position: absolute;
+            right: 10px;
+            top: 0;
         }
 
-        &:hover {
-            display: flex;
-            flex-direction: column;
+        .hideDetails {
+            &.bars-icon {
+                display: block;
+            }
 
-            .bars-icon {
+            &.navbar__list {
                 display: none;
             }
+        }
 
-            & .navbar__list {
+        .showDetails {
+            &.navbar__list {
                 display: flex;
-                flex-direction: column;
-                gap: 10px;
+            }
+
+            &.bars-icon {
+                display: none;
             }
         }
+
     }
 }

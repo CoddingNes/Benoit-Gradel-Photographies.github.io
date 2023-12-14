@@ -22,6 +22,7 @@ function App() {
     const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const [theme, setTheme] = useState(darkModePreference === false ? "light" : "dark");
     const [showNav, setShowNav] = useState(true);
+    const [showNavDetails, setShowNavDetails] = useState(false);
 
     useEffect(() => {
         document.body.setAttribute("data-theme", theme);
@@ -33,19 +34,63 @@ function App() {
 
     return (
         <BrowserRouter>
-            <Header />
-            <DarkBright theme={theme} setTheme={setTheme} />
-            <Navbar data={Data.navigation} showNav={showNav} />
+            <Header title={Data.titre} />
+            <DarkBright
+                theme={theme}
+                setTheme={setTheme} />
+            <Navbar
+                data={Data.navigation}
+                showNav={showNav}
+                showNavDetails={showNavDetails}
+                setShowNavDetails={setShowNavDetails} />
             <Routes>
-                <Route path="/Benoit-Gradel-Photographies.github.io/" element={<Home data={Data} showNav={setShowNav} />} />
-                <Route path="/Benoit-Gradel-Photographies.github.io/prestations/portraits" element={<Portraits data={Data.portraits} showNav={setShowNav} />} />
-                <Route path="/Benoit-Gradel-Photographies.github.io/prestations/mariage" element={<Marriage data={Data.mariages} showNav={setShowNav} />} />
-                <Route path="/Benoit-Gradel-Photographies.github.io/prestations/entreprises" element={<Corporate data={Data.entreprises} showNav={setShowNav} />} />
-                <Route path="/Benoit-Gradel-Photographies.github.io/gallerie" element={<Showroom data={Data.showRoom} showNav={setShowNav} />} />
-                <Route path="/Benoit-Gradel-Photographies.github.io/contact" element={<Contact data={Data.contact} showNav={setShowNav} />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/" element={
+                    <Home
+                        data={Data}
+                        showNav={setShowNav}
+                    />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/prestations/portraits" element={
+                    <Portraits
+                        data={Data.portraits}
+                        showNav={setShowNav}
+                        setShowNavDetails={setShowNavDetails}
+                    />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/prestations/mariage" element={
+                    <Marriage
+                        data={Data.mariages}
+                        showNav={setShowNav}
+                        setShowNavDetails={setShowNavDetails}
+                    />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/prestations/entreprises" element={
+                    <Corporate
+                        data={Data.entreprises}
+                        showNav={setShowNav}
+                        setShowNavDetails={setShowNavDetails}
+                    />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/gallerie" element={
+                    <Showroom
+                        data={Data.showRoom}
+                        showNav={setShowNav}
+                        setShowNavDetails={setShowNavDetails}
+                    />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/contact" element={
+                    <Contact
+                        data={Data.contact}
+                        showNav={setShowNav}
+                        setShowNavDetails={setShowNavDetails}
+                    />} />
                 {/* <Route path="/Benoit-Gradel-Photographies.github.io/mentions-legales" element={<LegalNotices showNav={setShowNav} />} /> */}
-                <Route path="/Benoit-Gradel-Photographies.github.io/grille-de-tarifs" element={<Prices data={Data.tarifs} showNav={setShowNav} />} />
-                <Route path="/Benoit-Gradel-Photographies.github.io/*" element={<Error showNav={setShowNav} />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/grille-de-tarifs" element={
+                    <Prices
+                        data={Data.tarifs}
+                        showNav={setShowNav}
+                        setShowNavDetails={setShowNavDetails}
+                    />} />
+                <Route path="/Benoit-Gradel-Photographies.github.io/*" element={
+                    <Error
+                        showNav={setShowNav}
+                        setShowNavDetails={setShowNavDetails}
+                    />} />
             </Routes>
             <Footer />
         </BrowserRouter>
