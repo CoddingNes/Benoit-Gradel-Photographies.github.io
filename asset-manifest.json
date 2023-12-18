@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/Benoit-Gradel-Photographies.github.io/static/css/main.d4e41645.css",
-    "main.js": "/Benoit-Gradel-Photographies.github.io/static/js/main.fbc170d1.js",
+    "main.css": "/Benoit-Gradel-Photographies.github.io/static/css/main.46879307.css",
+    "main.js": "/Benoit-Gradel-Photographies.github.io/static/js/main.701cb7a5.js",
+    "static/media/sunset.jpg": "/Benoit-Gradel-Photographies.github.io/static/media/sunset.21dd632f433d715b4192.jpg",
     "index.html": "/Benoit-Gradel-Photographies.github.io/index.html",
-    "main.d4e41645.css.map": "/Benoit-Gradel-Photographies.github.io/static/css/main.d4e41645.css.map",
-    "main.fbc170d1.js.map": "/Benoit-Gradel-Photographies.github.io/static/js/main.fbc170d1.js.map"
+    "main.46879307.css.map": "/Benoit-Gradel-Photographies.github.io/static/css/main.46879307.css.map",
+    "main.701cb7a5.js.map": "/Benoit-Gradel-Photographies.github.io/static/js/main.701cb7a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4e41645.css",
-    "static/js/main.fbc170d1.js"
+    "static/css/main.46879307.css",
+    "static/js/main.701cb7a5.js"
   ]
 }
