@@ -1,95 +1,55 @@
-// .gallery {
-//     max-height: 25%;
-//     max-width: 100%;
-
-//     & img {
-//         max-width: 100%;
-//         max-height: 100%;
-//     }
-// }
-
-$n: 5;
-$from: calc(50%/$n);
-/* number of images*/
+$portraitRatio: calc(3/4);
+$landscapeRatio: calc(4/3);
 
 .gallery {
-    --d: 13s;
-    /* duration */
-
     background-color: rgba(128, 128, 128, 0.479);
     display: grid;
     max-width: 100%;
-    // margin: 5em 0;
-    padding: 5% 0;
+    padding: 4% 0;
     overflow: hidden;
 }
 
 .gallery>img {
     justify-self: center !important;
     grid-area: 1/1;
-    width: 30%;
-    aspect-ratio: 2;
+    width: 33%;
+    aspect-ratio: $landscapeRatio;
     object-fit: cover;
     border: 1vw solid #f2f2f2;
     box-shadow: 0 0 4px #0007;
-    z-index: 2;
-    animation:
-        slide var(--d) infinite,
-        z-order var(--d) infinite steps(1);
-}
 
-.gallery img:last-child {
-    animation-name: slide, z-order-last;
-}
-
-@for $i from 1 to ($n + 1) {
-    .gallery>img:nth-child(#{$i}) {
-        animation-delay: calc(#{(1 - $i)/$n}*var(--d));
-        --r: #{(-20 + random(40))*1deg};
+    &.portrait {
+        aspect-ratio: $portraitRatio;
+        width: 25%;
     }
 }
 
 @keyframes slide {
 
-    // #{50/$n}% {
-    10% {
-        transform: translateX(120%) rotate(var(--r))
+    0% {
+        transform: translateX(0%) rotate(var(--r));
+        z-index: var(--z);
+
     }
 
-    0%,
-    100%,
-    // #{100/$n}% {
-    20% {
-        transform: translateX(0%) rotate(var(--r))
-    }
-}
+    49% {
+        z-index: var(--z);
 
-@keyframes z-order {
-
-    // #{50/$n}%,
-    // #{100/$n}% {
-    10%,
-    20% {
-        z-index: 1
     }
 
-    // #{100 - 100/$n}% {
-    80% {
-        z-index: 2
-    }
-}
-
-@keyframes z-order-last {
-
-    // #{50/$n}%,
-    // #{100/$n}% {
-    10%,
-    20% {
-        z-index: 1
+    50% {
+        transform: translateX(43vw) rotate(var(--r));
+        z-index: var(--z2);
     }
 
-    // #{100 - 50/$n}% {
-    80% {
-        z-index: 2
+
+    90% {
+        transform: translateX(0%) rotate(var(--r));
+        z-index: var(--z2);
+    }
+
+    100% {
+        transform: translateX(0%) rotate(var(--r));
+        z-index: var(--z2);
     }
 }

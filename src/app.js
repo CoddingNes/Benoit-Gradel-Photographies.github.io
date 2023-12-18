@@ -29,8 +29,6 @@ function App() {
     },
         [theme]
     );
-    console.log(showNav);
-
 
     return (
         <BrowserRouter>
