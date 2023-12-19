@@ -51,15 +51,16 @@
             }
 
             &>a {
+                // display: inline;
                 opacity: 0;
                 position: absolute;
                 color: #000;
                 background-color: #000;
-                font: bold 4em "Helvetica";
-                $shadow: 5px #fff;
+                font: bold 2.5em "Helvetica";
+                $shadow: 2px #fff;
                 text-shadow: 0 -1px $shadow, -1px 0px $shadow, 0 1px $shadow,
                     1px 0px $shadow;
-                padding: 2rem;
+                padding: 1rem;
                 mix-blend-mode: difference;
                 width: 100%;
                 height: 100%;

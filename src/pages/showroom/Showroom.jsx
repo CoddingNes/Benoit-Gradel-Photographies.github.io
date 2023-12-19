@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Image from '../../components/banner/sunset.jpg';
+// import Image from '../../components/banner/sunset.jpg';
 import './showroom.scss';
 
 const Showroom = (props) => {
@@ -8,6 +8,7 @@ const Showroom = (props) => {
     const [imageList, setImageList] = useState();
     const max = 18;
     const getData = () => {
+        setShowRoomData(props.data);
         console.log(showRoomData);
         let createImageList = [];
         for (let i = 0; i < max; i++) {
