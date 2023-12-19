@@ -1,34 +1,24 @@
-// .gallery {
-//     max-height: 25%;
-//     max-width: 100%;
-
-//     & img {
-//         max-width: 100%;
-//         max-height: 100%;
-//     }
-// }
-
 $n: 5;
-$from: calc(50%/$n);
+$portraitRatio: calc(3/4);
+$landscapeRatio: calc(4/3);
 /* number of images*/
 
-.gallery {
+.banner {
     --d: 13s;
     /* duration */
-
     background-color: rgba(128, 128, 128, 0.479);
     display: grid;
     max-width: 100%;
     // margin: 5em 0;
-    padding: 5% 0;
+    padding: 4% 0;
     overflow: hidden;
 }
 
-.gallery>img {
+.banner>img {
     justify-self: center !important;
     grid-area: 1/1;
-    width: 30%;
-    aspect-ratio: 2;
+    width: 33%;
+    aspect-ratio: $landscapeRatio;
     object-fit: cover;
     border: 1vw solid #f2f2f2;
     box-shadow: 0 0 4px #0007;
@@ -36,14 +26,19 @@ $from: calc(50%/$n);
     animation:
         slide var(--d) infinite,
         z-order var(--d) infinite steps(1);
+
+    &.portrait {
+        aspect-ratio: $portraitRatio;
+        width: 25%;
+    }
 }
 
-.gallery img:last-child {
+.banner img:last-child {
     animation-name: slide, z-order-last;
 }
 
 @for $i from 1 to ($n + 1) {
-    .gallery>img:nth-child(#{$i}) {
+    .banner>img:nth-child(#{$i}) {
         animation-delay: calc(#{(1 - $i)/$n}*var(--d));
         --r: #{(-20 + random(40))*1deg};
     }
@@ -53,12 +48,12 @@ $from: calc(50%/$n);
 
     // #{50/$n}% {
     10% {
-        transform: translateX(120%) rotate(var(--r))
+        transform: translateX(42vw) rotate(var(--r))
     }
 
+    // #{100/$n}% {
     0%,
     100%,
-    // #{100/$n}% {
     20% {
         transform: translateX(0%) rotate(var(--r))
     }

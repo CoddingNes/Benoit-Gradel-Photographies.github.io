@@ -1,27 +1,85 @@
 @import "../../Style/variables.scss";
 
+[data-theme="light"] {
+    footer {
+        background-color: $backgroundColor-light;
+    }
+}
+
+[data-theme="dark"] {
+    footer {
+        background-color: $backgroundColor-dark;
+    }
+}
+
 footer {
     position: fixed;
     bottom: 0;
     border-top: 2px solid $secondary-color;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 38% auto 38%;
+    gap: 10px;
     justify-content: space-around;
-    margin: auto;
-    width: 100%;
-    background-color: white;
+    align-items: center;
+    padding: 1vh 1vw;
+    width: 100vw;
+    z-index: 100;
+
+
+    @media screen and (max-width: 426px) {
+        padding: 2vw 1vw;
+    }
+
+    .social__links__block {
+        align-items: center;
+        text-wrap: nowrap;
+    }
+
+    .author__block {
+        justify-self: end;
+    }
+
+    &>* {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .coddingnes__link {
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 426px) {
+        flex-wrap: wrap;
+        font-size: 0.8em;
+
+        .legal__data {
+            display: flex;
+        }
+    }
 
     & ul {
         padding: 0;
+
+        & li:first-of-type {
+            font-weight: bold;
+        }
     }
 
     & .social__links {
-        display: flex;
-        justify-content: space-around;
 
         & a {
             padding: 0.3em;
             font-size: 2em;
+        }
+
+        @media screen and (max-width: 426px) {
+            display: block;
+            margin: 0.3em 0;
+
+            & a {
+                font-size: 1.5em;
+            }
         }
     }
 

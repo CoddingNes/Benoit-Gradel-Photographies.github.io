@@ -3,9 +3,21 @@
 header {
 
     border-bottom: 2px solid rgb(255, 128, 82);
+    display: flex;
+    // justify-content: space-between;
+
+    a {
+        max-width: 75vw;
+    }
 
     h1 {
         padding: 0.5em;
         padding-top: 0.1em;
+
+        @media screen and (max-width: 426px) {
+            font-size: 30px;
+            margin: 0.2em;
+            padding: 0.3em;
+        }
     }
 }

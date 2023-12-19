@@ -1,0 +1,80 @@
+@keyframes show {
+    0% {
+        translate: 0 -100%;
+        opacity: 0;
+        height: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        translate: 0 0;
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+@keyframes showForm {
+    0% {
+        opacity: 0;
+        // height: 10%;
+    }
+
+    25% {
+        opacity: 1;
+        translate: -3% 0;
+        rotate: -2deg;
+    }
+
+    50% {
+        translate: 3% 0;
+        rotate: 2deg;
+    }
+
+    75% {
+        translate: -1% 0;
+        rotate: -0.5deg;
+        // opacity: 1;
+        // height: 0%;
+    }
+
+    100% {
+        translate: 0 0;
+        rotate: 0;
+        opacity: 1;
+    }
+}
+
+
+@keyframes borderAnim {
+    0% {
+        // transform: rotate(-35deg);
+        scale: 1;
+        // translate: -50% -50%;
+    }
+
+    100% {
+        // transform: rotate(45deg);
+        scale: 3;
+        // translate: 0;
+    }
+}
+
+@keyframes hoverAnim {
+    0% {
+        rotate: -45deg;
+    }
+
+    99% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        rotate: 45deg;
+        opacity: 0;
+        scale: 0;
+    }
+}

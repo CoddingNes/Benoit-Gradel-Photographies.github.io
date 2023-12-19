@@ -1,0 +1,22 @@
+@import '../../../Style/variables.scss';
+
+#contact {
+
+    .input,
+    .textarea {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+    }
+
+    .button {
+        background-color: $primary-color;
+        color: $default-color-dark;
+        border: 2px solid $backgroundColor-dark;
+        font-weight: bold;
+        max-width: fit-content;
+        justify-content: end;
+        flex-direction: row-reverse;
+        margin-top: 2px;
+    }
+}

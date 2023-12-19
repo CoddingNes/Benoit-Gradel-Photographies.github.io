@@ -1,49 +1,101 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import CustomerSpace from '../customerSpace/CustomerSpace';
 
-const Navbar = () => {
+
+const Navbar = (props) => {
+
+    const [customerSpace, setCustomerSpace] = useState(false);
+    const [navData, setNavData] = useState([]);
+    const setData = () => {
+        setNavData(props.data);
+    }
+
+    useEffect(() => {
+        setData();
+    })
+
+    if (navData.length === 0) {
+        return <>Still loading...</>;
+    }
+
     return (
-        <nav>
-            <ul className='navbar__list'>
-                <li>
-                    <NavLink to='/' className='navbar__link'>
-                        Prestations
-                    </NavLink>
-                </li>
-                <li className='navbar__link private-list'>
-                    <p className='navbar__link private-title'>
-                        Particuliers
+        <nav id='nav' className={props.showNav ? 'show' : 'hide'}>
+            <FontAwesomeIcon
+                icon={faBars}
+                className={props.showNavDetails ? 'bars-icon showdetails' : 'bars-icon hideDetails'}
+                onClick={() => { props.setShowNavDetails(true) }}
+            />
+            <ul className={props.showNavDetails ? 'navbar__list showdetails' : 'navbar__list hideDetails'}>
+                <li className='navbar__link services-list'>
+                    <p className='navbar__link services-title'
+                    >
+                        {navData.prestations[0]}
                     </p>
-
                     <ul className='navbar__link dropdown-elements'>
                         <li>
-                            <NavLink to='/particuliers/portraits' className='navbar__link dropdown-element1'>
-                                Portraits
+                            <NavLink
+                                to='/Benoit-Gradel-Photographies.github.io/prestations/portraits'
+                                className='navbar__link dropdown-element1 hover__anim'
+                                onClick={() => { props.setShowNavDetails(false) }}
+                            >
+                                {navData.prestations[1]}
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/particuliers/mariage' className='navbar__link dropdown-element2'>
-                                Mariage
+                            <NavLink
+                                to='/Benoit-Gradel-Photographies.github.io/prestations/mariage'
+                                className='navbar__link dropdown-element2 hover__anim'
+                                onClick={() => { props.setShowNavDetails(false) }}
+                            >
+                                {navData.prestations[2]}
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to='/Benoit-Gradel-Photographies.github.io/prestations/entreprises'
+                                className='navbar__link dropdown-element3 hover__anim'
+                                onClick={() => { props.setShowNavDetails(false) }}
+                            >
+                                {navData.prestations[3]}
                             </NavLink>
                         </li>
                     </ul>
                 </li>
-                <li><NavLink to='/entreprises' className='navbar__link'>
-                    Entreprises
-                </NavLink>
+                <li>
+                    <NavLink
+                        to='/Benoit-Gradel-Photographies.github.io/gallerie'
+                        className='navbar__link hover__anim'
+                        onClick={() => { props.setShowNavDetails(false) }}
+                    >
+                        {navData.galerie}
+                    </NavLink>
                 </li>
-                <li><NavLink to='/gallerie' className='navbar__link'>
-                    Gallerie
-                </NavLink>
+                <li>
+                    <p
+                        className='navbar__link customerSpace hover__anim'
+                        onClick={() => {
+                            setCustomerSpace(true);
+                        }}
+                    >
+                        {navData.espace_clients}
+                    </p>
+                    <CustomerSpace
+                        className={customerSpace ? 'customerSpace__box navbar ' : 'customerSpace__box-Off'}
+                        setCustomerSpace={setCustomerSpace}
+                    />
                 </li>
-                <li><NavLink to='/espaceclient' className='navbar__link'>
-                    Espace clients
-                </NavLink>
-                </li>
-                <li><NavLink to='/contact' className='navbar__link'>
-                    Contact
-                </NavLink>
+                <li>
+                    <NavLink
+                        to='/Benoit-Gradel-Photographies.github.io/contact'
+                        className='navbar__link hover__anim'
+                        onClick={() => { props.setShowNavDetails(false) }}
+                    >
+                        {navData.formulaire_de_contact}
+                    </NavLink>
                 </li>
             </ul>
         </nav>

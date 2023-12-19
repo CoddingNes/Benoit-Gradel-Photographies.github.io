@@ -1,0 +1,168 @@
+@import '../../Style/variables.scss';
+@import '../../Style/animations.scss';
+@import '../../Style/mixins.scss';
+
+
+[data-theme="light"] {
+    .border::before {
+        background-color: $backgroundColor-dark;
+    }
+
+    .border::after {
+        background-color: $backgroundColor-light;
+    }
+}
+
+[data-theme="dark"] {
+    .border::before {
+        background-color: $backgroundColor-light;
+    }
+
+    .border::after {
+        background-color: $backgroundColor-dark;
+    }
+}
+
+
+
+
+#portraits {
+    .package__box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5vw;
+        // justify-content: space-between;
+        border: none !important;
+
+        @media screen and (max-width: 426px) {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        div {
+            display: flex;
+            flex: 1 1 50vw;
+
+            @media screen and (max-width: 426px) {
+                flex: none;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        &__closingCross {
+            font-size: 1.5em;
+            color: $primary-color;
+            position: absolute;
+            right: 7px;
+            top: 7px;
+            background-color: black;
+            padding: 0 2px;
+            border-radius: 20%;
+
+            &Off {
+                display: none;
+            }
+        }
+
+        &__titles {
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+
+            li {
+                position: relative;
+
+                h3 {
+                    margin: 25px;
+                    padding: 10px 4px;
+                    width: fit-content;
+
+                    // &:hover {
+                    //     position: relative;
+                    //     @include hoverAnimElement;
+
+                    //     &::before {
+                    //         @include hoverAnimBefore;
+                    //     }
+
+                    //     &::after {
+                    //         @include hoverAnimAfter;
+                    //     }
+                    // }
+
+                    @media screen and (max-width: 426px) {
+                        margin: 10px !important;
+                        margin: 20px 0 !important;
+                    }
+                }
+            }
+
+        }
+
+        &__description {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            justify-self: center;
+            max-width: 500px;
+            flex-direction: column;
+            padding: 20px;
+            margin: 0;
+            border: 4px ridge $primary-color;
+            overflow: hidden;
+
+            @media screen and (min-width: 426px) {
+                flex: 1 1 50vw;
+            }
+
+            &s-title {
+                @media screen and (max-width: 425px) {
+                    margin: 0 !important;
+                }
+            }
+
+            &.border {
+                &::before {
+                    // border: 4px ridge $primary-color;
+                    content: '';
+                    position: absolute;
+                    top: 15%;
+                    left: 15%;
+                    height: 70%;
+                    width: 70%;
+                    rotate: 20deg;
+                    z-index: -2;
+                    // background-color: black !important;
+                    animation: borderAnim 500ms linear forwards;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 1px;
+                    bottom: 1px;
+                    left: 1px;
+                    right: 1px;
+                    z-index: -1;
+                    // background-color: white;
+                }
+            }
+
+            &s {
+                padding: 8px 0;
+
+                &-title {
+                    font-weight: bold;
+                    margin: auto;
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                    font-size: 1.2em;
+                }
+
+            }
+        }
+    }
+}

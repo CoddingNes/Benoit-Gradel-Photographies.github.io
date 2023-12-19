@@ -1,11 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Error = () => {
+const Error = (props) => {
+
+    props.showNav(true);
+
     return (
         <main>
             {"Erreur 404, veuillez cliquer "}
-            <NavLink to='/' className='error__link'>
+            <NavLink to='/Benoit-Gradel-Photographies.github.io/' className='error__link'>
                 ICI
             </NavLink>
             {" pour être redirigé."}

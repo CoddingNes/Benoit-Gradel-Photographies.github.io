@@ -1,11 +1,9 @@
 import React from 'react';
-import Navbar from '../../components/navbar/Navbar';
 import './legalNotices.scss';
 
 const Notices = () => {
     return (
         <main>
-            <Navbar />
             <h2>Mentions légales</h2>
             <p>Merci de lire attentivement les présentes modalités d’utilisation du présent site avant de le parcourir. En vous connectant sur ce site, vous acceptez sans réserve les présentes modalités.</p>
             <h3>Entreprise individuelle</h3>
@@ -56,9 +54,7 @@ const Notices = () => {
             <h3>Liens hypertextes</h3>
             <p>Les sites internet de peuvent offrir des liens vers d’autres sites internet ou d’autres ressources disponibles sur Internet.</p>
             <p>Les utilisateurs, les abonnés et les visiteurs des sites internet de ne peuvent mettre en place un hyperlien en direction de ce site sans l’autorisation expresse et préalable de Benoit Gradel Photographies.</p>
-            <p>Dans l’hypothèse où un utilisateur ou visiteur souhaiterait mettre en place un hyperlien en direction d’un site internet, il lui appartiendra d’adresser un
-                <a mailto="postmaster@benoit-gradel-photographies.fr" className="link__email">email</a>
-                afin de formuler sa demande de mise en place d’un hyperlien. Le webmaster se réserve le droit d’accepter ou de refuser un hyperlien sans avoir à en justifier sa décision.
+            <p>Dans l’hypothèse où un utilisateur ou visiteur souhaiterait mettre en place un hyperlien en direction d’un site internet, il lui appartiendra d’adresser un mail à postmaster@benoit-gradel-photographies.frafin de formuler sa demande de mise en place d’un hyperlien. Le webmaster se réserve le droit d’accepter ou de refuser un hyperlien sans avoir à en justifier sa décision.
             </p>
 
             <h3>Responsabilité</h3>

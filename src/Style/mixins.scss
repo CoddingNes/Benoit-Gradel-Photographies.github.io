@@ -1,0 +1,65 @@
+@import './variables.scss';
+
+@mixin hoverAnimElement-light {
+    background-color: $backgroundColor-light;
+    position: relative;
+}
+
+@mixin hoverAnimElement-dark {
+    background-color: $backgroundColor-dark;
+    position: relative;
+}
+
+@mixin hoverAnimBefore {
+    content: "";
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    z-index: -2;
+    background-color: $primary-color;
+}
+
+@mixin hoverAnimAfter-light {
+    content: "";
+    position: absolute;
+    top: -85%;
+    bottom: -85%;
+    left: -30%;
+    right: -30%;
+    z-index: -1;
+    background-color: $backgroundColor-light;
+    rotate: 45deg;
+    animation: hoverAnim 300ms linear 1 forwards;
+}
+
+@mixin hoverAnimAfter-dark {
+    content: "";
+    position: absolute;
+    top: -85%;
+    bottom: -85%;
+    left: -30%;
+    right: -30%;
+    z-index: -1;
+    background-color: $backgroundColor-dark;
+    rotate: 45deg;
+    animation: hoverAnim 300ms linear 1 forwards;
+}
+
+@mixin link {
+    color: $primary-color !important;
+    font-weight: bold;
+    padding: 0 5px;
+    white-space: nowrap;
+}
+
+@mixin lightTheme {
+    background-color: $backgroundColor-light;
+    color: $default-color-light;
+}
+
+@mixin darkTheme {
+    background-color: $backgroundColor-dark;
+    color: $default-color-dark;
+}

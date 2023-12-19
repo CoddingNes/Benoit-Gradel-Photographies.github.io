@@ -1,15 +1,90 @@
+@import './Style/animations.scss';
+@import './Style/variables.scss';
+@import './Style/mixins.scss';
+
+
 * {
   list-style: none;
   max-width: 100vw;
-
 }
 
 body {
   margin: auto !important;
   max-width: 100vw;
+  overflow: hidden visible;
+  scroll-behavior: smooth;
+  // -ms-overflow-style:;
+  // scrollbar-width: none;
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
+
+[data-theme="light"] {
+  @include lightTheme;
+
+  a,
+  h1,
+  h2,
+  h3 {
+    color: $default-color-light;
+  }
+}
+
+[data-theme="dark"] {
+  @include darkTheme;
+
+  a,
+  h1,
+  h2,
+  h3 {
+    color: $default-color-dark;
+  }
+}
+
+main {
+  margin: 0 10px 100px 10px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
 }
 
 a {
   text-decoration: none;
-  color: black;
+}
+
+[data-theme="light"] {
+  .hover__anim:hover {
+    @include hoverAnimElement-light;
+
+    &::before {
+      @include hoverAnimBefore;
+    }
+
+    &::after {
+      @include hoverAnimAfter-light;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .hover__anim:hover {
+    @include hoverAnimElement-dark;
+
+    &::before {
+      @include hoverAnimBefore;
+    }
+
+    &::after {
+      @include hoverAnimAfter-dark;
+    }
+  }
+}
+
+
+.link-style {
+  @include link;
 }

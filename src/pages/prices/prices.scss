@@ -1,0 +1,37 @@
+@import '../../Style/variables.scss';
+
+#priceTable__table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 40vw;
+    color: $default-color-light;
+
+    td,
+    th {
+        border: 1px solid rgb(190, 190, 190);
+        padding: 10px 20px;
+    }
+
+    th {
+        background-color: rgb(235, 235, 235);
+    }
+
+    td {
+        text-align: center;
+    }
+
+    tr:nth-child(even) td {
+        background-color: rgb(250, 250, 250);
+    }
+
+    tr:nth-child(odd) td {
+        background-color: rgb(245, 245, 245);
+    }
+
+    caption {
+        padding: 10px;
+    }
+}
