@@ -67,7 +67,7 @@ function App() {
                     />} />
                 <Route path="/Benoit-Gradel-Photographies.github.io/gallerie" element={
                     <Showroom
-                        data={Data.showRoom}
+                        data={Data.showroom}
                         showNav={setShowNav}
                         setShowNavDetails={setShowNavDetails}
                     />} />

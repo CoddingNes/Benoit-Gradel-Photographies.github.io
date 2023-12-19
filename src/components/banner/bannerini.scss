@@ -3,7 +3,7 @@ $portraitRatio: calc(3/4);
 $landscapeRatio: calc(4/3);
 /* number of images*/
 
-.gallery {
+.banner {
     --d: 13s;
     /* duration */
     background-color: rgba(128, 128, 128, 0.479);
@@ -14,7 +14,7 @@ $landscapeRatio: calc(4/3);
     overflow: hidden;
 }
 
-.gallery>img {
+.banner>img {
     justify-self: center !important;
     grid-area: 1/1;
     width: 33%;
@@ -33,12 +33,12 @@ $landscapeRatio: calc(4/3);
     }
 }
 
-.gallery img:last-child {
+.banner img:last-child {
     animation-name: slide, z-order-last;
 }
 
 @for $i from 1 to ($n + 1) {
-    .gallery>img:nth-child(#{$i}) {
+    .banner>img:nth-child(#{$i}) {
         animation-delay: calc(#{(1 - $i)/$n}*var(--d));
         --r: #{(-20 + random(40))*1deg};
     }

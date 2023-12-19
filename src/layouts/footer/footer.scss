@@ -22,8 +22,8 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 1vh 1vw;
-    width: 98vw;
-
+    width: 100vw;
+    z-index: 100;
 
 
     @media screen and (max-width: 426px) {

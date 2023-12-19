@@ -301,6 +301,80 @@
             ]
         }
     },
+    "showroom": [
+        {
+            "url": "la_mouche_a_soif.jpg",
+            "alt": "La mouche a soif"
+        },
+        {
+            "url": "mykonos.jpg",
+            "alt": "Mykonos"
+        },
+        {
+            "url": "sunset.jpg",
+            "alt": "Sea Sunset"
+        },
+        {
+            "url": "lion.jpg",
+            "alt": "Lion"
+        },
+        {
+            "url": "sagrada_familia.jpg",
+            "alt": "Sagrada Familia"
+        },
+        {
+            "url": "la_mouche_a_soif.jpg",
+            "alt": "La mouche a soif"
+        },
+        {
+            "url": "mykonos.jpg",
+            "alt": "Mykonos"
+        },
+        {
+            "url": "sunset.jpg",
+            "alt": "Sea Sunset"
+        },
+        {
+            "url": "lion.jpg",
+            "alt": "Lion"
+        },
+        {
+            "url": "sagrada_familia.jpg",
+            "alt": "Sagrada Familia"
+        },
+        {
+            "url": "la_mouche_a_soif.jpg",
+            "alt": "La mouche a soif"
+        },
+        {
+            "url": "mykonos.jpg",
+            "alt": "Mykonos"
+        },
+        {
+            "url": "sunset.jpg",
+            "alt": "Sea Sunset"
+        },
+        {
+            "url": "lion.jpg",
+            "alt": "Lion"
+        },
+        {
+            "url": "sagrada_familia.jpg",
+            "alt": "Sagrada Familia"
+        },
+        {
+            "url": "la_mouche_a_soif.jpg",
+            "alt": "La mouche a soif"
+        },
+        {
+            "url": "mykonos.jpg",
+            "alt": "Mykonos"
+        },
+        {
+            "url": "sunset.jpg",
+            "alt": "Sea Sunset"
+        }
+    ],
     "contact": {
         "link": "Contact",
         "titre": "Contactez-moi",

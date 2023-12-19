@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.scss';
-import Gallery from '../../components/gallery/Gallery';
+import Banner from '../../components/banner/Banner';
 import CustomerSpace from '../../components/customerSpace/CustomerSpace';
 
 const Home = (props) => {
@@ -26,7 +26,7 @@ const Home = (props) => {
 
     return (
         <main id='home'>
-            <Gallery data={homeData.images} />
+            <Banner data={homeData.images} />
             <h2>{homeData.title}</h2>
             <ul className='home__link'>
                 <li className='home__link__benefits__list'>
