@@ -10,7 +10,7 @@ import './form.scss';
 const Form = (props) => {
     const [formData, setFormData] = useState([]);
     const form = useRef();
-    const setPackageBox = () => {
+    const getData = () => {
         setFormData(props.data);
     }
 
@@ -37,7 +37,7 @@ const Form = (props) => {
     }
 
     useEffect(() => {
-        setPackageBox();
+        getData();
     })
 
     if (formData.length === 0) {

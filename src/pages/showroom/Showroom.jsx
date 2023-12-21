@@ -43,7 +43,7 @@ const Showroom = (props) => {
                             {'./' + image.image.url}
                             alt={image.image.alt}
                         />
-                        <a href={"#lightbox-" + image.i}>
+                        <a href={"#lightbox-" + image.i} aria-label="afficher l'image en grand">
                             {image.image.alt}</a>
                     </div>
                 ))}
@@ -57,7 +57,7 @@ const Showroom = (props) => {
                             alt={image.image.alt}
                         />
                         <div className='title'>{image.image.alt}</div>
-                        <a className='close' href="#gallery"></a>
+                        <a className='close' href="#gallery" aria-label="fermer l'image"></a>
                     </div>
                 </div>
             ))}

@@ -16,6 +16,18 @@ import Error from './pages/error/Error';
 import Prices from './pages/prices/Prices';
 import Data from './assets/texts.json';
 import DarkBright from './components/darkBright/DarkBright';
+import Dashboard from "./components/dashboard/Dashboard";
+import useToken from "./components/dashboard/useToken";
+
+// function setToken(userToken) {
+//     sessionStorage.setItem('token', JSON.stringify(userToken));
+// }
+
+// function getToken() {
+//     const tokenString = sessionStorage.getItem('token');
+//     const userToken = JSON.parse(tokenString);
+//     return userToken?.token
+// }
 
 function App() {
 
@@ -23,12 +35,16 @@ function App() {
     const [theme, setTheme] = useState(darkModePreference === false ? "light" : "dark");
     const [showNav, setShowNav] = useState(true);
     const [showNavDetails, setShowNavDetails] = useState(false);
+    const { token, setToken } = useToken();
+    // const [token, setToken] = useState();
 
     useEffect(() => {
         document.body.setAttribute("data-theme", theme);
     },
         [theme]
     );
+
+    // const token = getToken();
 
     return (
         <BrowserRouter>
@@ -42,6 +58,12 @@ function App() {
                 showNavDetails={showNavDetails}
                 setShowNavDetails={setShowNavDetails} />
             <Routes>
+                <Route path="/Benoit-Gradel-Photographies.github.io/Admin"
+                    element={
+                        <Dashboard
+                            token={token}
+                            setToken={setToken}
+                        />} />
                 <Route path="/Benoit-Gradel-Photographies.github.io/" element={
                     <Home
                         data={Data}
