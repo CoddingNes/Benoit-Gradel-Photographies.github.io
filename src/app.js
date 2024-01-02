@@ -10,7 +10,6 @@ import Marriage from './pages/private/marriage/Marriage';
 import Corporate from './pages/corporate/Corporate';
 import Showroom from './pages/showroom/Showroom';
 import Contact from './pages/contact/Contact';
-// import LegalNotices from './pages/legalNotices/LegalNotices';
 import Footer from './layouts/footer/Footer';
 import Error from './pages/error/Error';
 import Prices from './pages/prices/Prices';
@@ -18,16 +17,7 @@ import Data from './assets/texts.json';
 import DarkBright from './components/darkBright/DarkBright';
 import Dashboard from "./components/dashboard/Dashboard";
 import useToken from "./components/dashboard/useToken";
-
-// function setToken(userToken) {
-//     sessionStorage.setItem('token', JSON.stringify(userToken));
-// }
-
-// function getToken() {
-//     const tokenString = sessionStorage.getItem('token');
-//     const userToken = JSON.parse(tokenString);
-//     return userToken?.token
-// }
+import Logout from "./components/logout/Logout";
 
 function App() {
 
@@ -36,7 +26,6 @@ function App() {
     const [showNav, setShowNav] = useState(true);
     const [showNavDetails, setShowNavDetails] = useState(false);
     const { token, setToken } = useToken();
-    // const [token, setToken] = useState();
 
     useEffect(() => {
         document.body.setAttribute("data-theme", theme);
@@ -44,14 +33,16 @@ function App() {
         [theme]
     );
 
-    // const token = getToken();
-
     return (
         <BrowserRouter>
-            <Header title={Data.titre} />
+            <Header
+                title={Data.titre}
+                token={token} />
             <DarkBright
                 theme={theme}
                 setTheme={setTheme} />
+            <Logout token={token}
+            />
             <Navbar
                 data={Data.navigation}
                 showNav={showNav}
@@ -64,11 +55,17 @@ function App() {
                             token={token}
                             setToken={setToken}
                         />} />
-                <Route path="/Benoit-Gradel-Photographies.github.io/" element={
-                    <Home
-                        data={Data}
-                        showNav={setShowNav}
-                    />} />
+                {/* <Route path="/Benoit-Gradel-Photographies.github.io/Admin/login"
+                    element={
+                        <Login
+                            setToken={setToken}
+                        />} /> */}
+                <Route path="/Benoit-Gradel-Photographies.github.io/"
+                    element={
+                        <Home
+                            data={Data}
+                            showNav={setShowNav}
+                        />} />
                 <Route path="/Benoit-Gradel-Photographies.github.io/prestations/portraits" element={
                     <Portraits
                         data={Data.portraits}

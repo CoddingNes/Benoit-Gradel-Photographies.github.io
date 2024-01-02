@@ -1,61 +1,33 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-// import Gallery from "../../components/gallery/Gallery";
+import React, { useState } from 'react';
+import Data from './testtext.json';
 
 //Tester des trucs
 const Test = () => {
+
+    const data = Data.titre.contenu;
+    const [element, setElement] = useState(data)
+    const [previous, setPrevious] = useState();
+    // const [text, setText] = useState()
+
+    const truc = () => {
+        console.log(previous);
+        let text = prompt('Indique le texte de remplacement ici', data)
+        if (text != null) {
+            setElement(text);
+            setPrevious(element);
+        }
+    }
+
     return (
-        <main>
-            <h1>Test</h1>
-            <p>Petit test pour voir si ça fonctionne</p>
-            {/* <Gallery /> */}
-
-            <div className='summary'>
-                <h2>Benoit Gradel photographe professionnel</h2>
-                <ul>
-                    <li>
-                        <h3>
-                            <NavLink to='/gallerie' className='navbar__link'>
-                                Gallerie
-                            </NavLink>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            Prestations
-                        </h3>
-                        <ul>
-                            <li>
-                                <NavLink to='/particuliers/portraits' className='navbar__link'>
-                                    Portraits
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/particuliers/mariage' className='navbar__link'>
-                                    Mariage
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/entreprises' className='navbar__link'>
-                                    Entreprises
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>
-                            <NavLink to='/espaceclient' className='navbar__link'>
-                                Espace clients
-                            </NavLink>
-                        </h3>
-                    </li>
-                </ul>
-                <NavLink to='contact' className='navbar__link'>
-                    Contactez-moi maintenant
-                </NavLink>
-            </div>
-        </main>
-
+        <div>
+            <button id='button__test' className="bouton" onClick={() => (truc())} >
+                {element}
+            </button>
+            {previous !== undefined && previous !== element ?
+                <div onClick={() => (setElement(previous))} >précédent</div> :
+                ""
+            }
+        </div>
     );
 };
 

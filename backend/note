@@ -1,2 +1,36 @@
 BenoitAdminAccount
 HAjV9r3S
+
+API Key Information
+tkgftzmu
+6ed0c801 - 6b95 - 4648 - 9db1 - 19f589161c83
+
+
+
+button on click{ onSignup() }
+/
+    /
+    onSignup() {
+    this.loading = true;
+    const email = this.signupForm.get('email')!.value;
+    const password = this.signupForm.get('password')!.value;
+    this.auth.createUser(email, password).pipe(
+        switchMap(() => this.auth.loginUser(email, password)),
+        tap(() => {
+            this.loading = false;
+            this.router.navigate(['/sauces']);
+        }),
+        catchError(error => {
+            this.loading = false;
+            this.errorMsg = error.message;
+            return EMPTY;
+        })
+    ).subscribe();
+}
+
+//   stocké dans authservice :
+createUser(email: string, password: string) {
+    return this.http.post<{ message: string }>('http://localhost:3000/api/auth/signup', { email: email, password: password });
+}
+
+/api/auth / signup

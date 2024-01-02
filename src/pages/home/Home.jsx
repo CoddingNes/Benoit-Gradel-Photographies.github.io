@@ -23,7 +23,6 @@ const Home = (props) => {
         return <>Still loading...</>;
     }
 
-
     return (
         <main id='home'>
             <Banner data={homeData.images} />

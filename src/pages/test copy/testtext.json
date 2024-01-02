@@ -1,9 +1,4 @@
 {
-    "titre": {
-        "id": "bouton test",
-        "route": "titre.contenu",
-        "contenu": "Benoit Gradel Photographies"
-    },
     "portraits": {
         "title": "Portait studio & Lifestyle",
         "text": [

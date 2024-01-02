@@ -1,0 +1,424 @@
+{
+    "titre": "Benoit Gradel Photographies",
+    "accueil": {
+        "title": "Benoit Gradel photographe professionnel",
+        "images": [
+            {
+                "url": "https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/347401205_6060050327398002_5811506122245440157_n.jpg?stp=dst-jpg_p180x540&_nc_cat=101&ccb=1-7&_nc_sid=a73e89&_nc_ohc=_S2H-FCJmrEAX8edmI4&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBmwAV8XzJi70XrxKP5XKnGSpBjLfojnLV9uKpHsLkKWA&oe=657ECAB7",
+                "alt": "La mouche a soif",
+                "sens": "paysage"
+            },
+            {
+                "url": "./mykonos.jpg",
+                "alt": "Mykonos",
+                "sens": "portrait"
+            },
+            {
+                "url": "./sunset.jpg",
+                "alt": "Sea Sunset",
+                "sens": "paysage"
+            },
+            {
+                "url": "https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/347396230_745114494288250_5133008024219586150_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=3635dc&_nc_ohc=1QI6sV55nxQAX8jN05r&_nc_ht=scontent-cdg4-2.xx&oh=00_AfB5HAesrBoLJloPvxe8i6l98DWG3i4XYXg_eFwW6cmLcg&oe=657EA6A7",
+                "alt": "Lion",
+                "sens": "paysage"
+            },
+            {
+                "url": "./sagrada_familia.jpg",
+                "alt": "Sagrada Familia",
+                "sens": "paysage"
+            }
+        ],
+        "formulaire_de_contact": "Contactez-moi maintenant"
+    },
+    "navigation": {
+        "prestations": [
+            "Prestations",
+            "Portrait",
+            "Mariages",
+            "Entreprises"
+        ],
+        "galerie": "Galerie",
+        "espace_clients": "Espace clients",
+        "formulaire_de_contact": "Contact"
+    },
+    "portraits": {
+        "title": "Portait studio & Lifestyle",
+        "text": [
+            "Parce que vos enfants grandissent trop vite, vous souhaitez garder une trace de tous ces moments…",
+            "Parce que vous avez toujours rêvé de jouer les stars de cinéma avec les flashs qui crépitent autour de vous…",
+            "Ou tout simplement, parce que vous avez envie de réaliser un beau portrait, pour vous ou pour offrir…",
+            "",
+            "",
+            "Tout cela est désormais possible demain, chez vous. Plus besoin de vous déplacer, grâce à mon studio mobile, c’est un véritable studio photo pro qui vient chez vous !",
+            "Je me déplace dans toute la région Rhône-Alpes et installe en quelques minutes le matériel nécessaire pour réaliser des portraits studio chez vous (ou dans tout autre lieu de votre choix) ou des portraits lifestyle.",
+            "Couleur ou Noir&Blanc… à vous de choisir !"
+        ],
+        "contact": {
+            "text": "Prenez rendez-vous ",
+            "link": "maintenant !"
+        },
+        "forfaits": [
+            {
+                "packageType": "solo",
+                "title": "Forfait SOLO : 90€",
+                "description": [
+                    "20 à 30 minutes² de prise de vues en intérieur ou en extérieur (si le temps le permet)",
+                    "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+                    "La création d’une galerie privée disponible 3 mois",
+                    "3 tirages papier au format 15x20cm"
+                ]
+            },
+            {
+                "packageType": "duo",
+                "title": "Forfait DUO : 105€¹",
+                "description": [
+                    "30 à 45 minutes² de prise de vues en intérieur ou en extérieur (si le temps le permet)",
+                    "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+                    "La création d’une galerie privée disponible 3 mois",
+                    "3 tirages papier au format 15x20cm"
+                ]
+            },
+            {
+                "packageType": "famille",
+                "title": "Forfait FAMILLE : 135€¹",
+                "description": [
+                    "Jusqu’à 5 personnes – 10€ par personne supplémentaires.",
+                    "1 heure² de prise de vues en intérieur ou en extérieur (si le temps le permet)",
+                    "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+                    "La création d’une galerie privée disponible 3 mois",
+                    "5 tirages papier au format 15x20cm"
+                ]
+            },
+            {
+                "packageType": "grossesse",
+                "title": "Forfait GROSSESSE : 180€¹",
+                "description": [
+                    "2 séances de prise de vue : 1 pendant la grossesse puis 1 dans le mois qui suit la naissance.",
+                    "L’ensemble des photos travaillées sur CD optimisées pour le web (pour un usage privé)",
+                    "La création d’une galerie privée disponible 3 mois",
+                    "8 tirages papier au format 15x20cm"
+                ]
+            }
+        ],
+        "notes": [
+            "¹ : Des frais de déplacements peuvent être ajoutés selon la distance à parcourir.",
+            "² : les durées de session sont données à titre indicatif et peuvent être plus ou moins importantes."
+        ],
+        "price-grid": {
+            "text": "Pour tous tirages supplémentaires, merci de vous reporter à la ",
+            "link": "grille de tarifs"
+        }
+    },
+    "mariages": {
+        "title": "Reportage de mariage",
+        "text": [
+            "Nous avons tous aujourd’hui un appareil photo dans la poche que nous utilisons lors de toutes les occasions du quotidien. Pourtant, malgré une qualité toujours croissante, nous avons tous été un jour déçu par le rendu de ces instantanés.",
+            "",
+            "",
+            "C’est pourquoi, lors des grandes occasions, faites appel à un professionnel de l’image. Je réaliserai pour vous des souvenirs à la hauteur de cet événement.",
+            "",
+            "",
+            "Et parce que chaque mariage est unique, je vous propose de vous rencontrer pour trouver ensemble la formule la plus adaptée à vos envies, à vos besoins et à votre budget."
+        ],
+        "contact": {
+            "text": "Alors n’hésitez plus et ",
+            "link": "contactez-moi maintenant !"
+        }
+    },
+    "entreprises": {
+        "title": "Entreprises et marketing photo",
+        "text": [
+            "Vous souhaitez réaliser des photos de vos produits pour vos plaquettes ou catalogues ? Je dispose de tous le matériel (éclairage, studio, tente de diffusion, etc.) nécessaire à a réalisation de packshots de qualité.",
+            "",
+            "",
+            "Vous désirez renouveler la charte photo de votre entreprise ? Nous définirons ensemble comment réaliser les images qui correspondent le plus à votre entreprise.",
+            "",
+            "",
+            "Vous organisez un évènement et vous souhaitez une couverture médiatique ?"
+        ],
+        "contact": {
+            "text": [
+                "Pour tous ces projets, et pour tous les autres,  n’hésitez pas à ",
+                ", nous mettrons alors en place la meilleure stratégie pour répondre à vos attentes."
+            ],
+            "link": "me contacter"
+        }
+    },
+    "tarifs": {
+        "title": "Tarifs des tirages 2020",
+        "text": [],
+        "tableau": [
+            {
+                "titres": [
+                    [
+                        "Format du tirage"
+                    ],
+                    [
+                        "Prix Unitaire",
+                        3
+                    ]
+                ],
+                "lignes": [
+                    [
+                        [
+                            ""
+                        ],
+                        [
+                            "de 1 à 4"
+                        ],
+                        [
+                            "de 5 à 9"
+                        ],
+                        [
+                            "plus de 10"
+                        ]
+                    ],
+                    [
+                        [
+                            "10x15 cm"
+                        ],
+                        [
+                            "2,50 €"
+                        ],
+                        [
+                            "2,20 €"
+                        ],
+                        [
+                            "2,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "15x20 cm"
+                        ],
+                        [
+                            "7,50 €"
+                        ],
+                        [
+                            "7,00 €"
+                        ],
+                        [
+                            "6,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "20x30 cm"
+                        ],
+                        [
+                            "15,00 €"
+                        ],
+                        [
+                            "14,00 €"
+                        ],
+                        [
+                            "12,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "30x40 cm"
+                        ],
+                        [
+                            "22,00 €"
+                        ],
+                        [
+                            "20,00 €"
+                        ],
+                        [
+                            "18,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "40x60 cm"
+                        ],
+                        [
+                            "45,00 €"
+                        ],
+                        [
+                            "43,00 €"
+                        ],
+                        [
+                            "40,00 €"
+                        ]
+                    ]
+                ]
+            },
+            {
+                "titres": [
+                    [
+                        "Format du tirage"
+                    ],
+                    [
+                        "Prix Unitaire"
+                    ]
+                ],
+                "lignes": [
+                    [
+                        [
+                            "30x30 cm"
+                        ],
+                        [
+                            "55,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "30x40 cm"
+                        ],
+                        [
+                            "60,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "40x40 cm"
+                        ],
+                        [
+                            "75,00 €"
+                        ]
+                    ],
+                    [
+                        [
+                            "40x60 cm"
+                        ],
+                        [
+                            "90,00 €"
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "link": {
+            "text": "Si vous souhaitez d’autres dimensions ou d’autres supports (plexy, caisse américaine, encadrement, etc.), merci de ",
+            "link": "me contacter"
+        },
+        "notes": {
+            "text": [
+                "Possibilité de réaliser un livre photo sur demande."
+            ]
+        }
+    },
+    "showroom": [
+        {
+            "url": "la_mouche_a_soif.jpg",
+            "alt": "La mouche a soif"
+        },
+        {
+            "url": "mykonos.jpg",
+            "alt": "Mykonos"
+        },
+        {
+            "url": "sunset.jpg",
+            "alt": "Sea Sunset"
+        },
+        {
+            "url": "lion.jpg",
+            "alt": "Lion"
+        },
+        {
+            "url": "sagrada_familia.jpg",
+            "alt": "Sagrada Familia"
+        },
+        {
+            "url": "la_mouche_a_soif.jpg",
+            "alt": "La mouche a soif"
+        },
+        {
+            "url": "mykonos.jpg",
+            "alt": "Mykonos"
+        },
+        {
+            "url": "sunset.jpg",
+            "alt": "Sea Sunset"
+        },
+        {
+            "url": "lion.jpg",
+            "alt": "Lion"
+        },
+        {
+            "url": "sagrada_familia.jpg",
+            "alt": "Sagrada Familia"
+        },
+        {
+            "url": "la_mouche_a_soif.jpg",
+            "alt": "La mouche a soif"
+        },
+        {
+            "url": "mykonos.jpg",
+            "alt": "Mykonos"
+        },
+        {
+            "url": "sunset.jpg",
+            "alt": "Sea Sunset"
+        },
+        {
+            "url": "lion.jpg",
+            "alt": "Lion"
+        },
+        {
+            "url": "sagrada_familia.jpg",
+            "alt": "Sagrada Familia"
+        },
+        {
+            "url": "la_mouche_a_soif.jpg",
+            "alt": "La mouche a soif"
+        },
+        {
+            "url": "mykonos.jpg",
+            "alt": "Mykonos"
+        },
+        {
+            "url": "sunset.jpg",
+            "alt": "Sea Sunset"
+        }
+    ],
+    "contact": {
+        "link": "Contact",
+        "titre": "Contactez-moi",
+        "texte": [
+            "Vous pouvez me contacter",
+            "soit par téléphone au 06 78 02 71 68",
+            "soit en remplissant ce formulaire."
+        ],
+        "cadres": [
+            {
+                "identifiant": "user-name",
+                "texte": "Votre nom",
+                "critères": "obligatoire",
+                "element": "input",
+                "type": "text"
+            },
+            {
+                "identifiant": "user-email",
+                "texte": "Votre email",
+                "critères": "obligatoire",
+                "element": "input",
+                "type": "email"
+            },
+            {
+                "identifiant": "user-phon",
+                "texte": "Votre numéro de téléphone",
+                "critères": "",
+                "element": "input",
+                "type": "tel"
+            },
+            {
+                "identifiant": "title",
+                "texte": "Sujet du message",
+                "critères": "obligatoire",
+                "element": "input",
+                "type": "text"
+            },
+            {
+                "identifiant": "message",
+                "texte": "Votre message",
+                "critères": "obligatoire",
+                "element": "textarea",
+                "type": "text"
+            }
+        ]
+    }
+}
