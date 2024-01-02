@@ -29,3 +29,14 @@ exports.postOneData = (req, res, next) => {
             res.status(400).json({ err });
         })
 };
+
+exports.updateOneData = (req, res, next) => {
+    const content = req.body.content
+    Data.findOne({ layer: req.body.layer, element: req.body.element })
+        .then(() => {
+            Data.updateOne({ layer: req.body.layer, element: req.body.element }, { content, layer: req.body.layer, element: req.body.element })
+                .then(() => res.status(200).json({ message: 'Data updated successfully' }))
+                .catch(err => res.status(401).json(err))
+        })
+        .catch(err => res.status(400).json({ err }));
+};

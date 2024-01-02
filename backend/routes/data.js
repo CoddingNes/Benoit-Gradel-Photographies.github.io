@@ -5,8 +5,8 @@ const auth = require('../middleware/auth');
 const dataCtrl = require('../controllers/data');
 
 router.get('/', dataCtrl.getAllDatas);
-router.get('/', dataCtrl.getOneData);
-router.post('/', dataCtrl.postOneData);
+router.get('/:id', dataCtrl.getOneData);
+router.put('/', dataCtrl.updateOneData);
 // router.put('/', dataCtrl.putOneSauce);
 // router.put('/:id', auth, multer, dataCtrl.putOneSauce);
 // router.delete('/:id', auth, multer, dataCtrl.deleteOneSauce);

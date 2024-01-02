@@ -7,18 +7,16 @@ const Header = (props) => {
 
 
     const [changeData, setChangeData] = useState(false);
-    // const [thisData, setThisData] = useState();
 
     const createData = () => {
         onclick = (event) => {
             if (event.ctrlKey) {
-                // setThisData(content)
+                console.log(event.target.id)
                 event.preventDefault();
-                /* let text = prompt('Indique le texte de remplacement ici', content)*/
-                // if (text != null) {
-                // console.log(text);
+                const id = event.target.id.split(' ')
+                localStorage.setItem("layer", id[0])
+                localStorage.setItem("element", id[1])
                 setChangeData(true);
-                // }
             }
         };
     }
@@ -26,27 +24,18 @@ const Header = (props) => {
     return (
         <header>
             <NavLink
-                onClick={
-                    createData()
-                }
                 to={props.token ? "" : '/Benoit-Gradel-Photographies.github.io/'}
                 className='logo__link'
                 title="Benoit Gradel Photographies, portraits, mariages et projets d'entreprise">
                 <h1
+                    id="header title"
+                    onClick={
+                        createData()
+                    }
                     className='title'
-                // onClick= {props.token ? () => { { getLocalData(), changeData(data, content) }} : "" } 
                 >{props.title}</h1>
             </NavLink>
             {changeData ? <DataForm token={props.token} setChangeData={setChangeData} /> : ""}
-            {/* <div>
-                <button className="bouton" onClick={() => (truc())} >
-                    {element}
-                </button>
-                {previous !== undefined ?
-                    <div onClick={() => (setElement(previous))} >précédent</div> :
-                    ""
-                }
-            </div> */}
         </header>
     );
 };
