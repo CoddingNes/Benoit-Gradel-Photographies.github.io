@@ -76,7 +76,7 @@ const DataForm = (props) => {
                         cols="30"
                         rows="10"
                         className="input"
-                        defaultValue={props.findData(props.layer, props.element).join("\n")}
+                        defaultValue={props.findData(props.layer, props.element) ? props.findData(props.layer, props.element).length > 1 ? props.findData(props.layer, props.element).join("\n") : props.findData(props.layer, props.element) : "entrer un texte ici"}
                         id="dataForm__content"
                         type="text"
                         onChange={e => setContent(e.target.value.split("\n"))}></textarea>

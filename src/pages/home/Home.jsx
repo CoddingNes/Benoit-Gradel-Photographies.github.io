@@ -89,7 +89,12 @@ const Home = (props) => {
                     <h3>
                         <NavLink
                             className='home__link__customer hover__anim'
-                            onClick={props.token ? () => { props.initData() } : () => { setCustomerSpace(true) }}
+                            // onClick={props.token ? () => { props.initData() } : () => { setCustomerSpace(true) }}
+                            onClick={() => {
+                                props.initData()
+                                setCustomerSpace(true)
+                            }}
+
                             id={"home customerSpace__Title"}
                         >
                             {props.findData("home", "customerSpace__Title")}
