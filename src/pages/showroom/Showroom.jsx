@@ -9,7 +9,6 @@ const Showroom = (props) => {
     const max = 18;
     const getData = () => {
         setShowRoomData(props.data);
-        console.log(showRoomData);
         let createImageList = [];
         for (let i = 0; i < max; i++) {
             createImageList.push({
@@ -21,7 +20,6 @@ const Showroom = (props) => {
             }
         }
         props.showNav(true);
-        console.log(imageList);
     }
 
     useEffect(() => {

@@ -5,11 +5,12 @@ const auth = require('../middleware/auth');
 const dataCtrl = require('../controllers/data');
 
 router.get('/', dataCtrl.getAllDatas);
-router.get('/:id', dataCtrl.getOneData);
+router.get('/:layer&element', dataCtrl.getOneData);
+router.post('/', dataCtrl.postOneData);
 router.put('/', dataCtrl.updateOneData);
 // router.put('/', dataCtrl.putOneSauce);
 // router.put('/:id', auth, multer, dataCtrl.putOneSauce);
-// router.delete('/:id', auth, multer, dataCtrl.deleteOneSauce);
+router.delete('/', dataCtrl.deleteOneData);
 // router.post('/:id/like', auth, dataCtrl.postOneSauceLike);
 
 

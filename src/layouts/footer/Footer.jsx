@@ -5,13 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faSquareXTwitter } from '@fortawesome/free-brands-svg-icons';
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer>
-            <ul className='contact__details__block'>
-                <li>Benoit Gradel Photographies</li>
-                <li>07130 Toulaud</li>
-                <li>tel : 06 78 08 71 68</li>
+            <ul
+                id="footer contactDetails"
+                onClick={() => props.initData()}
+                className='contact__details__block'>
+                {props.findData("footer", "contactDetails").map((ligne, index) => (
+                    <li
+                        key={index}>
+                        {ligne}
+                    </li>))}
             </ul>
             <div className='social__links__block'>
                 <div className="social__links">
@@ -32,11 +37,17 @@ const Footer = () => {
             </div>
             <div className='author__block'>
                 <a href='https://coddingnes-dev.fr/'
+                    id="footer coddingnesLink"
+                    onClick={() => props.initData()}
                     target='_blank'
-                    rel="noopener noreferrer" className="coddingnes__link">©2023 CoddingNes
+                    rel="noopener noreferrer" className="coddingnes__link">
+                    {props.findData("footer", "coddingnesLink")}
                 </a>
-                <p>
-                    Tous droits réservés
+                <p
+                    id="footer copyRights"
+                    onClick={() => props.initData()}
+                >
+                    {props.findData("footer", "copyRights")}
                 </p>
             </div>
         </footer >

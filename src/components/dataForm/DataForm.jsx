@@ -3,37 +3,18 @@ import './dataForm.scss';
 
 const DataForm = (props) => {
     const [content, setContent] = useState();
-    // const [element, setElement] = useState();
-    // const [layer, setLayer] = useState();
 
-    // async function changeData(data) {
-    //     await fetch('http://localhost:8080/admin', {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             // "Allow CORS": "Access-Control-Allow-Methods"
-    //         },
-    //         body: JSON.stringify(data)
-    //     })
-    //         .then(response => {
-    //             return response.json();
-    //         })
-    //         .then(data =>
-    //             console.log(data)
-    //         )
-    // }
-
-    async function updateData(data) {
+    async function createData() {
+        const sending = { layer: props.layer, element: props.element, content: content }
         await fetch('http://localhost:8080/admin', {
-            method: "PUT",
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 // "Allow CORS": "Access-Control-Allow-Methods"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(sending)
         })
             .then(response => {
-                console.log(response)
                 return response.json();
             })
             .then(data =>
@@ -41,46 +22,64 @@ const DataForm = (props) => {
             )
     }
 
-    async function deleteData(data) {
+    async function updateData() {
+        const sending = { layer: props.layer, element: props.element, content: content }
+        await fetch('http://localhost:8080/admin', {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                // "Allow CORS": "Access-Control-Allow-Methods"
+            },
+            body: JSON.stringify(sending)
+        })
+            .then(response => {
+                return response.json();
+            })
+            .then(data =>
+                console.log(data)
+            )
+    }
 
+    async function deleteData() {
+        const sending = { layer: props.layer, element: props.element }
+        await fetch('http://localhost:8080/admin', {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                // "Allow CORS": "Access-Control-Allow-Origin"
+            },
+            body: JSON.stringify(sending)
+        })
+            .then(response => {
+                return response.json();
+            })
+            .catch(err => console.log(err))
     }
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const layer = localStorage.getItem("layer");
-        const element = localStorage.getItem("element");
-        const sending = { layer: layer, element: element, content: content }
-        // changeData(sending);
-        updateData(sending);
         document.getElementById("dataForm__content").value = "";
-        // document.getElementById("dataForm__layer").value = "";
-        // document.getElementById("dataForm__element").value = "";
         props.setChangeData(false);
-        localStorage.clear();
     }
 
-    if (props.token) {
+    if (props.token && props.changeData) {
         return (
             <div className="login-wrapper">
                 <h4>Ajoute ton texte</h4>
-                <form onSubmit={handleSubmit}>
+                <form
+                    onSubmit={handleSubmit}
+                >
                     <label>
-                        <input defaultValue={props.thisData} id="dataForm__content" type="text" onChange={e => setContent(e.target.value)} />
+                        <input defaultValue={props.findData(props.layer, props.element)} id="dataForm__content" type="text" onChange={e => setContent(e.target.value.split("//"))} />
                     </label>
-                    {/* <label>
-                        <input id="dataForm__layer" type="text" onChange={e => setLayer(e.target.value)} />
-                    </label>
-                    <label>
-                        <input id="dataForm__element" type="text" onChange={e => setElement(e.target.value)} />
-                    </label> */}
                     <div>
-                        <button type="submit" >Ajouter</button>
+                        <button type="submit" onClick={() => createData()}>Ajouter</button>
                     </div>
                     <div>
-                        <button onclick={() => updateData()}>modifier</button>
+                        <button type="submit" onClick={() => updateData()}>modifier</button>
                     </div>
                     <div>
-                        <button onclick={() => deleteData()}>Supprimer</button>
+                        <button type="submit" onClick={() => deleteData()}>Supprimer</button>
                     </div>
                     <button onClick={() => props.setChangeData(false)}>X</button>
                 </form>
