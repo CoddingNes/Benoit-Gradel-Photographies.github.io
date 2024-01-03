@@ -22,12 +22,33 @@ const Portraits = (props) => {
     return (
         <main onClick={() => { props.setShowNavDetails(false) }}>
             <div id='portraits'>
-                <h2>{portraitsData["title"]}</h2>
-                {portraitsData["text"].map((ligne, index) => (
+                {props.findData("portraits", "title").map((ligne, index) => (
+                    <h2
+                        id="portraits title"
+                        onClick={() => props.initData()}
+                        key={index}>
+                        {ligne}
+                    </h2>))}
+                {/* <h2
+                >{props.findData("portraits", "title")}</h2> */}
+                {/* {portraitsData["text"].map((ligne, index) => (
                     <p
                         key={index}>
                         {ligne}
+                    </p>))} */}
+                {/* <div
+                    id="portraits text"
+                    onClick={() => props.initData()}
+                > */}
+                {props.findData("portraits", "text").map((ligne, index) => (
+                    <p
+                        id="portraits text"
+                        onClick={() => props.initData()}
+                        key={index}>
+                        {ligne}
                     </p>))}
+                {/* </div> */}
+
                 <p>
                     {portraitsData["contact"]["text"]}
                     <NavLink

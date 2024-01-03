@@ -90,7 +90,7 @@ function App() {
                 if (data[i].layer === layer && data[i].element === element) {
                     if (data[i].content) {
                         let content = []
-                        for (let j = 0; data[j].content.length; j++) {
+                        for (let j = 0; j < data[i].content.length; j++) {
                             content.push(data[i].content[j]);
                         }
                         return content

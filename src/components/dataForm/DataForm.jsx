@@ -64,24 +64,31 @@ const DataForm = (props) => {
 
     if (props.token && props.changeData) {
         return (
-            <div className="login-wrapper">
-                <h4>Ajoute ton texte</h4>
+            <div id="dataForm">
+                <p
+                    className="indications"
+                >Ajoute ou modifie ton texte ici.<br />Inscris // pour simuler un retour à la ligne.</p>
                 <form
                     onSubmit={handleSubmit}
                 >
-                    <label>
-                        <input defaultValue={props.findData(props.layer, props.element)} id="dataForm__content" type="text" onChange={e => setContent(e.target.value.split("//"))} />
-                    </label>
-                    <div>
+                    {/* <label> */}
+                    <textarea
+                        cols="30"
+                        rows="10"
+                        className="input"
+                        defaultValue={props.findData(props.layer, props.element).join("\n")}
+                        id="dataForm__content"
+                        type="text"
+                        onChange={e => setContent(e.target.value.split("\n"))}></textarea>
+                    {/* </label> */}
+                    <div className="button__box">
                         <button type="submit" onClick={() => createData()}>Ajouter</button>
-                    </div>
-                    <div>
                         <button type="submit" onClick={() => updateData()}>modifier</button>
-                    </div>
-                    <div>
                         <button type="submit" onClick={() => deleteData()}>Supprimer</button>
                     </div>
-                    <button onClick={() => props.setChangeData(false)}>X</button>
+                    <button
+                        className="closing-button"
+                        onClick={() => props.setChangeData(false)}>X</button>
                 </form>
             </div>
         );
