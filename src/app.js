@@ -47,6 +47,7 @@ function App() {
                     setLayer(id[0])
                     setElement(id[1])
                     setChangeData(true);
+                    console.log(layer, element);
                 }
             };
         }
@@ -82,6 +83,7 @@ function App() {
     useEffect(() => {
         getData();
         findData();
+        // eslint-disable-next-line
     }, [])
 
     const findData = (layer, element) => {
@@ -99,9 +101,7 @@ function App() {
                     }
                 }
             }
-
             return (['no data'])
-
         }
     }
 

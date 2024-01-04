@@ -6,9 +6,9 @@ import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Package = (props) => {
 
-    const [packageDetails, setPackageDetails] = useState([]);
+    // const [packageDetails, setPackageDetails] = useState([]);
     const [packageChoice, setPackageChoice] = useState();
-    const [descriptions, setDescriptions] = useState([]);
+    // const [descriptions, setDescriptions] = useState([]);
     const [border, setBorder] = useState("");
 
     useEffect(() => {
@@ -38,9 +38,9 @@ const Package = (props) => {
         // , packageDetails, props.data
     ]);
 
-    if (packageDetails.length === 0) {
-        return <>Still loading...</>;
-    }
+    // if (packageDetails.length === 0) {
+    //     return <>Still loading...</>;
+    // }
 
 
     return (

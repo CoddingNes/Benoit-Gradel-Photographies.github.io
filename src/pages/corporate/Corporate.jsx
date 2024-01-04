@@ -19,21 +19,49 @@ const Corporate = (props) => {
 
     return (
         <main id='corporate'>
-            <h2>{entreprisesData["title"]}</h2>
-            {entreprisesData["text"].map((line, index) => (
+            <h2
+                id={"corporate title"}
+                onClick={() => props.initData()}
+            >
+                {/* {entreprisesData["title"]} */}
+                {props.findData("corporate", "title")}
+            </h2>
+            {/* {entreprisesData["text"].map((line, index) => (
                 <p
                     key={index}>
                     {line}
-                </p>))}
+                </p>))} */}
+            {props.findData("corporate", "text").map((ligne, index) => (
+                <p
+                    id={"corporate text"}
+                    onClick={() => props.initData()}
+                    key={index}>
+                    {ligne}
+                </p>
+            ))}
 
-            <p>
-                {entreprisesData["contact"]["text"][0]}
+            <p
+                id={"corporate contactText"}
+                onClick={() => props.initData()}
+            >
+                {/* {entreprisesData["contact"]["text"][0]} */}
+                {props.findData("corporate", "contactText")}
                 <NavLink
+                    id={"corporate contactLink"}
+                    onClick={() => props.initData()}
                     to='../../contact'
                     className='link__contact link-style hover__anim'>
                     {entreprisesData["contact"]["link"]}
+                    {props.findData("corporate", "contactLink")}
                 </NavLink>
-                {entreprisesData["contact"]["text"][1]}
+                {/* {entreprisesData["contact"]["text"][1]}
+                {props.findData("corporate", "contactText")} */}
+            </p>
+            <p
+                id={"corporate contactText2"}
+                onClick={() => props.initData()}
+            >
+                {props.findData("corporate", "contactText2")}
             </p>
         </main>
     );

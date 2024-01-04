@@ -19,19 +19,40 @@ const Marriage = (props) => {
 
     return (
         <main id='marriage'>
-            <h2>{marriageData["title"]}</h2>
-            {marriageData["text"].map((ligne, index) => (
+            <h2
+                id={"mariage title"}
+                onClick={() => props.initData()}
+            >
+                {/* {marriageData["title"]} */}
+                {props.findData("mariage", "title")}
+            </h2>
+            {/* {marriageData["text"].map((ligne, index) => (
                 <p
                     key={index}>
                     {ligne}
-                </p>))}
+                </p>))} */}
 
-            <p>
-                {marriageData["contact"]["text"]}
+            {props.findData("mariage", "text").map((ligne, index) => (
+                <p
+                    id={"mariage text"}
+                    onClick={() => props.initData()}
+                    key={index}>
+                    {ligne}
+                </p>
+            ))}
+            <p
+                id={"mariage contactText"}
+                onClick={() => props.initData()}
+            >
+                {/* {marriageData["contact"]["text"]} */}
+                {props.findData("mariage", "contactText")}
                 <NavLink
+                    id={"mariage contactLink"}
+                    onClick={() => props.initData()}
                     to='../../contact'
                     className='link__contact link-style hover__anim'>
-                    {marriageData["contact"]["link"]}
+                    {/* {marriageData["contact"]["link"]} */}
+                    {props.findData("mariage", "contactLink")}
                 </NavLink>
             </p>
 
