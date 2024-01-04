@@ -13,27 +13,30 @@ const Package = (props) => {
 
     useEffect(() => {
         const getData = () => {
-            setPackageDetails(props.data);
-            let description = [];
-            if (packageChoice !== undefined && packageChoice !== null) {
-                for (let i = 0; i < packageDetails.length; i++) {
-                    if (packageDetails[i].packageType === packageChoice) {
-                        description = packageDetails[i].description;
-                        setDescriptions(description);
-                        setBorder("border");
-                        setTimeout(() => {
-                            setBorder("");
-                        }, 450
-                        )
-                    };
-                }
-            } else {
-                setDescriptions([]);
+            // setPackageDetails(props.data);
+            // let description = [];
+            // if (packageChoice !== undefined && packageChoice !== null) {
+            //     for (let i = 0; i < packageDetails.length; i++) {
+            //         if (packageDetails[i].packageType === packageChoice) {
+            //             description = packageDetails[i].description;
+            // setDescriptions(description);
+            if (packageChoice !== undefined) {
+                setBorder("border");
+                setTimeout(() => {
+                    setBorder("");
+                }, 450
+                )
             }
+            //     }
+            // } else {
+            //     setDescriptions([]);
+            // }
         };
 
         getData()
-    }, [packageChoice, packageDetails, props.data]);
+    }, [packageChoice
+        // , packageDetails, props.data
+    ]);
 
     if (packageDetails.length === 0) {
         return <>Still loading...</>;
@@ -43,27 +46,57 @@ const Package = (props) => {
     return (
         <div className={"package__box"}>
             <ul className={"package__box__titles"}>
-                {packageDetails.map((packagedetails, index) => (
+                {/* {packageDetails.map((packagedetails, index) => (
                     <li>
                         <h3 className={"package__box__title hover__anim " + packagedetails.packageType}
-                            onClick={() => { setPackageChoice(packagedetails.packageType) }}
+                            id={"portraits packages"}
+                            onClick={() => {
+                                props.initData()
+                                // setPackageChoice(packagedetails.packageType)
+                            }}
                             key={index}>
                             {packagedetails.title}
                         </h3>
                     </li>
+                ))} */}
+                {props.findData("portraits", "packages").map((packagedetails, index) => (
+                    <li>
+                        <h3 className={"package__box__title hover__anim " + packagedetails.packageType}
+                            id={"portraits packages"}
+                            onClick={() => {
+                                props.initData()
+                                setPackageChoice(packagedetails.split(" ")[1])
+                            }}
+                            key={index}>
+                            {packagedetails}
+                        </h3>
+                    </li>
                 ))}
+
             </ul>
             <div>
                 <ul className={'package__box__description ' + border} >
                     <li className={'package__box__descriptions-title'}>
                         {packageChoice === undefined ? 'Cliquer sur un forfait pour plus de détails' : 'Détails du forfait ' + packageChoice}
                     </li>
-                    {descriptions.map((description, index) => (
+                    {/* {descriptions.map((description, index) => (
                         <li className={'package__box__descriptions'}
                             key={index}>
                             {description}
                         </li>
-                    ))}
+                    ))} */}
+                    {packageChoice ? props.findData("portraits", packageChoice).map((description, index) => (
+                        <li
+                            className={'package__box__descriptions'}
+                            id={"portraits " + packageChoice}
+                            onClick={() => {
+                                props.initData()
+                            }}
+                            key={index}>
+                            {description}
+                        </li>
+                    )) : null}
+
                     <li>
                         <FontAwesomeIcon
                             className={packageChoice === undefined ? 'package__box__closingCrossOff' : 'package__box__closingCross'}

@@ -95,10 +95,13 @@ function App() {
                         }
                         return content
                     } else {
-                        return ('no data')
+                        return false
                     }
                 }
             }
+
+            return (['no data'])
+
         }
     }
 
