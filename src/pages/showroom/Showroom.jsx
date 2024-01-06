@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 // import Image from '../../components/banner/sunset.jpg';
 import './showroom.scss';
 
@@ -31,6 +31,55 @@ const Showroom = (props) => {
     //     return <>Still loading...</>;
     // }
 
+    const display = (i) => {
+        const image = props.findData("showroom", "showroomImg" + [i]);
+        console.log(image)
+        return (
+            image[0] !== 'no data' ?
+                (<div
+                    key={i}>
+                    <img
+                        id={"showroom showroomImg" + [i] + " img"}
+                        onClick={() => props.initData()}
+                        src=
+                        {'./' + image[0]}
+                        alt={image[1]}
+                    />
+                    <a
+                        id={"showroom showroomImg" + [i] + " img"}
+                        onClick={() => props.initData()}
+                        href={"#lightbox-" + [i]}
+                        aria-label="afficher l'image en grand">
+                        {image[1]}</a>
+                </div>)
+                :
+                (<div
+                    key={i}
+                    id={"showroom showroomImg" + [i] + " img"}
+                    onClick={() => props.initData()}
+                >
+                    entrer des données correctes
+                </div>)
+        )
+    }
+
+    const displayLinks = (i) => {
+        const image = props.findData("showroom", "showroomImg" + [i]);
+        console.log(image)
+        return (
+            <div className='lightbox' id={"lightbox-" + [i]} key={i}>
+                <div className='content'>
+                    <img src=
+                        // {Image}
+                        {'./' + image[0]}
+                        alt={image[1]}
+                    />
+                    <div className='title'>{image[1]}</div>
+                    <a className='close' href="#gallery" aria-label="fermer l'image"></a>
+                </div>
+            </div>)
+    }
+
 
     return (
         <main id='showroom'>
@@ -48,26 +97,15 @@ const Showroom = (props) => {
                 ))} */}
                 {Array.from(
                     { length: 18 },
-                    (_, i) => (props.findData("showroom", "showroomImg" + [i]).map((image, index) => (
-                        <div
-                            key={index}>
-                            <img
-                                id={"showroom showroomImg" + [i]}
-                                onClick={() => props.initData()}
-                                src=
-                                {'./' + image.split('$')[0]}
-                                alt={image.split('$')[1]}
-                            />
-                            <a
-                                id={"showroom showroomImg" + [i]}
-                                onClick={() => props.initData()}
-                                href={"#lightbox-" + image[i]}
-                                aria-label="afficher l'image en grand">
-                                {image.split('$')[1]}</a>
-                        </div>
-                    )))
+                    (_, i) =>
+                        display(i)
                 )}
             </div>
+            {Array.from(
+                { length: 18 },
+                (_, i) =>
+                    displayLinks(i)
+            )}
             {/* {
                 imageList.map((image, index) => (
                     <div className='lightbox' id={"lightbox-" + image.i} key={index}>
@@ -83,23 +121,23 @@ const Showroom = (props) => {
                     </div>
                 ))
             } */}
-            {
+            {/* {
                 Array.from(
                     { length: 18 },
-                    (_, i) => (props.findData("showroom", "showroomImg" + [i]).map((image, index) => (
+                    (_, i) => (props.findData("showroom", "showroomImg" + [i])[0].map((image, index) => (
                         <div className='lightbox' id={"lightbox-" + image[i]} key={index}>
                             <div className='content'>
                                 <img src=
                                     // {Image}
-                                    {'./' + image.split('$')[0]}
-                                    alt={image.split('$')[1]}
+                                    {'./' + image[0]}
+                                    alt={image[1]}
                                 />
-                                <div className='title'>{image.split('$')[1]}</div>
+                                <div className='title'>{image[1]}</div>
                                 <a className='close' href="#gallery" aria-label="fermer l'image"></a>
                             </div>
                         </div>)
                     )))
-            }
+            } */}
         </main >
     );
 };

@@ -9,11 +9,11 @@ const Footer = (props) => {
     return (
         <footer>
             <ul
-                id="footer contactDetails"
-                onClick={() => props.initData()}
                 className='contact__details__block'>
-                {props.findData("footer", "contactDetails").map((ligne, index) => (
+                {props.findData("footer", "contactDetails")[0].map((ligne, index) => (
                     <li
+                        id="footer contactDetails"
+                        onClick={() => props.initData()}
                         key={index}>
                         {ligne}
                     </li>))}

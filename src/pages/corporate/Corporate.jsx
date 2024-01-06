@@ -31,7 +31,7 @@ const Corporate = (props) => {
                     key={index}>
                     {line}
                 </p>))} */}
-            {props.findData("corporate", "text").map((ligne, index) => (
+            {props.findData("corporate", "text")[0].map((ligne, index) => (
                 <p
                     id={"corporate text"}
                     onClick={() => props.initData()}
@@ -51,7 +51,7 @@ const Corporate = (props) => {
                     onClick={() => props.initData()}
                     to='../../contact'
                     className='link__contact link-style hover__anim'>
-                    {entreprisesData["contact"]["link"]}
+                    {/* {entreprisesData["contact"]["link"]} */}
                     {props.findData("corporate", "contactLink")}
                 </NavLink>
                 {/* {entreprisesData["contact"]["text"][1]}

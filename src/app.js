@@ -5,8 +5,8 @@ import './index.scss';
 import Header from './layouts/header/Header';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/Home';
-import Portraits from './pages/private/portraits/Portraits';
-import Marriage from './pages/private/marriage/Marriage';
+import Portraits from './pages/portraits/Portraits';
+import Marriage from './pages/marriage/Marriage';
 import Corporate from './pages/corporate/Corporate';
 import Showroom from './pages/showroom/Showroom';
 import Contact from './pages/contact/Contact';
@@ -27,8 +27,9 @@ function App() {
     const [showNav, setShowNav] = useState(true);
     const [showNavDetails, setShowNavDetails] = useState(false);
     const { token, setToken } = useToken();
-    const [layer, setLayer] = useState(localStorage.getItem("layer"));
-    const [element, setElement] = useState(localStorage.getItem("element"));
+    const [layer, setLayer] = useState();
+    const [element, setElement] = useState();
+    const [dataType, setDataType] = useState();
 
     useEffect(() => {
         document.body.setAttribute("data-theme", theme);
@@ -46,8 +47,9 @@ function App() {
                     const id = event.target.id.split(' ')
                     setLayer(id[0])
                     setElement(id[1])
+                    if (id[2]) { setDataType(id[2]) }
                     setChangeData(true);
-                    console.log(layer, element);
+                    console.log(layer, element, dataType);
                 }
             };
         }
@@ -91,10 +93,26 @@ function App() {
             for (let i = 0; i < data.length; i++) {
                 if (data[i].layer === layer && data[i].element === element) {
                     if (data[i].content) {
-                        let content = []
-                        for (let j = 0; j < data[i].content.length; j++) {
-                            content.push(data[i].content[j]);
+                        let data1 = []
+                        let data2 = []
+                        let data3 = []
+                        const content = []
+                        if (data[i].content1) {
+                            if (data[i].content2) {
+                                for (let j = 0; j < data[i].content2.length; j++) {
+                                    data3.push(data[i].content2[j]);
+                                }
+                                content.push(data3)
+                            }
+                            for (let j = 0; j < data[i].content1.length; j++) {
+                                data2.push(data[i].content1[j]);
+                            }
+                            content.unshift(data2)
                         }
+                        for (let j = 0; j < data[i].content.length; j++) {
+                            data1.push(data[i].content[j]);
+                        }
+                        content.unshift(data1)
                         return content
                     } else {
                         return false
@@ -125,6 +143,7 @@ function App() {
                 token={token}
                 element={element}
                 layer={layer}
+                dataType={dataType}
                 findData={findData}
             />
             <Logout token={token}
@@ -133,7 +152,9 @@ function App() {
                 data={Data.navigation}
                 showNav={showNav}
                 showNavDetails={showNavDetails}
-                setShowNavDetails={setShowNavDetails} />
+                setShowNavDetails={setShowNavDetails}
+                initData={initData}
+                findData={findData} />
             <Routes>
                 <Route path="/Benoit-Gradel-Photographies.github.io/Admin"
                     element={

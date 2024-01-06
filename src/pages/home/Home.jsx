@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.scss';
 import Banner from '../../components/banner/Banner';
@@ -7,25 +7,28 @@ import CustomerSpace from '../../components/customerSpace/CustomerSpace';
 const Home = (props) => {
 
     const [customerSpace, setCustomerSpace] = useState(false);
-    const [homeData, setHomeData] = useState([]);
-    const [navData, setNavData] = useState([]);
-    const setData = () => {
-        setHomeData(props.data.accueil);
-        setNavData(props.data.navigation);
-        props.showNav(false);
-    }
+    // const [homeData, setHomeData] = useState([]);
+    // const [navData, setNavData] = useState([]);
+    // const setData = () => {
+    //     setHomeData(props.data.accueil);
+    // setNavData(props.data.navigation);
+    props.showNav(false);
+    // }
 
-    useEffect(() => {
-        setData();
-    })
+    // useEffect(() => {
+    //     setData();
+    // })
 
-    if (homeData.length === 0) {
-        return <>Still loading...</>;
-    }
+    // if (homeData.length === 0) {
+    //     return <>Still loading...</>;
+    // }
 
     return (
         <main id='home'>
-            <Banner data={homeData.images} />
+            <Banner
+                // data={homeData.images}
+                initData={props.initData}
+                findData={props.findData} />
             <h2
                 id={"home title"}
                 onClick={() => props.initData()}
@@ -103,7 +106,8 @@ const Home = (props) => {
                     <CustomerSpace
                         className={customerSpace ? 'customerSpace__box  home' : 'customerSpace__box-Off'}
                         setCustomerSpace={setCustomerSpace}
-                    />
+                        initData={props.initData}
+                        findData={props.findData} />
 
                 </li>
             </ul>

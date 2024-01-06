@@ -6,7 +6,13 @@ import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 const CustomerSpace = (props) => {
     return (
         <div className={props.className} >
-            <h3 className='customerSpace__title'>Entrez vos identifiants pour accéder à votre galerie privée</h3>
+            <h3
+                id={"customerSpace title"}
+                onClick={() => props.initData()}
+                className='customerSpace__title'>
+                {/* Entrez vos identifiants pour accéder à votre galerie privée */}
+                {props.findData("customerSpace", "title")}
+            </h3>
             <form
                 className="client__form"
                 method={"post"}
@@ -16,8 +22,9 @@ const CustomerSpace = (props) => {
                     <input
                         className="client__formInput"
                         name={"login"}
-                        id={"identifiant2"}
-                        defaultValue={"BG60-"}
+                        id={"customerSpace identifiant2"}
+                        onClick={() => props.initData()}
+                        defaultValue={props.findData("customerSpace", "identifiant2")}
                         placeholder={"Identifiant"}
                         // onfocus={"if (this.value=='Identifiant') {this.value=''}"}
                         type={"text"} />

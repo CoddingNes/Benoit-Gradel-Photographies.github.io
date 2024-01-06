@@ -16,9 +16,9 @@ exports.getAllDatas = (req, res, next) => {
 exports.getOneData = (req, res, next) => {
     // console.log({ layer: req.params.layer, element: req.params.element });
     Data.findOne({ layer: req.params.layer, element: req.params.element })
-        .then((data) => {
+        .then((response) => {
             // console.log(data);
-            res.status(200).json(data)
+            res.status(200).json(response)
         })
         .then((data) => {
             // console.log(data);
@@ -31,6 +31,8 @@ exports.postOneData = (req, res, next) => {
         layer: req.body.layer,
         element: req.body.element,
         content: req.body.content,
+        content1: req.body.content1,
+        content2: req.body.content2,
     })
     // console.log(data)
     data.save()
@@ -43,9 +45,11 @@ exports.postOneData = (req, res, next) => {
 
 exports.updateOneData = (req, res, next) => {
     const content = req.body.content
+    const content1 = req.body.content1
+    const content2 = req.body.content2
     Data.findOne({ layer: req.body.layer, element: req.body.element })
         .then(() => {
-            Data.updateOne({ layer: req.body.layer, element: req.body.element }, { content, layer: req.body.layer, element: req.body.element })
+            Data.updateOne({ layer: req.body.layer, element: req.body.element }, { content, content1, content2, layer: req.body.layer, element: req.body.element })
                 .then(() => res.status(200).json({ message: 'Data updated successfully' }))
                 .catch(err => res.status(401).json(err))
         })

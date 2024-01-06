@@ -3,9 +3,12 @@ import './dataForm.scss';
 
 const DataForm = (props) => {
     const [content, setContent] = useState();
+    const [content1, setContent1] = useState();
+    const [content2, setContent2] = useState();
 
     async function createData() {
-        const sending = { layer: props.layer, element: props.element, content: content }
+        console.log(content1)
+        const sending = { layer: props.layer, element: props.element, content: content, content1: content1, content2: content2 }
         await fetch('http://localhost:8080/admin', {
             method: "POST",
             headers: {
@@ -23,7 +26,7 @@ const DataForm = (props) => {
     }
 
     async function updateData() {
-        const sending = { layer: props.layer, element: props.element, content: content }
+        const sending = { layer: props.layer, element: props.element, content: content, content1: content1, content2: content2 }
         await fetch('http://localhost:8080/admin', {
             method: "PUT",
             headers: {
@@ -59,6 +62,8 @@ const DataForm = (props) => {
     const handleSubmit = async e => {
         e.preventDefault();
         document.getElementById("dataForm__content").value = "";
+        document.getElementById("dataForm__content1").value = "";
+        document.getElementById("dataForm__content2").value = "";
         props.setChangeData(false);
     }
 
@@ -76,11 +81,35 @@ const DataForm = (props) => {
                         cols="30"
                         rows="10"
                         className="input"
-                        defaultValue={props.findData(props.layer, props.element) ? props.findData(props.layer, props.element).length > 1 ? props.findData(props.layer, props.element).join("\n") : props.findData(props.layer, props.element) : "entrer un texte ici"}
+                        defaultValue={props.findData(props.layer, props.element)[0] !== 'no data' ? props.findData(props.layer, props.element)[0].length > 1 ? props.findData(props.layer, props.element)[0].join("\n") : props.findData(props.layer, props.element)[0] : "entrer un texte ici"}
                         id="dataForm__content"
                         type="text"
                         onChange={e => setContent(e.target.value.split("\n"))}></textarea>
                     {/* </label> */}
+                    {props.dataType === "img" ?
+                        <textarea
+                            cols="30"
+                            rows="10"
+                            className="input"
+                            defaultValue={props.findData(props.layer, props.element)[1] ? props.findData(props.layer, props.element)[1].length > 1 ? props.findData(props.layer, props.element)[1].join("\n") : props.findData(props.layer, props.element)[1] : "entrer un texte ici"}
+                            id="dataForm__content1"
+                            type="text"
+                            onChange={e => setContent1(e.target.value.split("\n"))}></textarea>
+                        :
+                        ""
+                    }
+                    {props.dataType === "img" ?
+                        <textarea
+                            cols="30"
+                            rows="10"
+                            className="input"
+                            defaultValue={props.findData(props.layer, props.element)[2] ? props.findData(props.layer, props.element)[2].length > 1 ? props.findData(props.layer, props.element)[2].join("\n") : props.findData(props.layer, props.element)[2] : "entrer un texte ici"}
+                            id="dataForm__content2"
+                            type="text"
+                            onChange={e => setContent2(e.target.value.split("\n"))}></textarea>
+                        :
+                        ""
+                    }
                     <div className="button__box">
                         <button type="submit" onClick={() => createData()}>Ajouter</button>
                         <button type="submit" onClick={() => updateData()}>modifier</button>

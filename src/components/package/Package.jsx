@@ -59,7 +59,7 @@ const Package = (props) => {
                         </h3>
                     </li>
                 ))} */}
-                {props.findData("portraits", "packages").map((packagedetails, index) => (
+                {props.findData("portraits", "packages")[0].map((packagedetails, index) => (
                     <li>
                         <h3 className={"package__box__title hover__anim " + packagedetails.packageType}
                             id={"portraits packages"}
@@ -85,7 +85,7 @@ const Package = (props) => {
                             {description}
                         </li>
                     ))} */}
-                    {packageChoice ? props.findData("portraits", packageChoice).map((description, index) => (
+                    {packageChoice ? props.findData("portraits", packageChoice)[0].map((description, index) => (
                         <li
                             className={'package__box__descriptions'}
                             id={"portraits " + packageChoice}

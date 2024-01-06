@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './portraits.scss';
-import Package from '../../../components/package/Package';
+import Package from '../../components/package/Package';
 
 
 const Portraits = (props) => {
@@ -15,6 +15,9 @@ const Portraits = (props) => {
         setPackageBox();
     })
 
+    // console.log(props.findData("portraits", "text"))
+
+
     if (portraitsData.length === 0) {
         return <>Still loading...</>;
     }
@@ -22,7 +25,7 @@ const Portraits = (props) => {
     return (
         <main onClick={() => { props.setShowNavDetails(false) }}>
             <div id='portraits'>
-                {props.findData("portraits", "title").map((ligne, index) => (
+                {props.findData("portraits", "title")[0].map((ligne, index) => (
                     <h2
                         id="portraits title"
                         onClick={() => props.initData()}
@@ -40,7 +43,7 @@ const Portraits = (props) => {
                     id="portraits text"
                     onClick={() => props.initData()}
                 > */}
-                {props.findData("portraits", "text").map((ligne, index) => (
+                {props.findData("portraits", "text")[0].map((ligne, index) => (
                     <p
                         id="portraits text"
                         onClick={() => props.initData()}
@@ -79,7 +82,7 @@ const Portraits = (props) => {
                         </p>
                     ))
                     } */}
-                    {props.findData("portraits", "notes").map((ligne, index) => (
+                    {props.findData("portraits", "notes")[0].map((ligne, index) => (
                         <p key={index}
                             id="portraits notes"
                             onClick={() => props.initData()}

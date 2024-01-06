@@ -3,7 +3,10 @@
 @import '../../Style/mixins.scss';
 
 [data-theme="light"] {
-    .dropdown-element1 {
+
+    .dropdown-element1,
+    .dropdown-element2,
+    .dropdown-element3 {
         background-color: $backgroundColor-light;
     }
 
@@ -17,7 +20,10 @@
 }
 
 [data-theme="dark"] {
-    .dropdown-element1 {
+
+    .dropdown-element1,
+    .dropdown-element2,
+    .dropdown-element3 {
         background-color: $backgroundColor-dark;
     }
 

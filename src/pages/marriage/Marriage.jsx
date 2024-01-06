@@ -32,7 +32,7 @@ const Marriage = (props) => {
                     {ligne}
                 </p>))} */}
 
-            {props.findData("mariage", "text").map((ligne, index) => (
+            {props.findData("mariage", "text")[0].map((ligne, index) => (
                 <p
                     id={"mariage text"}
                     onClick={() => props.initData()}
