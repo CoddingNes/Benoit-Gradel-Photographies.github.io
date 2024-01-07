@@ -34,7 +34,6 @@ const Banner = (props) => {
 
     const display = (i) => {
         const image = props.findData("home", "bannerImg" + [i]);
-        console.log(image[2][0])
         return (
             image[0] !== 'no data' ?
                 (

@@ -88,3 +88,11 @@ a {
 .link-style {
   @include link;
 }
+
+.adminButton {
+  font-weight: bold;
+  background-color: yellow;
+  border: 2px solid red;
+  border-radius: 3px;
+  margin: 5px;
+}

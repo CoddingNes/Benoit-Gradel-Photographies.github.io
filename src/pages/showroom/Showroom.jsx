@@ -33,7 +33,6 @@ const Showroom = (props) => {
 
     const display = (i) => {
         const image = props.findData("showroom", "showroomImg" + [i]);
-        console.log(image)
         return (
             image[0] !== 'no data' ?
                 (<div
@@ -65,7 +64,6 @@ const Showroom = (props) => {
 
     const displayLinks = (i) => {
         const image = props.findData("showroom", "showroomImg" + [i]);
-        console.log(image)
         return (
             <div className='lightbox' id={"lightbox-" + [i]} key={i}>
                 <div className='content'>

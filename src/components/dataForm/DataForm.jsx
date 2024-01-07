@@ -3,11 +3,12 @@ import './dataForm.scss';
 
 const DataForm = (props) => {
     const [content, setContent] = useState();
-    const [content1, setContent1] = useState();
-    const [content2, setContent2] = useState();
+    const [content1, setContent1] = useState("");
+    const [content2, setContent2] = useState("");
+
+    console.log(props.layer, props.element, props.dataType);
 
     async function createData() {
-        console.log(content1)
         const sending = { layer: props.layer, element: props.element, content: content, content1: content1, content2: content2 }
         await fetch('http://localhost:8080/admin', {
             method: "POST",
@@ -18,6 +19,8 @@ const DataForm = (props) => {
             body: JSON.stringify(sending)
         })
             .then(response => {
+                setContent1("")
+                setContent2("")
                 return response.json();
             })
             .then(data =>
@@ -36,6 +39,8 @@ const DataForm = (props) => {
             body: JSON.stringify(sending)
         })
             .then(response => {
+                setContent1("")
+                setContent2("")
                 return response.json();
             })
             .then(data =>
@@ -62,8 +67,12 @@ const DataForm = (props) => {
     const handleSubmit = async e => {
         e.preventDefault();
         document.getElementById("dataForm__content").value = "";
-        document.getElementById("dataForm__content1").value = "";
-        document.getElementById("dataForm__content2").value = "";
+        if (props.dataType === "img") {
+            document.getElementById("dataForm__content1").value = "";
+            document.getElementById("dataForm__content2").value = "";
+        } else if (props.dataType === "table") {
+            document.getElementById("dataForm__content1").value = "";
+        }
         props.setChangeData(false);
     }
 
@@ -86,7 +95,7 @@ const DataForm = (props) => {
                         type="text"
                         onChange={e => setContent(e.target.value.split("\n"))}></textarea>
                     {/* </label> */}
-                    {props.dataType === "img" ?
+                    {props.dataType === "img" || props.dataType === "table" ?
                         <textarea
                             cols="30"
                             rows="10"
@@ -117,7 +126,13 @@ const DataForm = (props) => {
                     </div>
                     <button
                         className="closing-button"
-                        onClick={() => props.setChangeData(false)}>X</button>
+                        onClick={() => {
+                            setContent("")
+                            setContent1("")
+                            setContent2("")
+                            props.setChangeData(false)
+                        }}
+                    >X</button>
                 </form>
             </div>
         );

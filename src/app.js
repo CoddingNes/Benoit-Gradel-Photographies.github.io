@@ -49,7 +49,6 @@ function App() {
                     setElement(id[1])
                     if (id[2]) { setDataType(id[2]) }
                     setChangeData(true);
-                    console.log(layer, element, dataType);
                 }
             };
         }
@@ -224,6 +223,7 @@ function App() {
                         findData={findData}
                         showNav={setShowNav}
                         setShowNavDetails={setShowNavDetails}
+                        token={token}
                     />} />
                 <Route path="/Benoit-Gradel-Photographies.github.io/*" element={
                     <Error

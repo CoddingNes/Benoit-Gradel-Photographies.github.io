@@ -11,7 +11,11 @@ const Logout = (props) => {
     if (props.token) {
         return (
             <div id='logout' >
-                <button onClick={logout}>logout</button>
+                <button
+                    className='adminButton'
+                    onClick={logout}>
+                    logout
+                </button>
             </div>
         );
     }
