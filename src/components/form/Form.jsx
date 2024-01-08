@@ -1,15 +1,15 @@
-import { React, useRef, useState, useEffect } from 'react';
+import { React, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Input from './input/Input';
 import Textarea from './textarea/Textarea';
 import './form.scss';
 
 const Form = (props) => {
-    const [formData, setFormData] = useState([]);
+    // const [formData, setFormData] = useState([]);
     const form = useRef();
-    const getData = () => {
-        setFormData(props.data);
-    }
+    // const getData = () => {
+    //     setFormData(props.data);
+    // }
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -50,7 +50,6 @@ const Form = (props) => {
                         false
                 } />
         } else if (content[0][3] === 'textarea') {
-            console.log("envoi réponse textarea");
             return < Textarea
                 id={"contact form" + [i]}
                 initData={props.initData}
@@ -62,13 +61,13 @@ const Form = (props) => {
         }
     }
 
-    useEffect(() => {
-        getData();
-    })
+    // useEffect(() => {
+    //     getData();
+    // })
 
-    if (formData.length === 0) {
-        return <>Still loading...</>;
-    }
+    // if (formData.length === 0) {
+    //     return <>Still loading...</>;
+    // }
 
     return (
         <div className='contact__form__container'>

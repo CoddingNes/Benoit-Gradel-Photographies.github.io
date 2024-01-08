@@ -36,6 +36,7 @@ import './signup.scss';
 const Signup = () => {
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
+    const [wrapper, setWrapper] = useState(true);
     //     const [newUser, setNewUser] = useState();
 
     async function createUser(a, b) {
@@ -66,21 +67,26 @@ const Signup = () => {
     }
 
     return (
-        <div className="login-wrapper">
-            <h2>Please Signup</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    <p>Username</p>
-                    <input type="text" onChange={e => setUsername(e.target.value)} />
-                </label>
-                <label>
-                    <p>Password</p>
-                    <input type="password" onChange={e => setPassword(e.target.value)} />
-                </label>
-                <div>
-                    <button type="submit" >Submit</button>
-                </div>
-            </form>
+        <div
+            className="signup-wrapper"
+            onClick={() => { wrapper ? setWrapper(false) : setWrapper(true) }}
+        >
+            <h3>Créer un nouveau compte Admin</h3>
+            {!wrapper ?
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <p>Identifiant</p>
+                        <input type="text" onChange={e => setUsername(e.target.value)} />
+                    </label>
+                    <label>
+                        <p>Mot de passe</p>
+                        <input type="password" onChange={e => setPassword(e.target.value)} />
+                    </label>
+                    <div>
+                        <button type="submit" >Submit</button>
+                    </div>
+                </form>
+                : null}
         </div>
     );
 };

@@ -33,23 +33,23 @@ const PriceTable = (props) => {
                 data.push(<td
                     id={'price table' + props.tableNb + 'Lines' + [j] + ' table'}
                     onClick={() => props.initData()}
-                    key={i}
+                    // key={i}
                     colSpan={lines[1][i]}>
                     {lines[0][i]}
                 </td>
                 );
             }
             return (
-                <tr>{data}</tr>
+                <tr key={props.key + j} >{data}</tr>
             )
         }
     }
 
     return (
-        <div>
+        <div key={props.key}>
             <table
                 id='priceTable__table'
-                key={props.key}>
+            >
                 <thead>
                     <tr>
                         {/* {props.titles.map((title, index) =>
@@ -99,7 +99,7 @@ const PriceTable = (props) => {
                     id={'price table' + props.tableNb + 'Lines' + nbOfLines() + ' table'}
                     onClick={() => props.initData()}
                 >
-                    ajouter une ligne au tableau</button>
+                    Ajouter une ligne au tableau</button>
                 : null
             }
         </div>

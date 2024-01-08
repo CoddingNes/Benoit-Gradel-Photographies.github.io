@@ -1,0 +1,22 @@
+@import '../../Style/variables.scss';
+
+.signup-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    min-width: fit-content;
+    max-width: 95vw;
+    margin: 20px auto 0;
+    padding-bottom: 20px;
+    border: 2px solid $primary-color;
+
+    h3 {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 426px) {
+        width: 95vw;
+    }
+}

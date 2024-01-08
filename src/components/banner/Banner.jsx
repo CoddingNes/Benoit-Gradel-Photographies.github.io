@@ -74,6 +74,7 @@ const Banner = (props) => {
         )
     }
 
+    console.log()
 
     return (
         <div id='banner'>
@@ -105,7 +106,9 @@ const Banner = (props) => {
                 ))} */}
                 {Array.from(
                     { length: 5 },
-                    (_, i) => display(i))}
+                    (_, i) =>
+                        display(i)
+                )}
             </div>
         </div>
     );

@@ -13,7 +13,7 @@ import Contact from './pages/contact/Contact';
 import Footer from './layouts/footer/Footer';
 import Error from './pages/error/Error';
 import Prices from './pages/prices/Prices';
-import Data from './assets/texts.json';
+// import Data from './assets/texts.json';
 import DarkBright from './components/darkBright/DarkBright';
 import Dashboard from "./components/dashboard/Dashboard";
 import useToken from "./components/dashboard/useToken";
@@ -148,7 +148,7 @@ function App() {
             <Logout token={token}
             />
             <Navbar
-                data={Data.navigation}
+                // data={Data.navigation}
                 showNav={showNav}
                 showNavDetails={showNavDetails}
                 setShowNavDetails={setShowNavDetails}
@@ -169,7 +169,7 @@ function App() {
                 <Route path="/Benoit-Gradel-Photographies.github.io/"
                     element={
                         <Home
-                            data={Data}
+                            // data={Data}
                             showNav={setShowNav}
                             initData={initData}
                             findData={findData}
@@ -177,7 +177,7 @@ function App() {
                         />} />
                 <Route path="/Benoit-Gradel-Photographies.github.io/prestations/portraits" element={
                     <Portraits
-                        data={Data.portraits}
+                        // data={Data.portraits}
                         initData={initData}
                         findData={findData}
                         showNav={setShowNav}
@@ -185,7 +185,7 @@ function App() {
                     />} />
                 <Route path="/Benoit-Gradel-Photographies.github.io/prestations/mariage" element={
                     <Marriage
-                        data={Data.mariages}
+                        // data={Data.mariages}
                         initData={initData}
                         findData={findData}
                         showNav={setShowNav}
@@ -193,7 +193,7 @@ function App() {
                     />} />
                 <Route path="/Benoit-Gradel-Photographies.github.io/prestations/entreprises" element={
                     <Corporate
-                        data={Data.entreprises}
+                        // data={Data.entreprises}
                         initData={initData}
                         findData={findData}
                         showNav={setShowNav}
@@ -201,7 +201,7 @@ function App() {
                     />} />
                 <Route path="/Benoit-Gradel-Photographies.github.io/gallerie" element={
                     <Showroom
-                        data={Data.showroom}
+                        // data={Data.showroom}
                         initData={initData}
                         findData={findData}
                         showNav={setShowNav}
@@ -209,7 +209,7 @@ function App() {
                     />} />
                 <Route path="/Benoit-Gradel-Photographies.github.io/contact" element={
                     <Contact
-                        data={Data.contact}
+                        // data={Data.contact}
                         initData={initData}
                         findData={findData}
                         showNav={setShowNav}
@@ -218,7 +218,7 @@ function App() {
                 {/* <Route path="/Benoit-Gradel-Photographies.github.io/mentions-legales" element={<LegalNotices showNav={setShowNav} />} /> */}
                 <Route path="/Benoit-Gradel-Photographies.github.io/grille-de-tarifs" element={
                     <Prices
-                        data={Data.tarifs}
+                        // data={Data.tarifs}
                         initData={initData}
                         findData={findData}
                         showNav={setShowNav}

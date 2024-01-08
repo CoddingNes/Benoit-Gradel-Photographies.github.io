@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.scss';
 import Banner from '../../components/banner/Banner';
@@ -12,12 +12,12 @@ const Home = (props) => {
     // const setData = () => {
     //     setHomeData(props.data.accueil);
     // setNavData(props.data.navigation);
-    props.showNav(false);
     // }
 
-    // useEffect(() => {
-    //     setData();
-    // })
+    useEffect(() => {
+        props.showNav(false);
+        // setData();
+    })
 
     // if (homeData.length === 0) {
     //     return <>Still loading...</>;

@@ -24,7 +24,7 @@ const CustomerSpace = (props) => {
                         name={"login"}
                         id={"customerSpace identifiant2"}
                         onClick={() => props.initData()}
-                        defaultValue={props.findData("customerSpace", "identifiant2")}
+                        defaultValue={props.findData("customerSpace", "identifiant2")[0]}
                         placeholder={"Identifiant"}
                         // onfocus={"if (this.value=='Identifiant') {this.value=''}"}
                         type={"text"} />

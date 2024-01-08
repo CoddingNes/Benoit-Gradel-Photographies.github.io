@@ -1,9 +1,11 @@
 @import '../../Style/variables.scss';
 
-.login-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#dashboard {
+    margin-bottom: 200px;
+}
+
+.signup-wrapper,
+.loging-wrapper {
     width: 50%;
     min-width: fit-content;
     max-width: 95vw;

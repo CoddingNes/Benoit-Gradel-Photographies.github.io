@@ -3,7 +3,6 @@ import './input.scss';
 
 
 const Input = (props) => {
-    console.log("input appear")
     return (
         <div
             className={"input contact__form__" + props.title}

@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './marriage.scss';
 
 const Marriage = (props) => {
-    const [marriageData, setMarriageData] = useState([]);
-    const setPackageBox = () => {
-        setMarriageData(props.data);
-        props.showNav(true);
-    }
+    // const [marriageData, setMarriageData] = useState([]);
+    // const setPackageBox = () => {
+    //     setMarriageData(props.data);
+    //     props.showNav(true);
+    // }
 
-    useEffect(() => {
-        setPackageBox();
-    })
+    // useEffect(() => {
+    //     setPackageBox();
+    // })
 
-    if (marriageData.length === 0) {
-        return <>Still loading...</>;
-    }
+    // if (marriageData.length === 0) {
+    //     return <>Still loading...</>;
+    // }
 
     return (
         <main id='marriage'>

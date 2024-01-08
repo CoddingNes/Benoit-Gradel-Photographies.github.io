@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Form from '../../components/form/Form';
 import './contact.scss';
 
 const Contact = (props) => {
 
-    const [contactData, setContactData] = useState([]);
-    const getData = () => {
-        setContactData(props.data);
-        props.showNav(true);
-    }
+    // const [contactData, setContactData] = useState([]);
+    // const getData = () => {
+    //     setContactData(props.data);
+    //     props.showNav(true);
+    // }
 
-    useEffect(() => {
-        getData();
-    })
+    // useEffect(() => {
+    //     getData();
+    // })
 
-    if (contactData.length === 0) {
-        return <>Still loading...</>;
-    }
+    // if (contactData.length === 0) {
+    //     return <>Still loading...</>;
+    // }
 
     return (
         <main id='contact'>
@@ -49,7 +49,7 @@ const Contact = (props) => {
                     ))}
                 </div>
                 <Form
-                    data={contactData.cadres}
+                    // data={contactData.cadres}
                     initData={props.initData}
                     findData={props.findData} />
             </div>

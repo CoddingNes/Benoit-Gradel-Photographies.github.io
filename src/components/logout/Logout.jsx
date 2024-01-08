@@ -12,9 +12,11 @@ const Logout = (props) => {
         return (
             <div id='logout' >
                 <button
+                    style={props.style}
                     className='adminButton'
+                    title='Sortir du mode administrateur'
                     onClick={logout}>
-                    logout
+                    Logout
                 </button>
             </div>
         );

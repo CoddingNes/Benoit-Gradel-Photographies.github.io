@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './corporate.scss';
 
 const Corporate = (props) => {
-    const [entreprisesData, setEntreprisesData] = useState([]);
-    const getData = () => {
-        setEntreprisesData(props.data);
-        props.showNav(true);
-    }
+    // const [entreprisesData, setEntreprisesData] = useState([]);
+    // const getData = () => {
+    //     setEntreprisesData(props.data);
+    //     props.showNav(true);
+    // }
 
-    useEffect(() => {
-        getData();
-    })
+    // useEffect(() => {
+    //     getData();
+    // })
 
-    if (entreprisesData.length === 0) {
-        return <>Still loading...</>;
-    }
+    // if (entreprisesData.length === 0) {
+    //     return <>Still loading...</>;
+    // }
 
     return (
         <main id='corporate'>

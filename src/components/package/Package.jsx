@@ -60,14 +60,14 @@ const Package = (props) => {
                     </li>
                 ))} */}
                 {props.findData("portraits", "packages")[0].map((packagedetails, index) => (
-                    <li>
+                    <li key={index}>
                         <h3 className={"package__box__title hover__anim " + packagedetails.packageType}
                             id={"portraits packages"}
                             onClick={() => {
                                 props.initData()
                                 setPackageChoice(packagedetails.split(" ")[1])
                             }}
-                            key={index}>
+                        >
                             {packagedetails}
                         </h3>
                     </li>
@@ -100,7 +100,7 @@ const Package = (props) => {
                     <li>
                         <FontAwesomeIcon
                             className={packageChoice === undefined ? 'package__box__closingCrossOff' : 'package__box__closingCross'}
-                            onClick={() => { setPackageChoice() }}
+                            onClick={() => { setPackageChoice("") }}
                             icon={faSquareXmark} />
                     </li>
                 </ul >

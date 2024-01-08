@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './portraits.scss';
 import Package from '../../components/package/Package';
 
 
 const Portraits = (props) => {
-    const [portraitsData, setPortraitsData] = useState([]);
-    const setPackageBox = () => {
-        setPortraitsData(props.data);
-        props.showNav(true);
-    }
+    // const [portraitsData, setPortraitsData] = useState([]);
+    // const setPackageBox = () => {
+    //     // setPortraitsData(props.data);
+    //     props.showNav(true);
+    // }
 
-    useEffect(() => {
-        setPackageBox();
-    })
+    // useEffect(() => {
+    //     props.showNav(true);
+    // })
 
     // console.log(props.findData("portraits", "text"))
 
 
-    if (portraitsData.length === 0) {
-        return <>Still loading...</>;
-    }
+    // if (portraitsData.length === 0) {
+    //     return <>Still loading...</>;
+    // }
 
     return (
         <main onClick={() => { props.setShowNavDetails(false) }}>
@@ -69,7 +69,7 @@ const Portraits = (props) => {
                 </p>
 
                 <Package
-                    data={portraitsData.forfaits}
+                    // data={portraitsData.forfaits}
                     initData={props.initData}
                     findData={props.findData} />
 

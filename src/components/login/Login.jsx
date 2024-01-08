@@ -34,14 +34,14 @@ const Login = (props) => {
 
     return (
         <div className="login-wrapper">
-            <h2>Please Log In</h2>
+            <h3>Se Connecter</h3>
             <form onSubmit={handleSubmit}>
                 <label>
-                    <p>Username</p>
+                    <p>Identifiant</p>
                     <input type="text" onChange={e => setUsername(e.target.value)} />
                 </label>
                 <label>
-                    <p>Password</p>
+                    <p>Mot de passe</p>
                     <input type="password" onChange={e => setPassword(e.target.value)} />
                 </label>
                 <div>

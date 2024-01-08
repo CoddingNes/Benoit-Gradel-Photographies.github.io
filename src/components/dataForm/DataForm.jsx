@@ -6,7 +6,6 @@ const DataForm = (props) => {
     const [content1, setContent1] = useState("");
     const [content2, setContent2] = useState("");
 
-    console.log(props.layer, props.element, props.dataType);
 
     async function createData() {
         const sending = { layer: props.layer, element: props.element, content: content, content1: content1, content2: content2 }
@@ -77,6 +76,7 @@ const DataForm = (props) => {
     }
 
     if (props.token && props.changeData) {
+        console.log(props.layer, props.element, props.dataType);
         return (
             <div id="dataForm">
                 <p
