@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '@csstools/normalize.css';
 import './index.scss';
+import Loading from './pages/loading/Loading';
 import Header from './layouts/header/Header';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/Home';
@@ -13,12 +14,12 @@ import Contact from './pages/contact/Contact';
 import Footer from './layouts/footer/Footer';
 import Error from './pages/error/Error';
 import Prices from './pages/prices/Prices';
-// import Data from './assets/texts.json';
 import DarkBright from './components/darkBright/DarkBright';
 import Dashboard from "./components/dashboard/Dashboard";
 import useToken from "./components/dashboard/useToken";
 import Logout from "./components/logout/Logout";
 import DataForm from "./components/dataForm/DataForm";
+// import Test from "./pages/test/Test";
 
 function App() {
 
@@ -155,18 +156,23 @@ function App() {
                 initData={initData}
                 findData={findData} />
             <Routes>
+                <Route path="/Benoit-Gradel-Photographies.github.io/"
+                    element={
+                        <Loading
+                        />} />
+                {/* <Route path="/Benoit-Gradel-Photographies.github.io/test"
+                    element={
+                        <Test
+                            initData={initData}
+                            findData={findData}
+                        />} /> */}
                 <Route path="/Benoit-Gradel-Photographies.github.io/Admin"
                     element={
                         <Dashboard
                             token={token}
                             setToken={setToken}
                         />} />
-                {/* <Route path="/Benoit-Gradel-Photographies.github.io/Admin/login"
-                    element={
-                        <Login
-                            setToken={setToken}
-                        />} /> */}
-                <Route path="/Benoit-Gradel-Photographies.github.io/"
+                <Route path="/Benoit-Gradel-Photographies.github.io/home"
                     element={
                         <Home
                             // data={Data}
@@ -215,7 +221,6 @@ function App() {
                         showNav={setShowNav}
                         setShowNavDetails={setShowNavDetails}
                     />} />
-                {/* <Route path="/Benoit-Gradel-Photographies.github.io/mentions-legales" element={<LegalNotices showNav={setShowNav} />} /> */}
                 <Route path="/Benoit-Gradel-Photographies.github.io/grille-de-tarifs" element={
                     <Prices
                         // data={Data.tarifs}

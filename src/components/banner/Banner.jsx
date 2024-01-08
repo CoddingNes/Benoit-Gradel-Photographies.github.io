@@ -4,34 +4,6 @@ import './banner.scss';
 
 const Banner = (props) => {
 
-    // const [bannerData, setBannerData] = useState([]);
-    // const [imageList, setImageList] = useState();
-    // // const [animGlobalDuration, setAnimGlobalDuration] = useState();
-    // const animationDuration = 3;
-    // const setData = () => {
-    //     let setAnimDelayList = [];
-    //     let setRotationList = [];
-    //     let createImageList = [];
-    //     // setBannerData(props.data);
-    //     // setAnimGlobalDuration(bannerData.length * animationDuration);
-    //     for (let i = 0; i < bannerData.length; i++) {
-    //         setAnimDelayList.push(bannerData.length * animationDuration - i * animationDuration - animationDuration);
-    //         setRotationList.push((-20 + Math.floor(Math.random() * 40)));
-    //         createImageList.push({ "image": bannerData[i], "delay": setAnimDelayList[i], "rotation": setRotationList[i], "zIndex": i + 1 });
-    //         if (imageList === undefined) {
-    //             setImageList(createImageList);
-    //         }
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     setData();
-    // }, []);
-
-    // if (imageList === undefined) {
-    //     return <>Still loading...</>;
-    // }
-
     const display = (i) => {
         const image = props.findData("home", "bannerImg" + [i]);
         return (
@@ -73,8 +45,6 @@ const Banner = (props) => {
                 </div>)
         )
     }
-
-    console.log()
 
     return (
         <div id='banner'>

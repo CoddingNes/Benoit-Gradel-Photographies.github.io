@@ -16,7 +16,7 @@ const PriceTable = (props) => {
             return <th
                 id={'price table' + props.tableNb + 'Header0 table'}
                 onClick={() => props.initData()}
-                // key={i}
+                key={props.tableNb + 'header' + i}
                 colSpan={title[1][i]}>
                 {title[0][i]}
             </th>
@@ -33,20 +33,20 @@ const PriceTable = (props) => {
                 data.push(<td
                     id={'price table' + props.tableNb + 'Lines' + [j] + ' table'}
                     onClick={() => props.initData()}
-                    // key={i}
-                    colSpan={lines[1][i]}>
+                    key={props.tableNb + 'line' + i + j}
+                    colSpan={lines[1][i]} >
                     {lines[0][i]}
-                </td>
+                </td >
                 );
             }
             return (
-                <tr key={props.key + j} >{data}</tr>
+                <tr key={props.tableNb + 'line' + j} >{data}</tr>
             )
         }
     }
 
     return (
-        <div key={props.key}>
+        <div key={"table" + props.tableNb}>
             <table
                 id='priceTable__table'
             >
@@ -95,6 +95,7 @@ const PriceTable = (props) => {
             </table>
             {props.token ?
                 <button
+                    key={props.tableNb}
                     className='moreButton adminButton'
                     id={'price table' + props.tableNb + 'Lines' + nbOfLines() + ' table'}
                     onClick={() => props.initData()}

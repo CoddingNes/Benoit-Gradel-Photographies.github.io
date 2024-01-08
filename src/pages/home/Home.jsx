@@ -7,26 +7,14 @@ import CustomerSpace from '../../components/customerSpace/CustomerSpace';
 const Home = (props) => {
 
     const [customerSpace, setCustomerSpace] = useState(false);
-    // const [homeData, setHomeData] = useState([]);
-    // const [navData, setNavData] = useState([]);
-    // const setData = () => {
-    //     setHomeData(props.data.accueil);
-    // setNavData(props.data.navigation);
-    // }
 
     useEffect(() => {
         props.showNav(false);
-        // setData();
     })
-
-    // if (homeData.length === 0) {
-    //     return <>Still loading...</>;
-    // }
 
     return (
         <main id='home'>
             <Banner
-                // data={homeData.images}
                 initData={props.initData}
                 findData={props.findData} />
             <h2

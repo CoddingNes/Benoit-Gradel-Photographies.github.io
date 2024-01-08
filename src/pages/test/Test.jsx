@@ -1,34 +1,30 @@
-import React, { useState } from 'react';
-import Data from './testtext.json';
+import React, { Suspense, lazy } from 'react';
+import Loading from '../loading/Loading';
+// import Banner from '../../components/banner/Banner';
 
 //Tester des trucs
-const Test = () => {
+const Test = (props) => {
 
-    const data = Data.titre.contenu;
-    const [element, setElement] = useState(data)
-    const [previous, setPrevious] = useState();
-    // const [text, setText] = useState()
+    const Banner = lazy(() => delayForDemo(import('../../components/banner/Banner')));
 
-    const truc = () => {
-        console.log(previous);
-        let text = prompt('Indique le texte de remplacement ici', data)
-        if (text != null) {
-            setElement(text);
-            setPrevious(element);
-        }
+    async function delayForDemo(promise) {
+        return new Promise(resolve => {
+            setTimeout(resolve, 1);
+        }).then(() => promise);
     }
 
     return (
         <div>
-            <button id='button__test' className="bouton" onClick={() => (truc())} >
-                {element}
-            </button>
-            {previous !== undefined && previous !== element ?
-                <div onClick={() => (setElement(previous))} >précédent</div> :
-                ""
-            }
+            <Suspense fallback={
+                // <Loading />
+                <p></p>
+            }>
+                <Banner
+                    initData={props.initData}
+                    findData={props.findData} />
+            </Suspense>;
         </div>
-    );
+    )
 };
 
 export default Test;
